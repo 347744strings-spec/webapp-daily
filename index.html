@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b0f1a">
+<title>WebAppDaily — 매일 하나씩 만드는 웹앱</title>
+<meta name="description" content="매일 트렌드를 보고 하나씩 만드는 모바일 웹앱 모음">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E📱%3C/text%3E%3C/svg%3E">
+<style>
+:root{--bg:#f5f6fa;--card:#fff;--fg:#131722;--mut:#6b7280;--line:#e5e7eb;--acc:#4f46e5}
+@media (prefers-color-scheme:dark){:root{--bg:#0b0f1a;--card:#141a29;--fg:#eef1f8;--mut:#9aa3b5;--line:#232b3e;--acc:#818cf8}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Noto Sans KR",system-ui,sans-serif}
+main{max-width:560px;margin:0 auto;padding:calc(24px + env(safe-area-inset-top)) 16px 40px}
+h1{font-size:26px;margin:0 0 4px;letter-spacing:-.03em}p.sub{color:var(--mut);margin:0 0 20px;font-size:14px}
+a.app{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;margin:10px 0;color:inherit;text-decoration:none}
+a.app:active{transform:scale(.99)}.em{width:52px;height:52px;flex:none;border-radius:14px;background:linear-gradient(135deg,#4f46e5,#06b6d4);display:grid;place-items:center;font-size:26px}
+.t{font-weight:800;font-size:16px}.d{color:var(--mut);font-size:13px;margin-top:3px;line-height:1.45}.dt{font-size:12px;color:var(--acc);font-weight:700}
+.tag{display:inline-block;font-size:11px;padding:2px 7px;border-radius:99px;background:color-mix(in srgb,var(--acc) 14%,transparent);color:var(--acc);margin:4px 4px 0 0}
+footer{color:var(--mut);font-size:12px;text-align:center;margin-top:24px}
+</style>
+</head>
+<body>
+<main>
+<h1>📱 WebAppDaily</h1>
+<p class="sub">매일 트렌드를 보고 하나씩 만드는 모바일 웹앱. 최신순.</p>
+<div id="list"><noscript>JavaScript를 켜 주세요.</noscript></div>
+<footer>모든 앱은 서버 없이 기기 안에서만 동작해요 · 홈 화면에 추가하면 오프라인에서도 쓸 수 있어요</footer>
+</main>
+<script>
+const esc=s=>String(s).replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
+fetch('apps.json',{cache:'no-cache'}).then(r=>r.json()).then(a=>{a.sort((x,y)=>y.date.localeCompare(x.date));
+document.getElementById('list').innerHTML=a.map(x=>`<a class="app" href="./${x.date}-${x.slug}/"><div class="em">${esc(x.emoji||'✨')}</div><div><div class="dt">${x.date}</div><div class="t">${esc(x.name)}</div><div class="d">${esc(x.desc)}</div>${(x.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div></a>`).join('')})
+.catch(()=>{document.getElementById('list').textContent='목록을 불러오지 못했어요.'});
+</script>
+</body>
+</html>

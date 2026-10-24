@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b0f1a" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f5f6fa" media="(prefers-color-scheme: light)">
+<meta name="description" content="실제 수능 시간표·타종 그대로, 폰 하나로 하는 수능 실전 모의 시뮬레이터">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="실전벨">
+<meta property="og:title" content="실전벨 — 수능 실전 시뮬레이터">
+<meta property="og:description" content="2027 수능 시간표·타종 그대로. D-day, 교시별 타이머, 페이스 알림, 기록까지.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<title>실전벨 — 수능 실전 시뮬레이터</title>
+<style>
+:root{--bg:#f5f6fa;--card:#fff;--fg:#131722;--mut:#6b7280;--line:#e5e7eb;--acc:#4f46e5;--acc2:#06b6d4;--ok:#10b981;--warn:#f59e0b;--bad:#ef4444;--r:18px;--sh:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(17,24,39,.06)}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0b0f1a;--card:#141a29;--fg:#eef1f8;--mut:#9aa3b5;--line:#232b3e;--acc:#818cf8;--acc2:#22d3ee;--sh:none}}
+:root[data-theme=dark]{--bg:#0b0f1a;--card:#141a29;--fg:#eef1f8;--mut:#9aa3b5;--line:#232b3e;--acc:#818cf8;--acc2:#22d3ee;--sh:none}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Noto Sans KR","Malgun Gothic",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+body{min-height:100dvh;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+header{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:calc(10px + env(safe-area-inset-top)) 18px 10px;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.brand{display:flex;gap:8px;align-items:center;font-weight:800;font-size:18px;letter-spacing:-.02em}
+.brand i{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,#4f46e5,#06b6d4);display:grid;place-items:center;font-style:normal;color:#fff;font-size:14px}
+.iconbtn{border:0;background:var(--card);color:var(--fg);width:38px;height:38px;border-radius:12px;font-size:17px;box-shadow:var(--sh);flex:none}
+main{max-width:520px;margin:0 auto;padding:4px 16px 40px}
+section.view{display:none;animation:fade .25s ease}section.view.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1}}
+.card{background:var(--card);border-radius:var(--r);padding:18px;margin:12px 0;box-shadow:var(--sh);border:1px solid var(--line)}
+.hero{background:linear-gradient(135deg,#4f46e5,#06b6d4);color:#fff;border:0}
+.hero .k{opacity:.85;font-size:13px;font-weight:600}
+.dday{font-size:64px;font-weight:900;letter-spacing:-.04em;line-height:1;margin:8px 0 4px}
+.hero .sub{font-variant-numeric:tabular-nums;font-size:15px;opacity:.95}
+h2{font-size:17px;margin:0 0 10px;letter-spacing:-.02em}
+h3{font-size:14px;margin:14px 0 8px;color:var(--mut);font-weight:700}
+.mut{color:var(--mut);font-size:13px;line-height:1.5}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;border:0;border-radius:14px;padding:15px;font-size:16px;font-weight:700;background:var(--acc);color:#fff;cursor:pointer;font-family:inherit}
+.btn.sec{background:color-mix(in srgb,var(--acc) 12%,transparent);color:var(--acc)}
+.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--fg)}
+.btn.bad{background:color-mix(in srgb,var(--bad) 14%,transparent);color:var(--bad)}
+.btn:active,.subj:active{transform:scale(.98)}
+.row{display:flex;gap:10px}.row>*{flex:1;min-width:0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.subj{border:1px solid var(--line);background:var(--bg);border-radius:14px;padding:14px;text-align:left;color:var(--fg);font-family:inherit;cursor:pointer}
+.subj b{display:block;font-size:16px;margin-bottom:2px}.subj span{font-size:12px;color:var(--mut)}
+.seg{display:flex;background:color-mix(in srgb,var(--fg) 6%,transparent);border-radius:12px;padding:4px;gap:4px}
+.seg button{flex:1;border:0;background:transparent;color:var(--mut);padding:9px 4px;border-radius:9px;font-weight:700;font-family:inherit;font-size:13px}
+.seg button.on{background:var(--card);color:var(--fg);box-shadow:var(--sh)}
+.tt{width:100%;border-collapse:collapse;font-size:14px}
+.tt td{padding:9px 4px;border-bottom:1px solid var(--line)}.tt tr:last-child td{border:0}
+.tt td:last-child{text-align:right;color:var(--mut);font-variant-numeric:tabular-nums;white-space:nowrap}
+.pill{display:inline-block;font-size:12px;font-weight:700;padding:4px 10px;border-radius:99px;background:color-mix(in srgb,var(--acc) 14%,transparent);color:var(--acc)}
+label.chk{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px;gap:10px}
+label.chk:last-of-type{border:0}
+input[type=checkbox]{appearance:none;-webkit-appearance:none;width:46px;height:28px;border-radius:99px;background:var(--line);position:relative;transition:.2s;flex:none;margin:0}
+input[type=checkbox]::after{content:"";position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:#fff;transition:.2s;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+input[type=checkbox]:checked{background:var(--acc)}input[type=checkbox]:checked::after{left:21px}
+input[type=text],input[type=number],textarea,select{width:100%;padding:12px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--fg);font-size:16px;font-family:inherit}
+#run{position:fixed;inset:0;z-index:20;background:var(--bg);display:none;flex-direction:column;padding:calc(14px + env(safe-area-inset-top)) 18px calc(18px + env(safe-area-inset-bottom));max-width:520px;margin:0 auto}
+#run.on{display:flex}
+.runtop{display:flex;justify-content:space-between;align-items:center}
+.clock{font-variant-numeric:tabular-nums;font-weight:700;font-size:15px;color:var(--mut)}
+.ring{position:relative;width:min(78vw,330px);aspect-ratio:1;margin:18px auto 8px}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring .c{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.phase{font-size:14px;font-weight:700;color:var(--acc)}
+.big{font-size:clamp(44px,15vw,64px);font-weight:900;font-variant-numeric:tabular-nums;letter-spacing:-.03em;line-height:1.05}
+.title{font-size:22px;font-weight:800;margin-top:4px}
+.nextev{text-align:center;font-size:14px;color:var(--mut);min-height:20px}
+.tl{display:flex;gap:3px;margin:14px 0 0}.tl div{height:6px;border-radius:3px;background:var(--line)}
+.tl div.done{background:var(--acc)}.tl div.cur{background:var(--acc2)}
+.flash{animation:fl 1.2s ease 2}@keyframes fl{50%{background:color-mix(in srgb,var(--acc) 30%,var(--bg))}}
+.toast{position:fixed;left:50%;top:calc(16px + env(safe-area-inset-top));transform:translateX(-50%) translateY(-160%);background:var(--fg);color:var(--bg);padding:12px 18px;border-radius:14px;font-weight:700;z-index:50;transition:.3s;max-width:90vw;text-align:center;font-size:15px}
+.toast.on{transform:translateX(-50%) translateY(0)}
+nav{position:fixed;bottom:0;left:0;right:0;z-index:10;display:flex;justify-content:space-around;background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:8px 0 calc(8px + env(safe-area-inset-bottom))}
+nav button{border:0;background:none;color:var(--mut);font-family:inherit;font-size:11px;font-weight:700;display:flex;flex-direction:column;align-items:center;gap:2px;padding:4px 14px}
+nav button span{font-size:21px}nav button.on{color:var(--acc)}
+dialog{border:0;border-radius:22px;background:var(--card);color:var(--fg);width:min(92vw,440px);padding:20px}
+dialog::backdrop{background:rgba(0,0,0,.5)}
+.hist{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--line);gap:10px}
+.hist:last-child{border:0}
+.hist b{font-size:15px}.score{font-size:20px;font-weight:900;font-variant-numeric:tabular-nums;white-space:nowrap}
+.empty{text-align:center;padding:22px 0;color:var(--mut);font-size:14px;line-height:1.6}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}.chips button{border:1px solid var(--line);background:var(--bg);color:var(--fg);border-radius:99px;padding:7px 12px;font-family:inherit;font-size:13px}
+.chips button.on{background:var(--acc);border-color:var(--acc);color:#fff}
+.spark{width:100%;height:60px}
+small.k{font-size:12px;color:var(--mut)}
+.install{display:none}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><i>🔔</i>실전벨</div>
+  <button class="iconbtn" id="themeBtn" aria-label="테마 전환">🌓</button>
+</header>
+<main>
+<section class="view on" id="v-home">
+  <div class="card hero">
+    <div class="k">2027학년도 수능 · 2026년 11월 19일(목)</div>
+    <div class="dday" id="dday">D-?</div>
+    <div class="sub" id="ddsub">—</div>
+  </div>
+  <div class="card">
+    <h2>오늘의 실전</h2>
+    <p class="mut" style="margin:0 0 12px">실제 수능과 같은 시간·타종으로 한 교시씩, 혹은 하루 전체를 그대로 연습해요.</p>
+    <div class="grid2" id="quick"></div>
+    <div style="height:10px"></div>
+    <button class="btn" id="fullBtn">📋 하루 전체 실전 모드</button>
+  </div>
+  <div class="card install" id="installCard">
+    <h2>📲 홈 화면에 추가</h2>
+    <p class="mut" style="margin:0 0 10px">앱처럼 바로 열고, 인터넷이 없어도 쓸 수 있어요.</p>
+    <button class="btn sec" id="installBtn">홈 화면에 추가하기</button>
+  </div>
+  <div class="card">
+    <h2>최근 기록</h2>
+    <div id="recent"></div>
+  </div>
+</section>
+
+<section class="view" id="v-full">
+  <div class="card">
+    <h2>하루 전체 실전 모드</h2>
+    <p class="mut" style="margin:0 0 12px">국어부터 탐구(또는 제2외국어)까지 수능 당일 시간표를 그대로 진행해요. 쉬는 시간·점심시간도 포함돼요.</p>
+    <h3>시작 방식</h3>
+    <div class="seg" id="startMode">
+      <button data-v="now" class="on">지금 바로 시작</button>
+      <button data-v="clock">실제 시각 동기화</button>
+    </div>
+    <p class="mut" id="startModeDesc" style="margin:8px 0 0"></p>
+    <h3>응시 영역</h3>
+    <label class="chk">탐구 2과목 응시<input type="checkbox" id="opt2tam" checked></label>
+    <label class="chk">제2외국어/한문 응시<input type="checkbox" id="optLang"></label>
+  </div>
+  <div class="card">
+    <h2>시간표 미리보기</h2>
+    <table class="tt" id="ttable"></table>
+  </div>
+  <button class="btn" id="startFull">▶ 실전 시작</button>
+  <div style="height:8px"></div>
+  <button class="btn ghost" data-go="home">돌아가기</button>
+</section>
+
+<section class="view" id="v-rec">
+  <div class="card">
+    <h2>과목별 점수 추이</h2>
+    <div class="chips" id="recFilter"></div>
+    <svg class="spark" id="spark" viewBox="0 0 300 60" preserveAspectRatio="none"></svg>
+    <div class="mut" id="sparkInfo"></div>
+  </div>
+  <div class="card">
+    <h2>전체 기록</h2>
+    <div id="allrec"></div>
+  </div>
+</section>
+
+<section class="view" id="v-set">
+  <div class="card">
+    <h2>타종·알림</h2>
+    <label class="chk">준비령 (시작 10분 전)<input type="checkbox" data-s="b10"></label>
+    <label class="chk">예비령 (시작 5분 전)<input type="checkbox" data-s="b5"></label>
+    <label class="chk">종료 10분 전 알림<input type="checkbox" data-s="e10"></label>
+    <label class="chk">종료 5분 전 알림<input type="checkbox" data-s="e5"></label>
+    <label class="chk">진동 (지원 기기)<input type="checkbox" data-s="vib"></label>
+    <label class="chk">화면 꺼짐 방지<input type="checkbox" data-s="wake"></label>
+    <h3>단일 교시 준비 시간</h3>
+    <div class="seg" id="prepSeg"><button data-v="0">바로 시작</button><button data-v="5">5분</button><button data-v="10">10분</button></div>
+    <div style="height:14px"></div>
+    <button class="btn sec" id="testBell">🔔 타종 소리 테스트</button>
+  </div>
+  <div class="card">
+    <h2>페이스 알림</h2>
+    <p class="mut" style="margin:0 0 10px">과목별로 “시작 후 몇 분엔 여기까지 풀자” 체크포인트를 정해 두면, 그 시각에 짧게 알려줘요.</p>
+    <select id="paceSubj"></select>
+    <div style="height:8px"></div>
+    <div class="row"><input type="number" id="paceMin" placeholder="분 (예: 30)" inputmode="numeric" style="flex:.6"><input type="text" id="paceLbl" placeholder="메모 (예: 독서 끝)"></div>
+    <div style="height:8px"></div>
+    <button class="btn sec" id="paceAdd">+ 체크포인트 추가</button>
+    <div id="paceList" style="margin-top:8px"></div>
+  </div>
+  <div class="card">
+    <h2>앱 정보</h2>
+    <p class="mut" style="margin:0">시간표는 한국교육과정평가원 2027학년도 수능 시행세부계획(2026.7.1 공고) 기준이에요. 모든 데이터는 이 기기에만 저장돼요(서버·로그인 없음). 무음 모드에선 소리가 안 날 수 있어요.</p>
+    <div style="height:10px"></div>
+    <button class="btn bad" id="resetAll">기록 전체 삭제</button>
+  </div>
+</section>
+</main>
+
+<nav>
+  <button data-go="home" class="on"><span>🏠</span>홈</button>
+  <button data-go="full"><span>📋</span>실전</button>
+  <button data-go="rec"><span>📈</span>기록</button>
+  <button data-go="set"><span>⚙️</span>설정</button>
+</nav>
+
+<div id="run" role="dialog" aria-label="실전 진행 화면">
+  <div class="runtop">
+    <span class="pill" id="runMode">실전</span>
+    <span class="clock" id="runClock">--:--:--</span>
+  </div>
+  <div class="tl" id="runTl"></div>
+  <div class="ring">
+    <svg viewBox="0 0 120 120"><defs><linearGradient id="g"><stop offset="0" stop-color="#4f46e5"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs><circle cx="60" cy="60" r="54" fill="none" stroke="var(--line)" stroke-width="8"/>
+    <circle id="prog" cx="60" cy="60" r="54" fill="none" stroke="url(#g)" stroke-width="8" stroke-linecap="round" stroke-dasharray="339.3" stroke-dashoffset="339.3"/></svg>
+    <div class="c">
+      <div class="phase" id="runPhase">준비</div>
+      <div class="big" id="runLeft">00:00</div>
+      <div class="title" id="runTitle">국어</div>
+      <div class="mut" id="runRange"></div>
+    </div>
+  </div>
+  <div class="nextev" id="runNext"></div>
+  <div style="flex:1"></div>
+  <div class="row">
+    <button class="btn ghost" id="runSkip">다음 단계 ⏭</button>
+    <button class="btn bad" id="runStop">그만하기</button>
+  </div>
+</div>
+
+<dialog id="dlg">
+  <h2 id="dlgTitle">시험 종료</h2>
+  <p class="mut" id="dlgSub" style="margin-top:0"></p>
+  <div class="row"><input type="number" id="dScore" placeholder="점수 (선택)" inputmode="numeric"><select id="dFeel"><option value="">체감 난이도</option><option>쉬움</option><option>보통</option><option>어려움</option><option>매우 어려움</option></select></div>
+  <div style="height:8px"></div>
+  <textarea id="dMemo" rows="3" placeholder="메모 (시간 부족했던 부분, 실수 등)"></textarea>
+  <div style="height:12px"></div>
+  <div class="row"><button class="btn ghost" id="dSkip">건너뛰기</button><button class="btn" id="dSave">저장</button></div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+'use strict';
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const EXAM_DATE=new Date('2026-11-19T08:40:00+09:00');
+const T=(h,m)=>h*60+m;
+const SUBJ={
+  kor:{name:'국어',period:1,s:T(8,40),e:T(10,0),q:45,pts:100,emo:'📖'},
+  math:{name:'수학',period:2,s:T(10,30),e:T(12,10),q:30,pts:100,emo:'📐'},
+  eng:{name:'영어',period:3,s:T(13,10),e:T(14,20),q:45,pts:100,emo:'🎧',note:'듣기 25분 포함'},
+  his:{name:'한국사',period:4,s:T(14,50),e:T(15,20),q:20,pts:50,emo:'🏛️'},
+  tam1:{name:'탐구 1',period:4,s:T(15,35),e:T(16,5),q:20,pts:50,emo:'🔬'},
+  tam2:{name:'탐구 2',period:4,s:T(16,7),e:T(16,37),q:20,pts:50,emo:'🧪'},
+  lang:{name:'제2외국어/한문',period:5,s:T(17,5),e:T(17,45),q:30,pts:50,emo:'🈶'}
+};
+const ORDER=['kor','math','eng','his','tam1','tam2','lang'];
+const LS={get:(k,d)=>{try{const v=localStorage.getItem('sb_'+k);return v?JSON.parse(v):d}catch(e){return d}},set:(k,v)=>{try{localStorage.setItem('sb_'+k,JSON.stringify(v))}catch(e){}}};
+let settings=Object.assign({b10:true,b5:true,e10:true,e5:true,vib:true,wake:true,prep:5},LS.get('settings',{}));
+let pace=LS.get('pace',{kor:[{m:35,l:'독서 마무리'},{m:70,l:'문학 끝 · 마킹 시작'}],math:[{m:60,l:'공통과목 마무리'}]});
+let records=LS.get('records',[]);
+const pad=n=>String(n).padStart(2,'0');
+const esc=s=>String(s||'').replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
+const fmtMin=m=>pad(Math.floor(m/60))+':'+pad(m%60);
+const fmtLeft=ms=>{ms=Math.max(0,ms);const s=Math.ceil(ms/1000),h=Math.floor(s/3600),m=Math.floor(s%3600/60),x=s%60;return h?h+':'+pad(m)+':'+pad(x):pad(m)+':'+pad(x)};
+function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove('on'),3200)}
+
+function applyTheme(){const t=LS.get('theme','auto');if(t==='auto')document.documentElement.removeAttribute('data-theme');else document.documentElement.dataset.theme=t}
+$('#themeBtn').onclick=()=>{const o=['auto','dark','light'];const n=o[(o.indexOf(LS.get('theme','auto'))+1)%3];LS.set('theme',n);applyTheme();toast({auto:'테마: 시스템 설정 따라가기',dark:'테마: 다크',light:'테마: 라이트'}[n])};
+applyTheme();
+
+function go(v){$$('section.view').forEach(s=>s.classList.toggle('on',s.id==='v-'+v));$$('nav button').forEach(b=>b.classList.toggle('on',b.dataset.go===v));if(v==='rec')renderRec();if(v==='home')renderRecent();scrollTo(0,0)}
+$$('[data-go]').forEach(b=>b.onclick=()=>go(b.dataset.go));
+
+function renderDday(){
+  const now=new Date();const kst=new Date(now.getTime()+9*3600e3);
+  const today=Date.UTC(kst.getUTCFullYear(),kst.getUTCMonth(),kst.getUTCDate());
+  const d=Math.round((Date.UTC(2026,10,19)-today)/864e5);
+  $('#dday').textContent=d>0?'D-'+d:d===0?'D-DAY':'D+'+(-d);
+  const ms=EXAM_DATE-now;
+  if(ms>0){const s=Math.floor(ms/1000);$('#ddsub').textContent=`1교시 국어 시작까지 ${Math.floor(s/86400)}일 ${pad(Math.floor(s%86400/3600))}:${pad(Math.floor(s%3600/60))}:${pad(s%60)}`}
+  else $('#ddsub').textContent=d===0?'오늘이에요. 지금까지 한 만큼 충분해요. 화이팅!':'수고 많으셨어요. 성적 통지는 12월 11일(금)';
+}
+renderDday();setInterval(renderDday,1000);
+
+$('#quick').innerHTML=['kor','math','eng','his','tam1','lang'].map(k=>{const s=SUBJ[k];return `<button class="subj" data-q="${k}"><b>${s.emo} ${k==='tam1'?'탐구':s.name}</b><span>${s.period}교시 · ${s.e-s.s}분 · ${s.q}문항</span></button>`}).join('');
+$$('[data-q]').forEach(b=>b.onclick=()=>startSingle(b.dataset.q));
+
+let startMode='now';
+const descs={now:'지금 시각을 입실 완료 시각(08:10)으로 맞춰 시작해요. 30분 뒤 국어 본령이 울려요.',clock:'오늘 실제 시계 기준으로 08:40 국어 시작에 맞춰 진행해요. 주말 수능 리허설용이에요.'};
+$$('#startMode button').forEach(b=>b.onclick=()=>{startMode=b.dataset.v;$$('#startMode button').forEach(x=>x.classList.toggle('on',x===b));$('#startModeDesc').textContent=descs[startMode]});
+$('#startModeDesc').textContent=descs.now;
+function fullList(){return ORDER.filter(k=>!(k==='tam2'&&!$('#opt2tam').checked)&&!(k==='lang'&&!$('#optLang').checked))}
+function renderTT(){let h='<tr><td>입실 완료</td><td>~08:10</td></tr>';fullList().forEach(k=>{const s=SUBJ[k];h+=`<tr><td><b>${s.period}교시</b> ${s.name}${s.note?` <small class="k">· ${s.note}</small>`:''}</td><td>${fmtMin(s.s)}~${fmtMin(s.e)}</td></tr>`});$('#ttable').innerHTML=h}
+$('#opt2tam').onchange=$('#optLang').onchange=renderTT;renderTT();
+$('#fullBtn').onclick=()=>go('full');
+
+function buildSegments(ss){
+  const segs=[],base=ss.base,A=m=>base+m*60e3;
+  if(ss.mode==='single'){const k=ss.keys[0],s=SUBJ[k],dur=s.e-s.s,p=ss.prep||0;
+    if(p>0)segs.push({type:'prep',title:s.name,label:'시험 준비',s:base,e:base+p*60e3,k});
+    const st=base+p*60e3;segs.push({type:'exam',title:s.name,label:s.period+'교시 시험 중',s:st,e:st+dur*60e3,k});return segs}
+  let cur=T(8,10);
+  ss.keys.forEach((k,i)=>{const s=SUBJ[k];
+    if(s.s>cur){const lbl=i===0?'입실 · 시험 준비':k==='tam1'?'문·답지 회수·배부':k==='tam2'?'문제지 회수':(s.s-cur)>=50?'점심시간':'쉬는 시간';segs.push({type:'break',title:s.name,label:lbl,s:A(cur),e:A(s.s),k})}
+    segs.push({type:'exam',title:s.name,label:s.period+'교시 시험 중',s:A(s.s),e:A(s.e),k});cur=s.e});
+  return segs;
+}
+function buildEvents(segs){
+  const ev=[];
+  segs.forEach(g=>{if(g.type!=='exam')return;const n=g.title;
+    if(settings.b10)ev.push({t:g.s-10*60e3,msg:`${n} 준비령 · 시작 10분 전`,kind:'pre'});
+    if(settings.b5)ev.push({t:g.s-5*60e3,msg:`${n} 예비령 · 시작 5분 전`,kind:'pre'});
+    ev.push({t:g.s,msg:`${n} 본령 · 시험 시작!`,kind:'start'});
+    (pace[g.k]||[]).forEach(p=>{if(p.m>0&&p.m*60e3<g.e-g.s)ev.push({t:g.s+p.m*60e3,msg:`⏱ ${p.m}분 · ${p.l||'페이스 체크'}`,kind:'pace'})});
+    if(settings.e10)ev.push({t:g.e-10*60e3,msg:`${n} 종료 10분 전`,kind:'warn'});
+    if(settings.e5)ev.push({t:g.e-5*60e3,msg:`${n} 종료 5분 전`,kind:'warn'});
+    ev.push({t:g.e,msg:`${n} 종료령 · 펜을 놓으세요`,kind:'end',seg:g});
+  });
+  return ev.sort((a,b)=>a.t-b.t);
+}
+
+let actx;function ac(){try{if(!actx)actx=new (window.AudioContext||window.webkitAudioContext)();if(actx.state==='suspended')actx.resume()}catch(e){}return actx}
+function tone(f,t0,d,v=.25){const c=ac();if(!c)return;const o=c.createOscillator(),g=c.createGain(),o2=c.createOscillator(),g2=c.createGain();o.type='sine';o.frequency.value=f;o2.type='sine';o2.frequency.value=f*2.76;g2.gain.value=.08;o.connect(g);o2.connect(g2);g2.connect(g);g.connect(c.destination);const t=c.currentTime+t0;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.01);g.gain.exponentialRampToValueAtTime(.0005,t+d);o.start(t);o2.start(t);o.stop(t+d);o2.stop(t+d)}
+function bell(kind){try{
+  if(kind==='pace')tone(880,0,.5,.12);
+  else if(kind==='warn')[0,.35].forEach(x=>tone(988,x,.9,.2));
+  else if(kind==='pre')[659,523].forEach((f,i)=>tone(f,i*.6,1.6));
+  else{const seq=kind==='start'?[523,659,784,1047]:[1047,784,659,523];seq.forEach((f,i)=>{tone(f,i*.55,1.8);tone(f,2.6+i*.55,1.8)})}
+  }catch(e){}
+  if(settings.vib&&navigator.vibrate)navigator.vibrate(kind==='pace'?[120]:kind==='warn'?[200,100,200]:[400,150,400,150,400]);
+}
+$('#testBell').onclick=()=>{bell('start');toast('🔔 본령 소리예요. 무음 모드면 안 들릴 수 있어요')};
+
+let wl=null;async function wake(on){try{if(on&&settings.wake&&'wakeLock' in navigator){wl=await navigator.wakeLock.request('screen')}else if(!on&&wl){await wl.release();wl=null}}catch(e){}}
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&session)wake(true)});
+
+let session=LS.get('session',null),timer=null,segs=[],events=[],firedIdx=0,pendingEnd=[];
+function startSingle(k){ac();session={mode:'single',keys:[k],base:Date.now(),prep:settings.prep,created:Date.now()};LS.set('session',session);runSession()}
+$('#startFull').onclick=()=>{ac();const keys=fullList(),now=new Date();let base;
+  if(startMode==='now')base=now.getTime()-T(8,10)*60e3;
+  else{const d=new Date(now);d.setHours(0,0,0,0);base=d.getTime();if(now.getTime()>base+SUBJ[keys[keys.length-1]].e*60e3){toast('오늘 시간표는 이미 끝났어요. “지금 바로 시작”을 써 주세요');return}}
+  session={mode:'full',keys,base,sync:startMode,created:Date.now()};LS.set('session',session);runSession()};
+function rebuild(){segs=buildSegments(session);events=buildEvents(segs);if(session.mode==='single'&&session.prep>0)events.unshift({t:segs[0].s,msg:'준비 시작 · 책상 정리하고 문제지 대기',kind:'none'})}
+function runSession(){
+  rebuild();const now=Date.now();firedIdx=events.findIndex(e=>e.t>now-1500);if(firedIdx<0)firedIdx=events.length;
+  $('#runMode').textContent=session.mode==='single'?'단일 교시':session.sync==='clock'?'실제 시각 동기화':'하루 전체 실전';
+  $('#runTl').innerHTML=segs.map(g=>`<div style="flex:${(g.e-g.s)/60e3}"></div>`).join('');
+  $('#run').classList.add('on');wake(true);clearInterval(timer);timer=setInterval(tick,250);tick();
+}
+function tick(){
+  if(!session)return;
+  const now=Date.now(),d=new Date(now);$('#runClock').textContent=`${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`;
+  let last=null;
+  while(firedIdx<events.length&&events[firedIdx].t<=now){const e=events[firedIdx++];if(now-e.t<5000)last=e;if(e.kind==='end')pendingEnd.push(e.seg)}
+  if(last){if(last.kind!=='none')bell(last.kind);toast(last.msg);const r=$('#run');r.classList.remove('flash');void r.offsetWidth;r.classList.add('flash')}
+  if(pendingEnd.length&&!$('#dlg').open)openDlg(pendingEnd.shift());
+  const i=segs.findIndex(g=>now<g.e);
+  $$('#runTl div').forEach((x,j)=>{x.className=(i<0||j<i)?'done':j===i?'cur':''});
+  if(i<0){$('#runPhase').textContent='모든 시험 종료';$('#runLeft').textContent='수고했어요';$('#runTitle').textContent='🎉';$('#runRange').textContent='';$('#runNext').textContent='';$('#prog').style.strokeDashoffset=0;if(!$('#dlg').open&&!pendingEnd.length)finishSession();return}
+  const g=segs[i],left=g.e-now,total=g.e-g.s;
+  $('#runPhase').textContent=g.label;$('#runPhase').style.color=g.type==='exam'?'var(--acc)':'var(--ok)';
+  $('#runLeft').textContent=fmtLeft(left);
+  $('#runTitle').textContent=g.type==='exam'?`${SUBJ[g.k].emo} ${g.title}`:`다음: ${g.title}`;
+  const vt=ms=>fmtMin(Math.round((ms-session.base)/60e3));
+  $('#runRange').textContent=session.mode==='single'?(g.type==='exam'?`${total/60e3}분 · ${SUBJ[g.k].q}문항`:'곧 시험이 시작돼요'):`${vt(g.s)} ~ ${vt(g.e)}${session.sync==='now'?' (수능 시각 기준)':''}`;
+  $('#prog').style.strokeDashoffset=339.3*(1-Math.max(0,Math.min(1,left/total)));
+  const nx=events[firedIdx];$('#runNext').textContent=nx?`다음: ${nx.msg.split(' · ')[0].replace('⏱ ','')} · ${fmtLeft(nx.t-now)} 후`:'';
+  document.title=`${fmtLeft(left)} · ${g.title} | 실전벨`;
+}
+function endSession(){clearInterval(timer);session=null;LS.set('session',null);wake(false);document.title='실전벨 — 수능 실전 시뮬레이터'}
+function finishSession(){endSession();setTimeout(()=>{$('#run').classList.remove('on');renderRecent()},2500)}
+$('#runStop').onclick=()=>{if(confirm('실전을 그만할까요? 진행 중인 교시는 기록되지 않아요.')){pendingEnd=[];endSession();$('#run').classList.remove('on');renderRecent()}};
+$('#runSkip').onclick=()=>{
+  if(session.mode==='full'&&session.sync==='clock'){toast('실제 시각 동기화 모드에선 건너뛸 수 없어요');return}
+  const now=Date.now(),i=segs.findIndex(g=>now<g.e);if(i<0)return;const g=segs[i];
+  if(g.type==='exam'&&!confirm('이 교시를 지금 종료할까요?'))return;
+  session.base-=(g.e-now)+50;LS.set('session',session);rebuild();
+  const n2=Date.now();firedIdx=events.findIndex(e=>e.t>n2-1200);if(firedIdx<0)firedIdx=events.length;tick()};
+
+let dlgSeg=null;
+function openDlg(seg){dlgSeg=seg;const s=SUBJ[seg.k];$('#dlgTitle').textContent=`${s.emo} ${s.name} 시험 종료`;$('#dlgSub').textContent=`${s.pts}점 만점 · 채점 후 점수를 남기면 추이 그래프로 볼 수 있어요.`;$('#dScore').value='';$('#dFeel').value='';$('#dMemo').value='';$('#dScore').max=s.pts;try{$('#dlg').showModal()}catch(e){}}
+function closeDlg(save){if(save&&dlgSeg){const sc=$('#dScore').value;records.unshift({id:Date.now(),k:dlgSeg.k,date:new Date().toISOString(),score:sc===''?null:Math.max(0,Math.min(+sc,SUBJ[dlgSeg.k].pts)),feel:$('#dFeel').value,memo:$('#dMemo').value.trim()});LS.set('records',records);toast('기록 저장 완료 ✅')}$('#dlg').close();dlgSeg=null;renderRecent()}
+$('#dSave').onclick=()=>closeDlg(true);$('#dSkip').onclick=()=>closeDlg(false);
+
+const fmtDate=iso=>{const d=new Date(iso);return `${d.getMonth()+1}/${d.getDate()} ${pad(d.getHours())}:${pad(d.getMinutes())}`};
+function recRow(r){const s=SUBJ[r.k];return `<div class="hist"><div><b>${s.emo} ${s.name}</b><div class="mut">${fmtDate(r.date)}${r.feel?' · '+esc(r.feel):''}${r.memo?' · '+esc(r.memo):''}</div></div><div class="score">${r.score==null?'—':r.score}<small class="k">/${s.pts}</small></div></div>`}
+function renderRecent(){$('#recent').innerHTML=records.length?records.slice(0,3).map(recRow).join(''):'<div class="empty">아직 기록이 없어요.<br>위에서 과목을 골라 첫 실전을 시작해 보세요!</div>'}
+let recK='kor';
+function renderRec(){
+  $('#recFilter').innerHTML=ORDER.map(k=>`<button data-rk="${k}" class="${k===recK?'on':''}">${SUBJ[k].name}</button>`).join('');
+  $$('[data-rk]').forEach(b=>b.onclick=()=>{recK=b.dataset.rk;renderRec()});
+  const pts=records.filter(r=>r.k===recK&&r.score!=null).reverse(),max=SUBJ[recK].pts;
+  if(pts.length<2){$('#spark').innerHTML='';$('#sparkInfo').textContent=pts.length?`최근 ${pts[0].score}점 · 기록이 2개 이상이면 그래프가 그려져요`:'점수가 기록된 시험이 아직 없어요'}
+  else{const vs=pts.map(p=>p.score),lo=Math.max(0,Math.min(...vs)-max*.1),hi=Math.min(max,Math.max(...vs)+max*.05),rg=Math.max(hi-lo,1);const xs=i=>i/(pts.length-1)*296+2,ys=v=>56-(v-lo)/rg*50;const d=pts.map((p,i)=>`${i?'L':'M'}${xs(i).toFixed(1)},${ys(p.score).toFixed(1)}`).join(' ');
+    $('#spark').innerHTML=`<path d="${d} L298,60 L2,60Z" fill="var(--acc)" opacity=".12"/><path d="${d}" fill="none" stroke="var(--acc)" stroke-width="2.5" vector-effect="non-scaling-stroke"/>`;
+    const avg=pts.reduce((a,p)=>a+p.score,0)/pts.length,best=Math.max(...pts.map(p=>p.score));$('#sparkInfo').textContent=`${pts.length}회 · 평균 ${avg.toFixed(1)}점 · 최고 ${best}점 · 최근 ${pts[pts.length-1].score}점`}
+  $('#allrec').innerHTML=records.length?records.map(recRow).join(''):'<div class="empty">기록이 없어요</div>';
+}
+
+$$('[data-s]').forEach(c=>{c.checked=!!settings[c.dataset.s];c.onchange=()=>{settings[c.dataset.s]=c.checked;LS.set('settings',settings)}});
+$$('#prepSeg button').forEach(b=>{b.classList.toggle('on',+b.dataset.v===settings.prep);b.onclick=()=>{settings.prep=+b.dataset.v;LS.set('settings',settings);$$('#prepSeg button').forEach(x=>x.classList.toggle('on',x===b))}});
+$('#paceSubj').innerHTML=ORDER.map(k=>`<option value="${k}">${SUBJ[k].name} (${SUBJ[k].e-SUBJ[k].s}분)</option>`).join('');
+function renderPace(){const k=$('#paceSubj').value,list=(pace[k]||[]).slice().sort((a,b)=>a.m-b.m);
+  $('#paceList').innerHTML=list.length?list.map(p=>`<div class="hist"><div><b>${p.m}분</b> <span class="mut">${esc(p.l)}</span></div><button class="iconbtn" data-pd="${p.m}" aria-label="삭제">✕</button></div>`).join(''):'<div class="empty" style="padding:12px">체크포인트 없음</div>';
+  $$('[data-pd]').forEach(b=>b.onclick=()=>{pace[k]=(pace[k]||[]).filter(p=>p.m!=b.dataset.pd);LS.set('pace',pace);renderPace()})}
+$('#paceSubj').onchange=renderPace;
+$('#paceAdd').onclick=()=>{const k=$('#paceSubj').value,m=parseInt($('#paceMin').value,10),dur=SUBJ[k].e-SUBJ[k].s;if(!(m>0&&m<dur)){toast(`1~${dur-1}분 사이로 입력해 주세요`);return}pace[k]=(pace[k]||[]).filter(p=>p.m!==m).concat({m,l:$('#paceLbl').value.trim()});LS.set('pace',pace);$('#paceMin').value='';$('#paceLbl').value='';renderPace();toast('체크포인트 추가됨')};
+renderPace();
+$('#resetAll').onclick=()=>{if(confirm('모든 시험 기록을 삭제할까요? 되돌릴 수 없어요.')){records=[];LS.set('records',records);renderRecent();toast('기록을 삭제했어요')}};
+
+let deferred=null;addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferred=e;$('#installCard').style.display='block'});
+$('#installBtn').onclick=async()=>{if(!deferred)return;deferred.prompt();await deferred.userChoice;deferred=null;$('#installCard').style.display='none'};
+
+renderRecent();
+if(session){if(Date.now()-session.created>16*3600e3){session=null;LS.set('session',null)}else{runSession();toast('진행 중이던 실전을 이어서 진행해요')}}
+if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+</script>
+</body>
+</html>
