@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>서명전에 — 테이블오더·키오스크 렌탈 위약금·총비용 계산기</title>
+<meta name="description" content="테이블오더·키오스크·POS·서빙로봇 렌탈 견적을 넣으면 약정 기간 총비용, 숨은 PG 수수료, 해지 시점별 위약금을 바로 계산하고 업체끼리 비교해 드려요. 로그인 없이 무료, 입력 내용은 내 기기에만 저장돼요.">
+<meta name="keywords" content="테이블오더 위약금, 키오스크 렌탈 비용, 서빙로봇 해지 비용, POS 렌탈 계약, PG 수수료 계산, 렌탈 위약금 계산기, 소상공인">
+<meta name="theme-color" content="#14284B">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://347744strings-spec.github.io/webapp-daily/2026-10-24-before-you-sign/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="서명전에">
+<meta property="og:title" content="서명전에 — 렌탈 계약, 도장 찍기 전에 3분 계산">
+<meta property="og:description" content="견적서 숫자 몇 개로 약정 총비용, 숨은 PG 수수료, 해지 시점별 위약금을 바로 보여드려요. 중립 계산기 · 무료 · 로그인 없음">
+<meta property="og:url" content="https://347744strings-spec.github.io/webapp-daily/2026-10-24-before-you-sign/">
+<meta property="og:image" content="https://347744strings-spec.github.io/webapp-daily/2026-10-24-before-you-sign/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="서명전에 — 테이블오더 렌탈 총비용과 해지 위약금 계산 화면">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="서명전에 — 렌탈 계약, 도장 찍기 전에 3분 계산">
+<meta name="twitter:description" content="약정 총비용 · 숨은 PG 수수료 · 해지 시점별 위약금을 바로 계산">
+<meta name="twitter:image" content="https://347744strings-spec.github.io/webapp-daily/2026-10-24-before-you-sign/og-image.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="서명전에">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"서명전에 (Before You Sign)","url":"https://347744strings-spec.github.io/webapp-daily/2026-10-24-before-you-sign/","applicationCategory":"BusinessApplication","operatingSystem":"Any","inLanguage":"ko","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"description":"테이블오더·키오스크·POS·서빙로봇 렌탈 계약의 약정 총비용, PG 수수료, 중도해지 위약금을 계산하고 견적을 비교하는 중립 계산기"}
+</script>
+</head>
+<body>
+<a class="skip" href="#view">본문 바로가기</a>
+<div id="app">
+  <main id="view" tabindex="-1" aria-live="off">
+    <noscript><div class="card" style="margin:24px 0"><h1>서명전에</h1><p>이 계산기는 자바스크립트가 필요해요. 브라우저 설정에서 자바스크립트를 켜 주세요.</p></div></noscript>
+  </main>
+</div>
+
+<div class="disclaimer-strip no-print" role="note">
+  <span>ⓘ 참고용 계산이며 법률 자문이 아니에요.</span> <a href="#/help" data-help-anchor="disclaimer">자세히</a>
+</div>
+<nav class="tabbar no-print" aria-label="주요 메뉴">
+  <a class="tab" href="#/" data-tab="quote"><span class="ti" aria-hidden="true">🧾</span><span>견적</span></a>
+  <a class="tab" href="#/compare" data-tab="compare"><span class="ti" aria-hidden="true">⚖️</span><span>비교</span><b class="tcount" id="cmpCount" hidden></b></a>
+  <a class="tab" href="#/help" data-tab="help"><span class="ti" aria-hidden="true">❓</span><span>도움</span></a>
+</nav>
+
+<div id="sheet-root"></div>
+<div id="modal-root"></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="rules.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

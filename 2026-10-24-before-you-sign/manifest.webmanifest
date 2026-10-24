@@ -1,0 +1,2 @@
+{"name":"서명전에 — 렌탈 위약금·총비용 계산기","short_name":"서명전에","description":"테이블오더·키오스크·POS·서빙로봇 렌탈 견적의 약정 총비용, PG 수수료, 해지 위약금을 계산하고 비교해요.","lang":"ko","start_url":"./","scope":"./","display":"standalone","orientation":"portrait","background_color":"#F4F6FA","theme_color":"#14284B",
+"icons":[{"src":"icon-192.png","sizes":"192x192","type":"image/png"},{"src":"icon-512.png","sizes":"512x512","type":"image/png"},{"src":"icon-512.png","sizes":"512x512","type":"image/png","purpose":"maskable"},{"src":"icon.svg","sizes":"any","type":"image/svg+xml"}]}
