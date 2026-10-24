@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#F7F8F5">
+<meta name="description" content="사고 싶을 때, 일단 담고 하루만 참아봐요. 참아낸 돈은 가상 저금통에 쌓여요. 로그인 없는 충동구매 쿨다운 장바구니.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="참았지">
+<meta property="og:title" content="참았지 — 충동구매 쿨다운 저금통">
+<meta property="og:description" content="사고 싶을 때, 일단 담고 하루만 참아봐요. 참은 돈은 저금통에 🐷">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="style.css">
+<title>참았지 — 충동구매 쿨다운 저금통</title>
+</head>
+<body>
+<div id="app">
+  <main id="view" tabindex="-1"></main>
+</div>
+
+<nav class="tabbar" aria-label="주요 메뉴">
+  <a class="tab" href="#/home" data-tab="home"><span class="ti" aria-hidden="true">🏠</span><span>홈</span></a>
+  <a class="tab" href="#/cooldown" data-tab="cooldown"><span class="ti" aria-hidden="true">⏳<b class="tbadge" id="readyBadge" hidden></b></span><span>쿨다운</span></a>
+  <div class="tab-plus-wrap"><a class="tab-plus" href="#/add" data-action="open-add" aria-label="사고 싶은 물건 담기">＋</a></div>
+  <a class="tab" href="#/record" data-tab="record"><span class="ti" aria-hidden="true">📅</span><span>기록</span></a>
+  <a class="tab" href="#/settings" data-tab="settings"><span class="ti" aria-hidden="true">⚙️</span><span>설정</span></a>
+</nav>
+
+<div id="sheet-root"></div>
+<div id="overlay-root"></div>
+<div id="modal-root"></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<noscript><p style="padding:24px;text-align:center">참았지는 자바스크립트가 필요해요 🙂</p></noscript>
+<script src="app.js"></script>
+</body>
+</html>

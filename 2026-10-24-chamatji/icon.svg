@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#22C59A"/>
+  <circle cx="420" cy="92" r="120" fill="#fff" opacity=".08"/>
+  <!-- coin -->
+  <circle cx="300" cy="118" r="46" fill="#FFC94D" stroke="#E0A400" stroke-width="8"/>
+  <text x="300" y="138" font-family="Arial,Helvetica,sans-serif" font-size="56" font-weight="700" fill="#B98200" text-anchor="middle">₩</text>
+  <!-- legs -->
+  <rect x="160" y="350" width="46" height="70" rx="18" fill="#F79AAE"/>
+  <rect x="300" y="350" width="46" height="70" rx="18" fill="#F79AAE"/>
+  <!-- ears -->
+  <path d="M150 210 L170 140 L228 186 Z" fill="#F79AAE"/>
+  <!-- body -->
+  <ellipse cx="256" cy="290" rx="150" ry="118" fill="#FFB3C1"/>
+  <!-- tail -->
+  <path d="M404 280 q34 -10 22 22 q-12 22 -26 0" fill="none" stroke="#F79AAE" stroke-width="10" stroke-linecap="round"/>
+  <!-- slot -->
+  <rect x="226" y="186" width="70" height="14" rx="7" fill="#D97A90"/>
+  <!-- snout -->
+  <ellipse cx="128" cy="292" rx="42" ry="34" fill="#F79AAE"/>
+  <ellipse cx="114" cy="292" rx="7" ry="11" fill="#C25F78"/>
+  <ellipse cx="142" cy="292" rx="7" ry="11" fill="#C25F78"/>
+  <!-- eye + cheek -->
+  <circle cx="196" cy="252" r="12" fill="#1F2A24"/>
+  <circle cx="200" cy="248" r="4" fill="#fff"/>
+  <ellipse cx="214" cy="300" rx="20" ry="11" fill="#FF8FA8" opacity=".6"/>
+</svg>
