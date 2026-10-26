@@ -1,0 +1,18 @@
+{
+  "name": "지연보상내비 — 비행기 지연·결항 보상 판정",
+  "short_name": "지연보상내비",
+  "description": "비행기 지연·결항·초과판매 때 한국 기준과 EU261 중 어떤 기준인지, 예상 배상액과 지금 할 일, 청구서와 14일 회신 기한까지 3분 안에.",
+  "lang": "ko",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F5F7FA",
+  "theme_color": "#1B2A4A",
+  "categories": ["travel", "utilities", "productivity"],
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"},
+    {"src": "icon.svg", "sizes": "any", "type": "image/svg+xml"}
+  ]
+}

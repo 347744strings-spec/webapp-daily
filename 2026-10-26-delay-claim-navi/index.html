@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>지연보상내비 — 비행기 지연·결항 보상 3분 판정과 청구서</title>
+<meta name="description" content="비행기가 늦게 도착했거나 결항·초과판매로 못 탔다면 노선·지연 시간·운임만 넣고 한국 소비자분쟁해결기준과 EU261 중 어떤 기준인지, 예상 배상액과 지금 할 일을 확인하세요. 한국어·영어 청구서, 14일 회신 기한, 1372 안내까지. 무료, 로그인 없음.">
+<meta name="keywords" content="비행기 지연 보상, 항공기 지연 배상, 결항 보상, 초과판매 보상, EU261 한국어, 소비자분쟁해결기준 항공, 국내선 지연 보상, 1372">
+<meta name="theme-color" content="#1B2A4A">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://347744strings-spec.github.io/webapp-daily/2026-10-26-delay-claim-navi/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="지연보상내비">
+<meta property="og:title" content="지연보상내비 — 비행기 지연·결항 보상, 3분 판정">
+<meta property="og:description" content="한국 기준·EU261 자동 판정, 예상 배상액과 신호등, 바로 보내는 청구서, 14일 회신 기한까지. 무료 · 로그인 없음 · 기록은 내 기기에만">
+<meta property="og:url" content="https://347744strings-spec.github.io/webapp-daily/2026-10-26-delay-claim-navi/">
+<meta property="og:image" content="https://347744strings-spec.github.io/webapp-daily/2026-10-26-delay-claim-navi/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="지연보상내비 — 비행기 지연·결항 보상 판정 화면">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="지연보상내비 — 비행기 지연·결항 보상, 3분 판정">
+<meta name="twitter:description" content="예상 배상액 · 신호등 · 한국어/영어 청구서 · 14일 기한 추적">
+<meta name="twitter:image" content="https://347744strings-spec.github.io/webapp-daily/2026-10-26-delay-claim-navi/og-image.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="지연보상내비">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"지연보상내비 (Delay Claim Navi)","url":"https://347744strings-spec.github.io/webapp-daily/2026-10-26-delay-claim-navi/","applicationCategory":"TravelApplication","operatingSystem":"Any","inLanguage":"ko","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"description":"항공편 지연·결항·초과판매 시 한국 소비자분쟁해결기준과 EU261 적용 여부와 예상 배상액을 판정하고 청구서와 14일 회신 기한 추적을 제공하는 무료 웹앱(참고용)"}
+</script>
+</head>
+<body>
+<a class="skip" href="#view">본문 바로가기</a>
+<div id="app">
+  <main id="view" tabindex="-1"></main>
+</div>
+<nav class="tabbar no-print" id="tabbar" aria-label="주요 메뉴"><div class="in">
+  <a href="#/" data-tab="home"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>판정</a>
+  <a href="#/airport" data-tab="airport"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>공항에서</a>
+  <a href="#/box" data-tab="box"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 7l9-4 9 4v10l-9 4-9-4z M3 7l9 4 9-4M12 11v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>청구함</a>
+  <a href="#/info" data-tab="info"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 11v6M12 7.5v.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>정보</a>
+</div></nav>
+<div id="modal-root"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<noscript><p style="padding:20px;font-size:18px">지연보상내비는 자바스크립트가 필요해요. 브라우저 설정에서 자바스크립트를 켜 주세요.</p></noscript>
+<script src="airports.js"></script>
+<script src="rules.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
