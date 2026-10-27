@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>한파TBM 5분 — 오늘 한파 단계·체크리스트·서명·TBM 일지</title>
+<meta name="description" content="현장 위치만 고르면 06~18시 최저기온과 기상청 공식 체감온도로 고용노동부 한파 단계(0℃·영하 6·12·15℃)를 판정하고, 단계별 조치 체크리스트, 중국어·베트남어·영어 그림 카드, 참석자 서명, TBM 일지 PDF까지 5분에 끝내요. 무료·로그인 없음·기록은 내 기기에만.">
+<meta name="keywords" content="한파 TBM, 한파 작업중지 기준, 한랭질환 예방, 체감온도 계산, 한파 체크리스트, 건설현장 한파, 환경미화 한파, TBM 일지, 외국인 근로자 한파 안전">
+<meta name="theme-color" content="#14213D">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://347744strings-spec.github.io/webapp-daily/2026-10-27-hanpa-tbm/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="한파TBM 5분">
+<meta property="og:title" content="한파TBM 5분 — 오늘 한파 단계부터 TBM 일지까지">
+<meta property="og:description" content="06~18시 최저기온·체감온도 → 고용노동부 한파 단계 → 조치 체크리스트 → 4개 언어 카드 → 서명 → 일지 PDF. 무료 · 로그인 없음">
+<meta property="og:url" content="https://347744strings-spec.github.io/webapp-daily/2026-10-27-hanpa-tbm/">
+<meta property="og:image" content="https://347744strings-spec.github.io/webapp-daily/2026-10-27-hanpa-tbm/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="한파TBM 5분 — 한파 단계 판정과 TBM 일지 화면">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="한파TBM 5분 — 오늘 한파 단계부터 TBM 일지까지">
+<meta name="twitter:description" content="고용노동부 한파 단계 · 기상청 체감온도 · 4개 언어 카드 · 서명 · 일지 PDF">
+<meta name="twitter:image" content="https://347744strings-spec.github.io/webapp-daily/2026-10-27-hanpa-tbm/og-image.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="한파TBM">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="preconnect" href="https://api.open-meteo.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"한파TBM 5분 (Cold-wave TBM in 5 minutes)","url":"https://347744strings-spec.github.io/webapp-daily/2026-10-27-hanpa-tbm/","applicationCategory":"BusinessApplication","operatingSystem":"Any","inLanguage":["ko","zh","vi","en"],"offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"description":"옥외 현장의 아침 TBM용: 06~18시 최저기온·기상청 체감온도로 고용노동부 한파 예방 단계를 판정하고 조치 체크리스트, 다국어 그림 카드, 서명, TBM 일지를 만드는 무료 웹앱(참고용, 법적 의무 이행을 대체하지 않음)"}
+</script>
+</head>
+<body>
+<a class="skip" href="#view">본문 바로가기</a>
+<div class="notice no-print" role="note"><span>⚠ <b>기상청 공식 특보 아님</b></span><a href="https://www.weather.go.kr/w/special-report/overall.do" target="_blank" rel="noopener">특보는 날씨누리<span class="sr">에서 확인 (새 창)</span> ↗</a></div>
+<div id="app">
+  <main id="view" tabindex="-1"></main>
+</div>
+<nav class="tabbar no-print" id="tabbar" aria-label="주요 메뉴"><div class="in">
+  <a href="#/dash" data-tab="dash"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v11M9 6l3-3 3 3M8 14a4 4 0 1 0 8 0" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 20h14" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>오늘</a>
+  <a href="#/cards" data-tab="cards"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 8h8M8 12h8M8 16h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>작업자 카드</a>
+  <a href="#/history" data-tab="history"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16v15H4zM4 9h16M9 3v4M15 3v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>일지 기록</a>
+  <a href="#/basis" data-tab="basis"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 11v6M12 7.5v.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>근거</a>
+</div></nav>
+<div id="modal-root"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<noscript><p style="padding:20px;font-size:18px">한파TBM 5분은 자바스크립트가 필요해요. 브라우저 설정에서 자바스크립트를 켜 주세요.</p></noscript>
+<script src="rules.js"></script>
+<script src="qrcode.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

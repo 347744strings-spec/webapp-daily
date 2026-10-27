@@ -1,0 +1,43 @@
+{
+ "lang": "vi",
+ "name": "Tiếng Việt",
+ "reviewed": false,
+ "title": "Thẻ an toàn khi trời rét",
+ "rules": [
+  {
+   "icon": "clothes",
+   "h": "Mặc ấm",
+   "t": "Đội mũ chống rét, đeo găng tay, đi giày giữ ấm chống nước. Mang thêm tất dự phòng."
+  },
+  {
+   "icon": "shelter",
+   "h": "Nơi nghỉ ấm",
+   "t": "Khi thấy lạnh, hãy nghỉ ở nơi nghỉ ấm gần đó. Khi có cảnh báo rét, nghỉ thường xuyên hơn."
+  },
+  {
+   "icon": "cup",
+   "h": "Nước ấm",
+   "t": "Uống nước ấm sạch thường xuyên."
+  },
+  {
+   "icon": "clock",
+   "h": "Điều chỉnh giờ làm",
+   "t": "Giảm hoặc dời công việc vào sáng sớm lạnh nhất. Làm theo hướng dẫn của quản lý."
+  },
+  {
+   "icon": "phone",
+   "h": "Gọi 119",
+   "t": "Nếu có người ngã quỵ hoặc lơ mơ, gọi ngay 119."
+  }
+ ],
+ "symptomsTitle": "Có các dấu hiệu này hãy nghỉ ngay và báo cho quản lý",
+ "symptoms": [
+  "Run mạnh, nói líu lưỡi, buồn ngủ hoặc lú lẫn (nghi hạ thân nhiệt)",
+  "Ngón tay, ngón chân, tai, mũi trắng hoặc vàng xám và mất cảm giác (nghi tê cóng)",
+  "Da đỏ, sưng và ngứa (nghi cước)"
+ ],
+ "rightTitle": "Bạn có quyền dừng việc",
+ "right": "Khi có dấu hiệu cảnh báo, bạn có thể tự dừng làm việc và nghỉ, không phụ thuộc giờ nghỉ quy định. Theo hướng dẫn của Bộ Lao động Hàn Quốc, bạn không bị kỷ luật hay phạt vì việc này. Hãy báo ngay cho quản lý.",
+ "call": "Cấp cứu 119",
+ "badge": "Chưa được người bản ngữ kiểm tra · 번역 검수 필요"
+}

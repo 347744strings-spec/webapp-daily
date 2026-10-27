@@ -1,0 +1,43 @@
+{
+ "lang": "en",
+ "name": "English",
+ "reviewed": false,
+ "title": "Cold weather safety card",
+ "rules": [
+  {
+   "icon": "clothes",
+   "h": "Warm clothes",
+   "t": "Wear a winter hat, gloves and warm waterproof shoes. Bring spare socks."
+  },
+  {
+   "icon": "shelter",
+   "h": "Warm shelter",
+   "t": "When cold, rest in the nearby warm shelter. During cold-wave alerts, rest more often."
+  },
+  {
+   "icon": "cup",
+   "h": "Warm water",
+   "t": "Drink clean, warm water often."
+  },
+  {
+   "icon": "clock",
+   "h": "Adjusted hours",
+   "t": "Work in the coldest early-morning hours is reduced or moved. Follow your supervisor."
+  },
+  {
+   "icon": "phone",
+   "h": "Call 119",
+   "t": "If someone collapses or becomes confused, call 119 right away."
+  }
+ ],
+ "symptomsTitle": "If you notice these signs, stop, rest and tell someone",
+ "symptoms": [
+  "Strong shivering, slurred speech, drowsiness or confusion (possible hypothermia)",
+  "Fingers, toes, ears or nose turn white or grey-yellow and feel numb (possible frostbite)",
+  "Red, swollen, itchy skin (possible chilblains)"
+ ],
+ "rightTitle": "You may stop working",
+ "right": "If you have warning signs, you may stop work and rest on your own, regardless of scheduled breaks. Korea's Ministry of Employment and Labor guidance says you must not be disciplined or penalised for this. Tell your supervisor right away.",
+ "call": "Emergency 119",
+ "badge": "Not yet reviewed by a native speaker · 번역 검수 필요"
+}
