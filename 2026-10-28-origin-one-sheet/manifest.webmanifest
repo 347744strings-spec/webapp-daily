@@ -1,0 +1,18 @@
+{
+  "name": "원산지 한 장 — 음식점 원산지 표시판·셀프 체크",
+  "short_name": "원산지 한 장",
+  "description": "메뉴만 고르면 표시 대상 판정, A3 원산지 표시판(60pt), 메뉴판·배달앱·포장 문구, 셀프 점검 신호등, 영수증 6개월 장부까지.",
+  "lang": "ko",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FAF7F0",
+  "theme_color": "#1F6F4A",
+  "categories": ["business", "productivity", "food"],
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"},
+    {"src": "icon.svg", "sizes": "any", "type": "image/svg+xml"}
+  ]
+}

@@ -130,9 +130,12 @@ function render(soft) {
   var hd = $('h1', view) || $('h2', view);
   if (render.navigated && !soft) { if (hd) { hd.setAttribute('tabindex', '-1'); hd.focus({ preventScroll: true }); } window.scrollTo(0, 0); }
   render.navigated = true;
-  document.title = (hd ? hd.textContent.trim() + ' — ' : '') + '한파TBM 5분';
+  document.title = pageTitle(hd ? hd.textContent : '');
 }
 render.navigated = false;
+/* 화면 제목이 앱 이름과 같거나 비어 있으면 접미사를 붙이지 않음 ('한파TBM 5분 — 한파TBM 5분' 중복 방지) */
+function pageTitle(h) { var APPN = '한파TBM 5분', t = String(h || '').replace(/\s+/g, ' ').trim(); return !t || t === APPN ? APPN : t + ' — ' + APPN; }
+window.__pageTitle = pageTitle;
 /* ---------- S1 현장 설정 + 첫 방문 안내 ---------- */
 routes.setup = function (view) {
   var ss = sites(), first = !ss.length;

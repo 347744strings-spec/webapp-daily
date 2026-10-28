@@ -1,4 +1,4 @@
-const C='hanpa-tbm-v1';
+const C='hanpa-tbm-v2';
 const A=['./','index.html','styles.css','rules.js','rules.json','cards.ko.json','cards.zh.json','cards.vi.json','cards.en.json','qrcode.js','app.js','manifest.webmanifest','icon.svg','icon-192.png','icon-512.png','favicon-32.png'];
 const API=['api.open-meteo.com','geocoding-api.open-meteo.com'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(C).then(c=>c.addAll(A)).then(()=>self.skipWaiting()))});

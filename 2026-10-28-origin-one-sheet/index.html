@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>원산지 한 장 — 음식점 원산지 표시 셀프 체크 · A3 원산지 표시판 만들기</title>
+<meta name="description" content="메뉴만 고르면 표시 대상 29품목과 예외(떡볶이 쌀떡·열무김치·황태)를 가려 주고, 한우·육우·젖소, 배추김치 배추·고춧가루, 섞음 문구까지 맞춰 A3 원산지 표시판(60pt)·메뉴판·배달앱·포장 문구를 만들어요. 영수증 6개월 보관 장부와 셀프 점검 신호등까지. 무료·로그인 없음.">
+<meta name="keywords" content="원산지 표시판, 음식점 원산지 표시, 원산지 표시판 양식, A3 원산지 표시판, 배달앱 원산지 표시, 배추김치 원산지, 한우 육우 젖소 표시, 원산지 과태료, 원산지 영수증 보관 6개월">
+<meta name="theme-color" content="#1F6F4A">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://347744strings-spec.github.io/webapp-daily/2026-10-28-origin-one-sheet/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="원산지 한 장">
+<meta property="og:title" content="원산지 한 장 — 원산지 표시, 종이 한 장으로 끝">
+<meta property="og:description" content="메뉴 고르고 재료 원산지만 고르면 A3 원산지 표시판·메뉴판·배달앱 문구 완성. 셀프 점검 신호등·영수증 6개월 장부. 무료 · 로그인 없음">
+<meta property="og:url" content="https://347744strings-spec.github.io/webapp-daily/2026-10-28-origin-one-sheet/">
+<meta property="og:image" content="https://347744strings-spec.github.io/webapp-daily/2026-10-28-origin-one-sheet/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="원산지 한 장 — A3 원산지 표시판 미리보기와 셀프 점검 신호등">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="원산지 한 장 — 원산지 표시, 종이 한 장으로 끝">
+<meta name="twitter:description" content="표시 대상 판정 · A3 표시판(60pt) · 배달앱 문구 · 셀프 점검 · 영수증 6개월 장부">
+<meta name="twitter:image" content="https://347744strings-spec.github.io/webapp-daily/2026-10-28-origin-one-sheet/og-image.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="원산지 한 장">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"원산지 한 장","url":"https://347744strings-spec.github.io/webapp-daily/2026-10-28-origin-one-sheet/","applicationCategory":"BusinessApplication","operatingSystem":"Any","inLanguage":"ko","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"description":"음식점·급식소용 원산지 표시 셀프 체크와 A3 원산지 표시판(29×42cm, 60pt) 생성기. 배달앱·포장·냉장고 문구, 셀프 점검 신호등, 영수증 6개월 보관 장부(참고용, 최종 판단은 농관원 1588-8112·관할 기관)."}
+</script>
+</head>
+<body>
+<a class="skip" href="#view">본문 바로가기</a>
+<div class="notice no-print" role="note"><span>ⓘ 참고용 · 최종 판단은 관할 기관</span><a href="tel:15888112">농관원 ☎ 1588-8112</a></div>
+<header class="top no-print"><div class="in"><a class="brand" href="#/"><img src="icon.svg" alt="" width="28" height="28">원산지 한 장</a><nav class="toplinks" aria-label="보조 메뉴"><a href="#/sources">근거</a><a href="#/settings">설정</a></nav></div></header>
+<div id="app">
+  <main id="view" tabindex="-1"></main>
+</div>
+<nav class="tabbar no-print" id="tabbar" aria-label="주요 메뉴"><div class="in">
+  <a href="#/menus" data-tab="menus"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 4h14v16H5z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M8 8h8M8 12h8M8 16h5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>내 메뉴</a>
+  <a href="#/out/board" data-tab="out"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 9V3h10v6M6 18H4v-7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v7h-2M7 14h10v7H7z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></svg>출력</a>
+  <a href="#/check" data-tab="check"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="8" y="2.5" width="8" height="19" rx="4" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="12" cy="7" r="1.8" fill="currentColor"/><circle cx="12" cy="12" r="1.8" fill="currentColor"/><circle cx="12" cy="17" r="1.8" fill="currentColor"/></svg>점검</a>
+  <a href="#/ledger" data-tab="ledger"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M9 8h6M9 12h6" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>장부</a>
+</div></nav>
+<div id="modal-root"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<noscript><p style="padding:20px;font-size:18px">원산지 한 장은 자바스크립트가 필요해요. 브라우저 설정에서 자바스크립트를 켜 주세요.</p></noscript>
+<script src="rules.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
