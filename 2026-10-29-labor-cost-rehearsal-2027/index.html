@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>2027 인건비 리허설 — 최저임금 10,700원 인건비·주휴수당 계산과 근무표 비교</title>
+<meta name="description" content="지금 근무표만 넣으면 2027 최저임금(시급 10,700원) 기준 직원별 주휴수당 포함 월·연 인건비와 올해 대비 증가액을 계산해요. 주 15시간·월 60시간·5인 경계 표시, 대안 근무표 비교, 메뉴 가격 역산, 직원 시급 안내문까지. 가입 없음·무료·기기에만 저장.">
+<meta name="keywords" content="2027 최저임금, 최저임금 10700원, 인건비 계산기, 주휴수당 계산, 알바 인건비, 소상공인 인건비, 5인 미만 가산수당, 근무표 인건비, 메뉴 가격 인상 계산">
+<meta name="theme-color" content="#1E3A5F">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://347744strings-spec.github.io/webapp-daily/2026-10-29-labor-cost-rehearsal-2027/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="2027 인건비 리허설">
+<meta property="og:title" content="2027 인건비 리허설 — 내년 인건비, 미리 계산해 보세요">
+<meta property="og:description" content="근무표만 넣으면 2027 최저임금 기준 인건비·증가액, 경계선 경고, 대안 근무표 비교, 가격 역산까지 10분. 가입 없음 · 무료">
+<meta property="og:url" content="https://347744strings-spec.github.io/webapp-daily/2026-10-29-labor-cost-rehearsal-2027/">
+<meta property="og:image" content="https://347744strings-spec.github.io/webapp-daily/2026-10-29-labor-cost-rehearsal-2027/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="2027 인건비 리허설 — 연 인건비 증가액과 2026·2027 비교 막대">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="2027 인건비 리허설 — 내년 인건비, 미리 계산해 보세요">
+<meta name="twitter:description" content="주휴수당 포함 2027 인건비 · 주 15시간/5인 경계 · 대안 근무표 · 가격 역산 · 직원 안내문">
+<meta name="twitter:image" content="https://347744strings-spec.github.io/webapp-daily/2026-10-29-labor-cost-rehearsal-2027/og-image.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="인건비 리허설">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"2027 인건비 리허설","url":"https://347744strings-spec.github.io/webapp-daily/2026-10-29-labor-cost-rehearsal-2027/","applicationCategory":"BusinessApplication","operatingSystem":"Any","inLanguage":"ko","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"description":"소상공인용 2027 인건비 시뮬레이터. 근무표로 2027 최저임금(10,700원) 기준 주휴수당 포함 인건비와 증가액, 주 15시간·월 60시간·5인 경계, 대안 근무표 비교, 가격 역산, 직원 안내문(참고용 계산, 법률·노무 자문 아님)."}
+</script>
+</head>
+<body>
+<a class="skip" href="#view">본문 바로가기</a>
+<div class="notice no-print" role="note"><span>ⓘ 참고용 계산 · 법률·노무 자문 아님</span><a href="tel:1350">노동부 ☎ 1350</a></div>
+<header class="top no-print"><div class="in"><a class="brand" href="#/"><img src="icon.svg" alt="" width="28" height="28">인건비 리허설</a><nav class="toplinks" aria-label="보조 메뉴"><a href="#/report">리포트</a><a href="#/info">정보</a><a href="#/settings">설정</a></nav></div></header>
+<div id="app"><main id="view" tabindex="-1"></main></div>
+<nav class="tabbar no-print" id="tabbar" aria-label="주요 메뉴"><div class="in">
+  <a href="#/staff" data-tab="staff"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5" width="17" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M3.5 10h17M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>근무표</a>
+  <a href="#/result" data-tab="result"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 20V11M12 20V5M19 20v-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>결과</a>
+  <a href="#/alt" data-tab="alt"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 4v16M17 4v16M3 8h8M13 16h8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>대안</a>
+  <a href="#/price" data-tab="price"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 12l9-9h8v8l-9 9z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><circle cx="15.5" cy="8.5" r="1.6" fill="currentColor"/></svg>가격</a>
+  <a href="#/notice" data-tab="notice"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></svg>안내문</a>
+</div></nav>
+<div id="modal-root"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<noscript><p style="padding:20px;font-size:18px">2027 인건비 리허설은 자바스크립트가 필요해요. 브라우저 설정에서 자바스크립트를 켜 주세요.</p></noscript>
+<script src="rules.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

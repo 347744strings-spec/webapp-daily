@@ -1,0 +1,18 @@
+{
+  "name": "2027 인건비 리허설",
+  "short_name": "인건비 리허설",
+  "description": "근무표로 2027 최저임금 기준 주휴수당 포함 인건비·증가액, 경계선 경고, 대안 근무표 비교, 가격 역산, 직원 안내문까지(참고용 계산).",
+  "lang": "ko",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F7F8FA",
+  "theme_color": "#1E3A5F",
+  "categories": ["business", "finance", "productivity"],
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"},
+    {"src": "icon.svg", "sizes": "any", "type": "image/svg+xml"}
+  ]
+}
