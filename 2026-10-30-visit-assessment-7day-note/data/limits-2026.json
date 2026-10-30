@@ -1,0 +1,173 @@
+{
+ "year": 2026,
+ "checkedAt": "2026-10-30",
+ "source": "보건복지부 「장기요양급여 제공기준 및 급여비용 산정방법 등에 관한 고시」 제13조① · 국민건강보험공단 노인장기요양보험 공식 페이지에서 금액 대조",
+ "monthlyLimit": {
+  "1": 2512900,
+  "2": 2331200,
+  "3": 1528200,
+  "4": 1409700,
+  "5": 1208900,
+  "cognitive": 676320
+ },
+ "gradeOrder": [
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "cognitive"
+ ],
+ "gradeLabel": {
+  "1": "1등급",
+  "2": "2등급",
+  "3": "3등급",
+  "4": "4등급",
+  "5": "5등급",
+  "cognitive": "인지지원등급"
+ },
+ "copay": {
+  "home": {
+   "normal": 0.15,
+   "cut40": 0.09,
+   "cut60": 0.06,
+   "basic": 0
+  }
+ },
+ "copayTypes": [
+  {
+   "id": "normal",
+   "label": "일반",
+   "rate": 0.15,
+   "pct": "15%",
+   "basis": "노인장기요양보험법 제40조①, 시행령 제15조의8: 재가급여 비용의 100분의 15",
+   "src": [
+    "law-40"
+   ]
+  },
+  {
+   "id": "cut40",
+   "label": "40% 감경",
+   "rate": 0.09,
+   "pct": "9%",
+   "basis": "감경 고시 제2조②: 보험료 순위 25% 초과~50% 이하 등 → 본인부담금의 100분의 40 감경 (15% × 0.6 = 9%)",
+   "src": [
+    "cut-notice",
+    "ltc-calc"
+   ]
+  },
+  {
+   "id": "cut60",
+   "label": "60% 감경",
+   "rate": 0.06,
+   "pct": "6%",
+   "basis": "감경 고시 제2조①: 의료급여 수급권자(기초생활수급자 제외)·보험료 순위 25% 이하·건강보험 본인부담 경감 인정자 등 → 100분의 60 감경 (15% × 0.4 = 6%)",
+   "src": [
+    "cut-notice",
+    "ltc-calc"
+   ]
+  },
+  {
+   "id": "basic",
+   "label": "기초생활수급자(의료급여)",
+   "rate": 0,
+   "pct": "0%",
+   "basis": "법 제40조②: 국민기초생활 보장법에 따른 의료급여 수급자는 본인부담금 없음",
+   "src": [
+    "easylaw-copay",
+    "ltc-calc"
+   ]
+  }
+ ],
+ "rounding": "원 미만 반올림(앱 계산 방식 — 실제 청구는 기관 산정을 따름)",
+ "legal": {
+  "decisionDays": 30,
+  "decisionExtDays": 30,
+  "appealDays": 90,
+  "appealMaxDays": 180,
+  "rehearDays": 90,
+  "reapplyMonths": 3,
+  "reapplyIsLaw": false
+ },
+ "phone": "1577-1000",
+ "notIncluded": [
+  "복지용구(별도 연 한도)",
+  "비급여(식사재료비·이미용비·상급침실 등)",
+  "야간·일요일·공휴일 가산으로 늘어나는 금액",
+  "월 한도액 추가 산정(주·야간보호 월 15일 이상 등)"
+ ],
+ "sources": [
+  {
+   "id": "ltc-limit",
+   "title": "노인장기요양보험 급여비용 간편 계산(재가급여 월 한도액) — 국민건강보험공단",
+   "url": "https://www.longtermcare.or.kr/npbs/e/b/502/npeb502m01.web?menuId=npe0000002742",
+   "verified": true
+  },
+  {
+   "id": "notice-13",
+   "title": "장기요양급여 제공기준 및 급여비용 산정방법 등에 관한 고시 제13조 (보건복지부고시 제2026-189호)",
+   "url": "https://www.law.go.kr/LSW/admRulInfoR.do?admRulSeq=2100000285470",
+   "verified": true
+  },
+  {
+   "id": "law-40",
+   "title": "노인장기요양보험법 시행령 제15조의8(본인부담금) — 법 제40조①",
+   "url": "https://law.go.kr/lsLinkCommonInfo.do?lspttninfSeq=175987",
+   "verified": true
+  },
+  {
+   "id": "cut-notice",
+   "title": "장기요양 본인부담금 감경에 관한 고시 제2조(감경대상 및 감경률)",
+   "url": "https://www.nhis.or.kr/lm/lmxsrv/law/lawFullContent.do?SEQ=99",
+   "verified": true
+  },
+  {
+   "id": "easylaw-copay",
+   "title": "찾기쉬운 생활법령 — 장기요양 본인부담금(감경·면제 정리)",
+   "url": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=3&cciNo=3&cnpClsNo=1&csmSeq=2038",
+   "verified": true
+  },
+  {
+   "id": "ltc-calc",
+   "title": "공단 재가급여 계산기(수급자 유형 15%·9%·6%·0%)",
+   "url": "https://www.longtermcare.or.kr/npbs/e/b/504/openPopApprvPaymtCalcu",
+   "verified": true
+  },
+  {
+   "id": "law-55",
+   "title": "노인장기요양보험법 제55조(심사청구) — 90일·180일",
+   "url": "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1030736139",
+   "verified": true
+  },
+  {
+   "id": "law-16",
+   "title": "노인장기요양보험법 제16조(장기요양등급판정기간) — 30일 원칙",
+   "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1030961971",
+   "verified": true
+  },
+  {
+   "id": "dec-7",
+   "title": "노인장기요양보험법 시행령 제7조(등급판정기준)",
+   "url": "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1030735647",
+   "verified": true
+  },
+  {
+   "id": "nhis-apply",
+   "title": "국민건강보험 — 장기요양인정 신청절차·조사 안내",
+   "url": "https://www.nhis.or.kr/static/html/wbda/c/wbdac02.html",
+   "verified": true
+  },
+  {
+   "id": "easylaw-appeal",
+   "title": "찾기쉬운 생활법령 — 등급판정 결과 이의신청",
+   "url": "https://www.easylaw.go.kr/CSP/OnhunqueansInfoRetrieve.laf?onhunqnaAstSeq=97&onhunqueSeq=6348",
+   "verified": true
+  },
+  {
+   "id": "caring",
+   "title": "케어링 — 등급 탈락 후 이의신청·재신청 가이드(업계 자료)",
+   "url": "https://caring.co.kr/guide/longtermcare-when-fail/",
+   "verified": false
+  }
+ ]
+}
