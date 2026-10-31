@@ -529,8 +529,8 @@ routes.check = function (view, args) {
   var list = c.issues.filter(function (i) { return f === 'done' ? i.acked : !i.acked; }).sort(function (a, b) { return (a.level === 'red' ? 0 : 1) - (b.level === 'red' ? 0 : 1); });
   view.innerHTML = '<h1>점검함</h1>' + exBanner() +
     '<div class="card ' + (risk.info ? 'danger' : 'soft') + '" id="risk"><h2>가산세 위험 미리 보기</h2>' +
-    '<dl class="kv"><dt>인적사항 오류·누락·명의 합산 (빨강 ' + risk.donors + '명)</dt><dd class="num">' + W(risk.infoBase) + ' × 5% = <b id="pen-info">' + W(risk.info) + '</b></dd>' +
-    '<dt>발급명세 미작성·미보관(종이 발급분)</dt><dd class="num">' + W(risk.ledgerBase) + ' × 0.2% = <b id="pen-ledger">' + W(risk.ledger) + '</b></dd></dl>' +
+    '<dl class="kv stack"><dt>인적사항 오류·누락·명의 합산 (빨강 ' + risk.donors + '명)</dt><dd class="formula" id="f-info"><span>' + W(risk.infoBase) + ' × 5%</span><span>= <b id="pen-info">' + W(risk.info) + '</b></span></dd>' +
+    '<dt>발급명세 미작성·미보관(종이 발급분)</dt><dd class="formula" id="f-ledger"><span>' + W(risk.ledgerBase) + ' × 0.2%</span><span>= <b id="pen-ledger">' + W(risk.ledger) + '</b></span></dd></dl>' +
     '<label class="ck"><input type="checkbox" id="kept"' + (S.settings.ledgerKept ? ' checked' : '') + '><span><b>발급명세서를 만들어 5년 보관할게요</b><span class="muted">출력 → 기부자별 발급명세서. 전자 발급분은 작성·보관 의무가 없어요.</span></span></label>' +
     '<ul class="small">' + RJ.penalties.map(function (p) { return '<li>' + esc(p.label) + ': ' + esc(p.rateText) + '</li>'; }).join('') + '</ul>' +
     '<p class="small">' + esc(RJ.penaltyNote) + ' ' + esc(RJ.rounding) + '</p>' + srcs(['law-81-7', 'law-75-4', 'nts-qna']) +
