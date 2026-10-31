@@ -1,0 +1,18 @@
+{
+  "name": "연말 기부금영수증 정리함",
+  "short_name": "기부금영수증",
+  "description": "통장 거래내역을 붙여 넣으면 기부자별 연간 합계, 가산세 위험 점검, 별지 제45호의2 기부금영수증 인쇄, 발급명세서·합계표, 홈택스 전자 발급 준비표까지. 자료는 기기에만.",
+  "lang": "ko",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F6F7F9",
+  "theme_color": "#1F4E79",
+  "categories": ["finance", "productivity", "business"],
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"},
+    {"src": "icon.svg", "sizes": "any", "type": "image/svg+xml"}
+  ]
+}

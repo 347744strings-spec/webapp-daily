@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>기부금영수증 정리함 — 통장 입금내역으로 연말 기부금영수증·발급명세 만들기</title>
+<meta name="description" content="작은 교회·비영리단체·복지시설 총무용. 통장 거래내역을 붙여 넣으면 입금자를 기부자로 묶어 연간 합계를 내고, 명의 불일치·주민번호 누락 같은 가산세 위험을 점검한 뒤 기부금영수증(별지 제45호의2서식), 기부자별 발급명세서, 발급합계표 숫자, 홈택스 전자 발급 준비표까지 만들어요. 서버 없음·가입 없음·주민번호는 기본 저장 안 함.">
+<meta name="keywords" content="기부금영수증 양식, 교회 기부금영수증 발급, 기부금영수증 발급명세서, 기부금영수증 발급합계표, 전자기부금영수증 일괄발급, 기부금영수증 가산세">
+<meta name="theme-color" content="#1F4E79">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://347744strings-spec.github.io/webapp-daily/2026-10-31-donation-receipt-desk/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="기부금영수증 정리함">
+<meta property="og:title" content="기부금영수증 정리함 — 통장 내역 붙여 넣고 1월 영수증 끝">
+<meta property="og:description" content="입금자 묶기 → 연간 합계 → 가산세 위험 점검 → 기부금영수증 A4 인쇄·발급명세서·발급합계표·홈택스 준비표. 서버 없음, 주민번호는 기본 저장 안 함">
+<meta property="og:url" content="https://347744strings-spec.github.io/webapp-daily/2026-10-31-donation-receipt-desk/">
+<meta property="og:image" content="https://347744strings-spec.github.io/webapp-daily/2026-10-31-donation-receipt-desk/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="기부금영수증 정리함 — 기부자별 연간 합계와 신호등 점검 화면">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="기부금영수증 정리함">
+<meta name="twitter:description" content="통장 입금내역으로 기부금영수증·발급명세서·발급합계표·전자 발급 준비표를 한 번에">
+<meta name="twitter:image" content="https://347744strings-spec.github.io/webapp-daily/2026-10-31-donation-receipt-desk/og-image.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="영수증 정리함">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"기부금영수증 정리함","url":"https://347744strings-spec.github.io/webapp-daily/2026-10-31-donation-receipt-desk/","applicationCategory":"BusinessApplication","operatingSystem":"Any","inLanguage":"ko","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"description":"통장 입금내역을 기부자별 연간 합계로 묶고 가산세 위험을 점검해 기부금영수증(소득세법 시행규칙 별지 제45호의2서식), 기부자별 발급명세서, 발급합계표 숫자, 홈택스 전자기부금영수증 일괄발급 준비표를 만드는 서버 없는 웹앱. 세무 자문이 아닙니다."}
+</script>
+</head>
+<body>
+<a class="skip" href="#view">본문 바로가기</a>
+<header class="top no-print"><div class="in"><a class="brand" href="#/"><img src="icon.svg" alt="" width="30" height="30">영수증 정리함</a><nav class="toplinks" aria-label="보조 메뉴"><a href="#/org">단체</a><a href="#/help">도움말</a><a href="#/settings">설정</a></nav></div></header>
+<div id="app"><main id="view" tabindex="-1"></main>
+<footer class="foot no-print" id="foot"><p>이 앱은 정리·출력 도구이며 <b>세무 자문이 아니에요</b>. 실제로 받은 기부금만, 실제 기부자 명의로 발급하세요. 자료는 이 기기에만 있고 서버로 보내지 않아요. · <a href="#/help">출처·면책</a></p></footer></div>
+<nav class="tabbar no-print" id="tabbar" aria-label="주요 메뉴"><div class="in">
+  <a href="#/" data-tab="home"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>요약</a>
+  <a href="#/donors" data-tab="donors"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.5" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5M16 4.8a3.3 3.3 0 010 6.4M18 14.6c1.8.7 3 2.4 3.5 5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>기부자</a>
+  <a href="#/check" data-tab="check"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l9 16H3z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M12 10v4M12 16.5v.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>점검</a>
+  <a href="#/out" data-tab="out"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 8V3h10v5M7 17H4v-7h16v7h-3" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><rect x="7" y="14" width="10" height="7" fill="none" stroke="currentColor" stroke-width="1.9"/></svg>출력</a>
+</div></nav>
+<div id="modal-root"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<noscript><p style="padding:20px;font-size:18px">기부금영수증 정리함은 자바스크립트가 필요해요. 브라우저 설정에서 자바스크립트를 켜 주세요.</p></noscript>
+<script src="rules.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
