@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>우리 육휴 설계도 — 맞벌이 부부 육아휴직 18개월 공동 설계·6+6 급여 계산</title>
+<meta name="description" content="출산(예정)일과 두 사람의 통상임금만 넣으면 누가 언제 몇 개월 쉴지 타임라인으로 짜고, 부모함께 육아휴직제(6+6) 급여, 1년 6개월 연장 조건, 생후 18개월 마감·회사 신청 30일 전·급여 신청 기한, 월 가구 수입까지 한 번에. 서버 없음·가입 없음.">
+<meta name="keywords" content="육아휴직 6+6 계산, 부모함께 육아휴직제, 육아휴직급여 상한액 2026, 육아휴직 1년 6개월 연장 조건, 육아휴직 신청 30일 전, 맞벌이 육아휴직 계획">
+<meta name="theme-color" content="#2F6F6A">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://347744strings-spec.github.io/webapp-daily/2026-11-01-parental-leave-plan/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="우리 육휴 설계도">
+<meta property="og:title" content="우리 육휴 설계도 — 둘이 몇 달씩, 언제 쉬면 좋을까?">
+<meta property="og:description" content="두 사람 육아휴직 타임라인, 6+6 상향 급여, 1년 6개월 연장, 18개월·30일 전 마감, 월 가구 수입을 한 화면에. 배우자에게 링크로 공유">
+<meta property="og:url" content="https://347744strings-spec.github.io/webapp-daily/2026-11-01-parental-leave-plan/">
+<meta property="og:image" content="https://347744strings-spec.github.io/webapp-daily/2026-11-01-parental-leave-plan/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="우리 육휴 설계도 — A·B 육아휴직 타임라인과 6+6 급여 합계">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="우리 육휴 설계도">
+<meta name="twitter:description" content="맞벌이 부부 육아휴직 공동 설계: 6+6 급여·연장 조건·마감일·가구 수입">
+<meta name="twitter:image" content="https://347744strings-spec.github.io/webapp-daily/2026-11-01-parental-leave-plan/og-image.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="육휴 설계도">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"우리 육휴 설계도","url":"https://347744strings-spec.github.io/webapp-daily/2026-11-01-parental-leave-plan/","applicationCategory":"FinanceApplication","operatingSystem":"Any","inLanguage":"ko","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"description":"맞벌이 부부가 육아휴직 시기와 기간을 함께 설계하는 서버 없는 웹앱. 고용보험법 시행령 제95조·제95조의3(2026. 9. 18. 시행) 기준 육아휴직급여·부모함께 육아휴직제(6+6) 추정, 1년 6개월 연장 조건, 신청 마감일. 참고 추정치이며 실제 지급은 고용센터가 결정합니다."}
+</script>
+</head>
+<body>
+<a class="skip" href="#view">본문 바로가기</a>
+<header class="top no-print"><div class="in"><a class="brand" href="#/"><img src="icon.svg" alt="" width="30" height="30">우리 육휴 설계도</a><nav class="toplinks" aria-label="보조 메뉴"><a href="#/start">새로 설계</a></nav></div></header>
+<div id="app"><main id="view" tabindex="-1"></main>
+<footer class="foot no-print" id="foot"><p>참고 추정치예요. 실제 지급·자격은 고용센터가 결정해요. 입력값은 이 기기에만 저장돼요. · <a href="#/help">근거·도움말</a> · <a href="privacy.html">개인정보</a></p></footer></div>
+<nav class="tabbar no-print" id="tabbar" aria-label="주요 메뉴"><div class="in">
+  <a href="#/plan" data-tab="plan"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 7h12M3 12h18M9 17h12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>설계</a>
+  <a href="#/compare" data-tab="compare"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 20V9M12 20V4M19 20v-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>비교</a>
+  <a href="#/out" data-tab="out"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 8V3h10v5M7 17H4v-7h16v7h-3" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><rect x="7" y="14" width="10" height="7" fill="none" stroke="currentColor" stroke-width="1.9"/></svg>출력</a>
+  <a href="#/help" data-tab="help"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M9.5 9.5a2.5 2.5 0 114 2c-.9.6-1.5 1.1-1.5 2.2M12 17v.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>도움말</a>
+</div></nav>
+<div id="modal-root"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<noscript><p style="padding:20px;font-size:18px">우리 육휴 설계도는 자바스크립트가 필요해요.</p></noscript>
+<script src="rules.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
