@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>전역 목돈 설계도 — 장병내일준비적금 한도·매칭지원금·전역 날 받을 돈 계산</title>
+<meta name="description" content="한 번 정하면 못 바꾸는 장병내일준비적금 한도를 계급별 월급 흐름으로 3분 만에 정해요. 전역 때 받을 원금·이자·매칭지원금, 매칭 입금일(해지 다음 달 25일), 지금 깨면 잃는 돈, 전역 해지 체크리스트, 목돈 배분까지. 가입·서버 없음, 오프라인 동작.">
+<meta name="theme-color" content="#4B5D3A">
+<link rel="canonical" href="https://347744strings-spec.github.io/webapp-daily/2026-11-02-discharge-savings-plan/">
+<meta property="og:type" content="website"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="전역 목돈 설계도">
+<meta property="og:title" content="전역 목돈 설계도 — 못 바꾸는 적금 한도, 3분 만에 안전하게">
+<meta property="og:description" content="계급별 월급으로 적금 한도 스트레스 테스트, 전역 날 받을 원금·이자·매칭지원금과 입금일, 부모님 공유 링크">
+<meta property="og:url" content="https://347744strings-spec.github.io/webapp-daily/2026-11-02-discharge-savings-plan/">
+<meta property="og:image" content="https://347744strings-spec.github.io/webapp-daily/2026-11-02-discharge-savings-plan/og-image.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="전역 목돈 설계도 — 월별 잉여 막대그래프와 전역 때 받을 돈">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://347744strings-spec.github.io/webapp-daily/2026-11-02-discharge-savings-plan/og-image.png">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="전역 목돈">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png"><link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"전역 목돈 설계도","url":"https://347744strings-spec.github.io/webapp-daily/2026-11-02-discharge-savings-plan/","applicationCategory":"FinanceApplication","operatingSystem":"Any","inLanguage":"ko","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"description":"장병내일준비적금 한도 결정·만기액·매칭지원금 입금일 계산. 국방부·병무청·법령 2026-11-02 기준. 참고용 계산이며 실제 금액은 은행·국방부 확인."}</script>
+</head>
+<body>
+<a class="skip" href="#view">본문 바로가기</a>
+<header class="top"><div class="in"><a href="#/"><img src="icon.svg" alt="" width="28" height="28">전역 목돈 설계도</a><a href="#/w/1">새로 설계</a></div></header>
+<main id="view" tabindex="-1"><h1>전역 목돈 설계도</h1><p>불러오는 중…</p></main>
+<p class="foot">참고용 계산이에요. 입력값은 이 기기에만 저장돼요. <a href="privacy.html">개인정보</a></p>
+<nav class="tabbar" id="tabbar" aria-label="주요 메뉴" hidden><div class="in">
+<a href="#/plan" data-tab="plan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V10M12 20V4M19 20v-7" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>설계</a>
+<a href="#/check" data-tab="check"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>체크리스트</a>
+<a href="#/bucket" data-tab="bucket"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2.4" fill="none"/><path d="M12 4v8h8" stroke="currentColor" stroke-width="2.4" fill="none"/></svg>배분</a>
+<a href="#/about" data-tab="about"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6z" stroke="currentColor" stroke-width="2.2" fill="none"/><path d="M9 11h6M9 15h6" stroke="currentColor" stroke-width="2.2"/></svg>기준</a>
+</div></nav>
+<div id="modal-root"></div><div id="toast" role="status" aria-live="polite"></div>
+<noscript><p style="padding:16px">자바스크립트가 필요해요.</p></noscript>
+<script src="rules.js" defer></script><script src="app.js" defer></script>
+</body>
+</html>

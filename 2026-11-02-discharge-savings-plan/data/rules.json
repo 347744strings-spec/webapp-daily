@@ -1,0 +1,43 @@
+{
+  "baseDate": "2026-11-02",
+  "personMax": 550000, "bankMax": 300000, "unit": 50000, "maxAccounts": 2,
+  "defaultRate": 0.05, "taxRate": 0.154,
+  "matchSince": "2024-01-01", "matchRate": 1.0,
+  "noChangeSince": "2025-01-02",
+  "taxFreeJoinUntil": "2026-12-31",
+  "branches": [
+    {"id":"army","label":"육군","months":18,"saveMax":18},
+    {"id":"marine","label":"해병대","months":18,"saveMax":18},
+    {"id":"reserve","label":"상근예비역","months":18,"saveMax":18},
+    {"id":"navy","label":"해군","months":20,"saveMax":20},
+    {"id":"air","label":"공군","months":21,"saveMax":21},
+    {"id":"social","label":"사회복무요원","months":21,"saveMax":21},
+    {"id":"alt","label":"대체복무요원","months":36,"saveMax":24}
+  ],
+  "promoExample": {"일병":2,"상병":6,"병장":6},
+  "banks": ["NH농협","신한","우리","하나","IBK기업","KB국민","수협","iM뱅크","부산","광주","제주","전북","경남","우체국"],
+  "sources": [
+    {"id":"mnd","title":"국방부 장병내일준비적금 안내","url":"https://www.mnd.go.kr/mnd/288/subview.do","verified":true,"note":"한도 개인 55만·은행 30만, 5만원 단위, 중도 변경 불가, 이자 5% 수준 비과세, '24년~ 원금 100% 매칭, 중도해지 시 비과세·지원금 없음, 가입기간 18/20/21/24개월"},
+    {"id":"brief","title":"정책브리핑 2025 달라지는 정책: 납입한도 월 55만원(병무청, 2025-01-21)","url":"https://www.korea.kr/news/policyFocusView.do?newsId=148938864&pkgId=49500817","verified":true,"note":"'25.1.2. 이후 가입자 중도변경 불가, 기존 가입자 1회 상향"},
+    {"id":"dec158","title":"병역법 시행령 제158조의2(적금의 정부지원) [시행 2026. 10. 2.]","url":"https://law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lspttninfSeq=171035","verified":true,"note":"입금액의 100%, 만기 전 해지 시 미지원"},
+    {"id":"tax","title":"조세특례제한법 제91조의19(장병내일준비적금 비과세) [시행 2026. 9. 18.]","url":"https://www.law.go.kr/lsLinkCommonInfo.do?lsJoLnkSeq=1021454851","verified":true,"note":"2026-12-31까지 가입분, '25.1.1. 이후 납입 월 55만원 한도 비과세, 만기 전 해지 시 추징"},
+    {"id":"mma","title":"병무청 사회복무요원 장병내일준비적금 재정지원 안내(수정 2026-01-09)","url":"https://www.mma.go.kr/board/boardView.do?gesipan_id=2&gsgeul_no=1518779","verified":true,"note":"만기해지 다음 달 25일 지급(휴일이면 전 평일), 은행별 계좌로 각각 입금, 2개 은행이면 서류 2부, 조기전역·신분전환자 방문 해지"},
+    {"id":"fmc","title":"국군재정관리단 공지: 매칭지원금은 적금해지일 기준 익월 25일 지급","url":"https://new.mnd.go.kr/user/boardList.action?boardId=O_290732&boardSeq=O_403966&command=view&page=1&siteId=fmc","verified":true,"note":"현역 기준. 휴일 처리 문구는 병무청 안내와 같다고 가정(확인 필요)"},
+    {"id":"pay","title":"공무원보수규정 별표 13 비고 6 (2026. 1. 2. 개정)","url":"https://www.law.go.kr/LSW/lsInfoP.do?lsId=002298","verified":true,"note":"이등병 750,000 · 일등병 900,000 · 상등병 1,200,000 · 병장 1,500,000"},
+    {"id":"budget27","title":"2027년 국방예산 정부안(병 봉급 인상 미반영 보도)","url":"https://www.dapa.go.kr/dapa/doc/selectDoc.do?bbsSeq=326&currentPageNo=1&docSeq=59116&menuSeq=3069&recordCountPerPage=10","verified":false,"note":"2027 봉급표 미확정 → 앱은 2026과 같다고 가정"},
+    {"id":"nh","title":"NH장병내일준비적금 상품설명(중도해지이율 예시)","url":"https://nhlink.nonghyup.com/content/nhbank/html/sf/mk/dt/dt10000961_02.html","verified":true,"note":"중도해지이율은 은행별로 다름(NH: 기준이율×50~80%×경과월/계약월, 3개월 미만 0.1%)"},
+    {"id":"kfb","title":"은행연합회 소비자포털 적금 금리 비교공시","url":"https://portal.kfb.or.kr/compare/receiving_search.php","verified":false,"note":"은행별 우대금리는 매일 바뀌어 앱에 넣지 않음. 가입 전 직접 확인"},
+    {"id":"hol","title":"관공서의 공휴일에 관한 규정 [시행 2026. 5. 11.] · 우주항공청 2027년 월력요항(2026-06-29)","url":"https://www.kasa.go.kr/prog/plcyBrf/brief/kor/sub01_01_04/view.do?plcyBrfNo=431","verified":true,"note":"2026·2027 공휴일. 2028은 월력요항 미발표"}
+  ],
+  "unverified": [
+    "2027년 이후 병 봉급 — 확정 봉급표가 없어 2026과 같다고 가정해요(인상률 직접 입력 가능).",
+    "입대·전역 달 봉급 일할(그 달 일수로 나눔) — 흔히 쓰는 방식으로 계산했어요.",
+    "은행 이자는 KorCalc·국방부 예시와 같은 '월 단리(남은 개월수)' 근사예요. 실제는 입금일별 일수로 계산돼 조금 달라요.",
+    "현역 매칭지원금이 휴일이면 직전 평일에 지급되는지 — 병무청(사회복무요원) 안내 문구를 같이 적용했어요.",
+    "2028년 공휴일 — 월력요항이 아직 없어 법 규정으로 계산했어요(설·추석 날짜 포함).",
+    "2027년 1월 1일 이후 가입자의 비과세 — 현행법은 2026-12-31 가입분까지예요. 연장 개정안(2026-08-10 발의)은 아직 확정 전이에요.",
+    "진급 월 — 이병 2·일병 6·상병 6개월은 흔한 예시예요. 부대 실제 진급일로 고치세요.",
+    "중도해지 이율 — 은행마다 달라 '잃는 돈'에는 매칭지원금과 비과세 혜택만 넣었어요."
+  ],
+  "disclaimer": "참고용 계산이며 실제 금액은 은행·국방부 확인이 필요해요(병무청·국군재정관리단)."
+}
