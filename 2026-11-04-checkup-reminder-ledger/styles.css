@@ -68,3 +68,8 @@ ol.flowlist{padding-left:20px}ol.flowlist li{margin:6px 0}
 }
 
 td.nm{overflow-wrap:anywhere;word-break:normal;min-width:3.5em}
+/* v3: 버튼 라벨 한 줄 */
+.btn,button.btn,.seg button,#tabbar a{white-space:nowrap}
+.btn{flex-shrink:0;max-width:100%}
+.task{flex-wrap:wrap}.task .grow{flex:1 1 160px}.task .btn{flex:0 0 auto}
+.row>.btn.grow{flex:1 0 auto}

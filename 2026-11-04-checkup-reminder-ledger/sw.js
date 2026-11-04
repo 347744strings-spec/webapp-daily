@@ -1,4 +1,4 @@
-const C='checkup-reminder-ledger-v2';
+const C='checkup-reminder-ledger-v3';
 const A=['./','index.html','styles.css','rules.js','app.js','manifest.webmanifest','icon.svg','icon-192.png','favicon-32.png','privacy.html','data/rules.json','data/templates.json','checkup-penalty-guide/','reminder-message-flow/','january-carryover/'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(C).then(c=>c.addAll(A)).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k.startsWith('checkup-reminder-ledger-')&&k!==C).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
