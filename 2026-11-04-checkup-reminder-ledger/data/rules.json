@@ -1,0 +1,110 @@
+{
+ "asOf": "2026-11-04",
+ "cycle": {
+  "office": 2,
+  "nonoffice": 1,
+  "source": "rule197"
+ },
+ "fineEmployer": {
+  "1": 100000,
+  "2": 200000,
+  "3": 300000,
+  "unit": "건강진단 대상 근로자 1명당",
+  "source": "b35",
+  "verified": true
+ },
+ "fineEmployerCap": {
+  "amount": 10000000,
+  "source": "moel",
+  "verified": true,
+  "note": "법률상 상한(산업안전보건법 제175조제4항, 고용노동부 답변 기준)"
+ },
+ "fineWorker": {
+  "1": 50000,
+  "2": 100000,
+  "3": 150000,
+  "source": "b35",
+  "verified": true
+ },
+ "sizeReduction": {
+  "note": "별표 35 제3호: 상시근로자 10명 이상 50명 미만 100분의 80 등 규모별 감경이 있으나, 같은 별표 제1호 마목(100만원 미만은 감경하지 않음 등) 적용 방식은 사안별 판단이라 이 앱은 감경을 계산하지 않아요.",
+  "source": "b35"
+ },
+ "nhis2026": {
+  "text": "2026년 국가 일반건강검진: 만 20세 이상 짝수년도 출생자, 직장가입자 비사무직 매년·사무직 2년마다, 기간 12월 31일까지",
+  "source": "yna",
+  "verified": "공단 발표 보도(공단 원문 미확인)"
+ },
+ "carry": [
+  {
+   "k": "office",
+   "title": "사무직 직장가입자",
+   "text": "회사가 건강보험 EDI ‘건강검진 대상자 변경(추가·제외) 신청서’로 등록(등록사유 코드 A: 추가(전년도미수검)).",
+   "source": "nhisEdi",
+   "status": "verified"
+  },
+  {
+   "k": "nonoffice",
+   "title": "비사무직 직장가입자",
+   "text": "일반검진은 별도 신청 없이 이어진다는 보도가 있어요. 확인 필요 — 공단 사업장 지사(1577-1000) 확인.",
+   "source": "maeil",
+   "status": "check"
+  },
+  {
+   "k": "due",
+   "title": "추가 등록 후 수검 기한",
+   "text": "“1월 신청 시 6월 말까지 수검”은 보도 내용이에요. 확인 필요 — 공단 공지로 재확인.",
+   "source": "maeil",
+   "status": "check"
+  },
+  {
+   "k": "law",
+   "title": "산업안전보건법 위반 여부",
+   "text": "다음 해에 받더라도 올해 주기 위반이 해소되는지는 정해진 기준을 찾지 못했어요. 관할 지방고용노동관서 확인.",
+   "source": "moel1350",
+   "status": "check"
+  }
+ ],
+ "sources": {
+  "rule197": {
+   "t": "산업안전보건법 시행규칙 제197조(일반건강진단의 주기 등) — 국가법령정보센터, 시행 2026.8.1.",
+   "u": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lspttninfSeq=154549"
+  },
+  "b35": {
+   "t": "산업안전보건법 시행령 [별표 35] 과태료의 부과기준 원문(개정 2023.6.27.) — 국가법령정보센터",
+   "u": "https://www.law.go.kr/LSW/flDownload.do?bylClsCd=110201&flSeq=162449929&gubun="
+  },
+  "moel": {
+   "t": "고용노동부 빠른인터넷상담 답변(건강진단 미실시 1,000만원 이하 과태료, 국민건강보험법 검진으로 대체 가능)",
+   "u": "https://www.moel.go.kr/minwon/fastcounsel/fastcounselView.do?inetDcssMngId=202210251754485021000"
+  },
+  "moel1350": {
+   "t": "고용노동부 1350 상담(주기는 회계연도 기준, 사업주 조치 방식에 별도 규정 없음)",
+   "u": "https://1350.moel.go.kr/rtmview.do?id=1000310768"
+  },
+  "nhisLaw": {
+   "t": "국민건강보험법 시행령 제25조(건강검진 주기: 2년마다, 비사무직 직장가입자 1년 1회)",
+   "u": "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lspttninfSeq=69419"
+  },
+  "nhisEdi": {
+   "t": "국민건강보험공단 건강보험 EDI — 건강검진 대상자 변경(추가·제외) 신청서 사양(등록사유 A: 추가(전년도미수검))",
+   "u": "https://edi.nhis.or.kr/webedi/file_sy/kungang(chuka_jewoi).html"
+  },
+  "yna": {
+   "t": "연합뉴스(2026-10-08): 국민건강보험공단 — 2026년 대상 짝수년도 출생자, 비사무직 매년·사무직 2년마다",
+   "u": "https://www.yna.co.kr/view/AKR20261008065100530"
+  },
+  "maeil": {
+   "t": "매일신문(2026-10-16): 12월 31일 놓쳐도 1월 신청하면 6월까지(보도)",
+   "u": "https://www.imaeil.com/page/view/2026101609192214309"
+  },
+  "kdca": {
+   "t": "질병관리청 국가건강정보포털: 검진 대상 여부는 국민건강보험공단 홈페이지(www.nhis.or.kr)·모바일 앱 「건강보험25시」에서 조회, 1577-1000",
+   "u": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6671"
+  },
+  "kiha": {
+   "t": "한국건강관리협회 월간지 산업보건 Q&A(개별 안내·미수검 재안내 후 미수검 시 근로자 책임)",
+   "u": "https://kiha21.or.kr/monthly/2025/10/2025_10_11_s450.pdf"
+  }
+ }
+}
