@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>연말 연차 정산표</title>
+<meta name="description" content="남은 연차와 월 통상임금만 넣으면 미사용 연차수당(세전 참고), 회사 사용촉진 점검 신호등, 12월 31일까지 지정일·할 일, 회사 확인 메일 초안까지 한 장으로. 가입·서버 없음, 월급은 이 기기에만 저장.">
+<meta name="theme-color" content="#3730A3">
+<link rel="canonical" href="https://347744strings-spec.github.io/webapp-daily/2026-11-05-year-end-leave-settlement/">
+<meta property="og:type" content="website"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="연말 연차 정산표">
+<meta property="og:title" content="연말 연차 정산표 — 남은 연차 × 월급 → 수당 얼마 · 촉진 유효? · 12/31 전 할 일">
+<meta property="og:description" content="인사팀 메일 한 통에 연차수당이 사라졌다고요? 가입 없이 5분 점검. 금액은 세전 참고, 신호등은 점검 힌트(법률 자문 아님).">
+<meta property="og:url" content="https://347744strings-spec.github.io/webapp-daily/2026-11-05-year-end-leave-settlement/">
+<meta property="og:image" content="https://347744strings-spec.github.io/webapp-daily/2026-11-05-year-end-leave-settlement/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="연말 연차 정산표 — D-day와 미사용 연차수당 카드">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://347744strings-spec.github.io/webapp-daily/2026-11-05-year-end-leave-settlement/og-image.png">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="연차 정산">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png"><link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"연말 연차 정산표","applicationCategory":"FinanceApplication","operatingSystem":"Any","inLanguage":"ko","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"url":"https://347744strings-spec.github.io/webapp-daily/2026-11-05-year-end-leave-settlement/"}</script>
+</head>
+<body>
+<a class="skip" href="#view">본문으로 건너뛰기</a>
+<header class="top"><a href="#/" class="brand"><img src="icon.svg" alt="" width="28" height="28"><span>연말 연차 정산표</span></a></header>
+<main id="view" tabindex="-1"></main>
+<nav id="tabbar" aria-label="주요 화면">
+<a href="#/">홈</a><a href="#/calc">계산</a><a href="#/check">촉진</a><a href="#/cal">날짜</a><a href="#/result">결과</a><a href="#/settings">설정</a>
+</nav>
+<div id="toast" role="status" aria-live="polite"></div>
+<dialog id="dlg" aria-labelledby="dlg-h"><form method="dialog" id="dlg-f"></form></dialog>
+<noscript><p style="padding:16px">이 앱은 자바스크립트가 필요해요. <a href="leave-pay-calculator/">미사용 연차수당 계산법</a>은 그대로 읽을 수 있어요.</p></noscript>
+<script src="rules.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
