@@ -1,0 +1,30 @@
+{
+  "checked": "2026-11-08",
+  "source": "https://www.gne.go.kr/component/file/ND_fileDownload.do?q_fileId=17d2b829-32eb-4dd1-a412-8d0dbeb1f747&q_fileSn=181613794",
+  "newLimit": 3,
+  "currentLimit": 2,
+  "waitDays": 2,
+  "includeSelectionDay": true,
+  "excludeHolidays": true,
+  "lastDay": "2026-12-31",
+  "lastDaySource": "https://www.ice.go.kr/upload/ice/na/bbs_1482/2026/10/c86797d921974aefbb21e01880d1addc.pdf",
+  "gapThreshold": 90,
+  "thresholdAssumption": true,
+  "subsidy2026": {
+    "private": 110000,
+    "publicAfter": 20000,
+    "ages": [
+      4,
+      5
+    ],
+    "source": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=105471&lev=0&m=020402&opType=N&s=moe&statusYN=W"
+  },
+  "subsidy2027": {
+    "status": "확정 전 · 교육부 세부 발표 확인 필요",
+    "automaticDeduction": false
+  },
+  "initialRegistrationOtherWait": {
+    "status": "2027 FAQ 원문 재확인 필요",
+    "secondary": "https://emongstory.com/kindergarten-admission-results-next-steps-2027/"
+  }
+}

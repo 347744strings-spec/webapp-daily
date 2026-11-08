@@ -1,0 +1,25 @@
+{
+  "name": "유치원 3희망 결정판",
+  "short_name": "유치원3희망",
+  "lang": "ko",
+  "id": "./",
+  "scope": "./",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#FFFBF5",
+  "theme_color": "#FFFBF5",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

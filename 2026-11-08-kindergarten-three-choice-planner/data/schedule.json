@@ -1,0 +1,72 @@
+{
+  "year": 2027,
+  "checked": "2026-11-08",
+  "tz": "Asia/Seoul",
+  "source": "https://www.gne.go.kr/component/file/ND_fileDownload.do?q_fileId=17d2b829-32eb-4dd1-a412-8d0dbeb1f747&q_fileSn=181613794",
+  "steps": [
+    {
+      "id": "guide",
+      "label": "모집요강 조회",
+      "start": "2026-10-28T09:00",
+      "end": null,
+      "verified": true
+    },
+    {
+      "id": "priorityApply",
+      "label": "우선모집 접수",
+      "start": "2026-11-02T09:00",
+      "end": "2026-11-04T18:00",
+      "verified": true
+    },
+    {
+      "id": "priorityResult",
+      "label": "우선모집 발표",
+      "start": "2026-11-09T15:00",
+      "end": null,
+      "verified": true
+    },
+    {
+      "id": "priorityRegister",
+      "label": "우선모집 등록",
+      "start": "2026-11-10T09:00",
+      "end": "2026-11-11T18:00",
+      "verified": true
+    },
+    {
+      "id": "apply",
+      "label": "일반모집 접수",
+      "start": "2026-11-17T09:00",
+      "end": "2026-11-23T18:00",
+      "verified": true
+    },
+    {
+      "id": "docs",
+      "label": "증빙 확인",
+      "start": "2026-11-24T09:00",
+      "end": "2026-11-25T18:00",
+      "verified": true
+    },
+    {
+      "id": "generalResult",
+      "label": "일반모집 발표",
+      "start": "2026-11-26T15:00",
+      "end": null,
+      "verified": true
+    },
+    {
+      "id": "generalRegister",
+      "label": "일반모집 등록",
+      "start": "2026-11-27T09:00",
+      "end": "2026-11-30T18:00",
+      "verified": true
+    },
+    {
+      "id": "wait",
+      "label": "대기자 관리",
+      "start": "2026-12-01T09:00",
+      "end": "2026-12-31T23:59",
+      "verified": true
+    }
+  ],
+  "additional": "추가모집은 지역·유치원별. 경남·인천 공고상 12/1~2027/2/12, 전국 공통 확정일로 적용하지 않음."
+}
