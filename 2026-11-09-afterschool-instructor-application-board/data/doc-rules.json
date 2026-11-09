@@ -1,0 +1,32 @@
+{
+  "checked": "2026-11-09",
+  "sources": {
+    "jeongseon": {"title": "강원특별자치도정선교육지원청 늘봄학교 인력풀 — 외부강사 등록 안내", "url": "https://gwjsed.gwe.go.kr/Pool/AfterApply.do?m=060302&s=gwjsed"},
+    "incheon": {"title": "인천광역시교육청 「늘봄(방과후)학교, 오해와 진실」 FAQ (2025-11 게시 PDF)", "url": "https://www.ice.go.kr/upload/afterschool/na/bbs_1541/2025/11/43bfd24b8a696079e20038868e80ae7c.pdf"},
+    "chungnam": {"title": "충청남도교육청 「2025 충남 중등 방과후학교 운영 길라잡이」 서식편(2024-12 발행)", "url": "https://www.cnbre.go.kr/tmp/hwp/45383/index.xhtml"},
+    "seoul": {"title": "서울특별시교육청 공고 제2026-327호 2027 「방과후·돌봄」 맞춤형교실 강사 인력풀 (2026-09-16)", "url": "https://www.sen.go.kr/user/bbs/BD_selectBbs.do?q_bbsDocNo=20260916095458906&q_bbsSn=1100"}
+  },
+  "docs": [
+    {"key": "proposal", "label": "프로그램 운영 제안서", "scope": "per_application", "keywords": ["제안서", "운영 계획서", "운영계획서"], "note": "학교마다 서식·학교명·차시가 달라요. 학교별로 고쳐 쓰세요."},
+    {"key": "application_form", "label": "지원서·신청서(학교 서식)", "scope": "per_application", "keywords": ["지원서", "신청서", "응모서"]},
+    {"key": "self_intro", "label": "자기소개서", "scope": "per_application", "keywords": ["자기소개서"]},
+    {"key": "resume", "label": "이력서", "scope": "vault", "keywords": ["이력서"]},
+    {"key": "cert_copy", "label": "자격증 사본", "scope": "vault", "keywords": ["자격증"], "flag": "pqi", "note": "민간자격증은 민간자격정보서비스(pqi.or.kr)에 등록된 자격증만 인정(정선교육지원청 안내). 학교 공고 기준 우선.", "source": "jeongseon"},
+    {"key": "activity_confirm", "label": "방과후 강사 활동 확인서", "scope": "vault", "keywords": ["활동 확인서", "활동확인서"], "note": "방과후강사 경력은 최근 5년만 인정(정선교육지원청 안내). 학교마다 다를 수 있어요.", "source": "jeongseon"},
+    {"key": "career_cert", "label": "경력증명서", "scope": "vault", "keywords": ["경력증명서", "경력 증명서"]},
+    {"key": "consent_crime", "label": "성범죄·아동학대 전력 조회 동의서", "scope": "per_application", "keywords": ["성범죄", "아동학대"]},
+    {"key": "consent_privacy", "label": "개인정보 수집·이용 동의서", "scope": "per_application", "keywords": ["개인정보"]},
+    {"key": "consent_admin", "label": "행정정보 공동이용 동의서", "scope": "per_application", "keywords": ["행정정보"]},
+    {"key": "crime_report", "label": "범죄경력회보서", "scope": "per_application", "keywords": ["범죄경력회보서", "회보서"], "printDays": 5, "note": "학교 기관 아이디·검증번호를 받아 crims.police.go.kr에서 신청. 인쇄 가능 기간 5일, 지나면 자동 삭제(충남교육청 길라잡이 서식32).", "source": "chungnam"},
+    {"key": "medical_cert", "label": "채용신체검사서", "scope": "vault", "keywords": ["채용신체검사서", "신체검사서"], "validYears": 1, "note": "유효기간 1년(정선교육지원청), 검사일로부터 1년간 유효(인천교육청 FAQ). 보건소 건강진단서는 정선 안내상 불가.", "source": "incheon"},
+    {"key": "health_alt", "label": "건강검진대체통보서", "scope": "vault", "keywords": ["건강검진", "대체통보서"], "tbAfterYears": 1, "note": "검진일로부터 1년이 지나면 결핵검진 결과서를 추가 제출(인천교육청 FAQ, 「결핵예방법」 인용).", "source": "incheon"},
+    {"key": "tb_result", "label": "결핵검진 결과서", "scope": "vault", "keywords": ["결핵검진 결과", "결핵검진결과"]},
+    {"key": "latent_tb", "label": "잠복결핵감염검진확인서", "scope": "vault", "keywords": ["잠복결핵"], "lifetime": true, "note": "생애 1회 검진(인천교육청 FAQ).", "source": "incheon"},
+    {"key": "final_edu", "label": "최종학력증명서", "scope": "vault", "keywords": ["최종학력", "졸업증명서"]},
+    {"key": "id_copy", "label": "신분증 사본", "scope": "vault", "keywords": ["신분증"]},
+    {"key": "bankbook", "label": "통장 사본", "scope": "vault", "keywords": ["통장"]},
+    {"key": "integrity", "label": "청렴(이행) 서약서", "scope": "per_application", "keywords": ["청렴"]},
+    {"key": "legal_training", "label": "법정의무교육 이수증", "scope": "vault", "keywords": ["법정의무교육", "의무교육"], "note": "4대 폭력 예방·아동학대 신고의무자 등 교육별 시간·주기가 달라요(인천교육청 FAQ). 이 앱은 만료를 계산하지 않아요 — 학교 확인 필요.", "source": "incheon"},
+    {"key": "safety_training", "label": "안전교육 이수증", "scope": "vault", "keywords": ["안전교육"], "note": "학교안전교육은 학기당 2시간 등 기준이 따로 있어요(인천교육청 FAQ). 만료 계산 안 함."}
+  ]
+}
