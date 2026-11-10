@@ -1,0 +1,16 @@
+{
+  "name": "구독자 이벤트 정리판",
+  "short_name": "이벤트 정리판",
+  "description": "구독자 이벤트 경품 22% 신호등, 공지문, 공정 추첨·검증, 당첨자 최소 수집, 원천세·파기 캘린더",
+  "lang": "ko",
+  "id": "./",
+  "scope": "./",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#FAFAFC",
+  "theme_color": "#5B3DF5",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ]
+}

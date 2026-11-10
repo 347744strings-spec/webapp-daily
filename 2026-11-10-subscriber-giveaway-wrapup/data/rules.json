@@ -1,0 +1,132 @@
+{
+ "checkedAt": "2026-11-10",
+ "threshold": 50000,
+ "incomeTaxRate": 0.2,
+ "localTaxRate": 0.1,
+ "rate": 0.22,
+ "contestExpenseRatio": 0.8,
+ "statementExemptMax": 100000,
+ "highValue": 300000000,
+ "withholdingDueDay": 10,
+ "statementDue": "next-year-02-last",
+ "holidays": {
+  "from": "2026-11-01",
+  "through": "2027-03-31",
+  "dates": [
+   "2026-12-25",
+   "2027-01-01",
+   "2027-02-06",
+   "2027-02-07",
+   "2027-02-08",
+   "2027-02-09",
+   "2027-03-01"
+  ],
+  "labels": {
+   "2026-12-25": "기독탄신일",
+   "2027-01-01": "1월 1일",
+   "2027-02-06": "설 연휴",
+   "2027-02-07": "설날",
+   "2027-02-08": "설 연휴",
+   "2027-02-09": "설 연휴 대체공휴일",
+   "2027-03-01": "3·1절"
+  },
+  "source": "kasa"
+ },
+ "sources": {
+  "income84": {
+   "title": "소득세법 제84조(기타소득의 과세최저한) — 그 밖의 기타소득금액 건별 5만원 이하 비과세 (현행 제3호, 2027.1.1. 시행본 제4호)",
+   "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1025229663",
+   "kind": "법령"
+  },
+  "income129": {
+   "title": "소득세법 제129조 제1항 제6호 라목 — 그 밖의 기타소득 원천징수세율 100분의 20",
+   "url": "https://www.law.go.kr/법령/소득세법/제129조",
+   "kind": "법령"
+  },
+  "income127": {
+   "title": "소득세법 제127조 제1항 — 기타소득을 지급하는 자의 원천징수 의무",
+   "url": "https://www.law.go.kr/법령/소득세법/제127조",
+   "kind": "법령"
+  },
+  "income128": {
+   "title": "소득세법 제128조 제1항 — 징수일이 속하는 달의 다음 달 10일까지 납부 (제2항 반기별 납부 특례)",
+   "url": "https://www.law.go.kr/법령/소득세법/제128조",
+   "kind": "법령"
+  },
+  "income164": {
+   "title": "소득세법 제164조 — 지급명세서 제출(지급일이 속하는 연도의 다음 연도 2월 말일)",
+   "url": "https://www.law.go.kr/법령/소득세법/제164조",
+   "kind": "법령"
+  },
+  "decree87": {
+   "title": "소득세법 시행령 제87조 제1호 가목 — 다수가 순위 경쟁하는 대회 입상 상금·부상은 받은 금액의 100분의 80 필요경비",
+   "url": "https://www.law.go.kr/법령/소득세법시행령/제87조",
+   "kind": "법령"
+  },
+  "decree214": {
+   "title": "국세청 손택스 「거주자 기타소득 지급명세서」 제출 제외대상 — 복권·경품권 그 밖의 추첨권 당첨 금품으로서 1건당 10만원 이하(소득세법 시행령 제214조 제1항)",
+   "url": "https://mob.tbht.hometax.go.kr/jsonAction.do?actionId=UTBSFAAE76F001",
+   "kind": "국세청"
+  },
+  "penalty": {
+   "title": "소득세법 제81조의11 — 지급명세서 미제출 가산세 지급금액의 1%(기한 후 3개월 이내 제출 0.5%)",
+   "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1032206317",
+   "kind": "법령"
+  },
+  "basic5": {
+   "title": "국세기본법 제5조(기한의 특례) — 기한이 토·일요일, 공휴일·대체공휴일, 노동절이면 그 다음 날",
+   "url": "https://www.law.go.kr/LSW/lsLawLinkInfo.do?chrClsCd=010202&lsJoLnkSeq=1000574525",
+   "kind": "법령"
+  },
+  "ntsSchedule": {
+   "title": "국세청 세무일정 — 원천세 신고·납부기한(매월 10일), 국세기본법 제5조 기한 특례 안내",
+   "url": "https://www.nts.go.kr/nts/ad/taxSchdul/selectList.do?mi=135747",
+   "kind": "국세청"
+  },
+  "localTax": {
+   "title": "지방세법 제103조의13 — 원천징수하는 소득세의 100분의 10을 개인지방소득세로 특별징수, 다음 달 10일까지 납부",
+   "url": "https://www.law.go.kr/LSW/lsLawLinkInfo.do?chrClsCd=010202&lsId=001649&lsJoLnkSeq=1000226093&print=print",
+   "kind": "법령"
+  },
+  "pipc2023": {
+   "title": "개인정보보호위원회 「개인정보 보호 가이드라인(온라인 경품행사편)」(2023.5.) — PIPC 게시판에 ‘과거 안내서’로 표시",
+   "url": "https://www.privacy.go.kr/cmm/fms/FileDown.do?atchFileId=ATCH_000000000852214&fileSn=1",
+   "kind": "개인정보보호위원회"
+  },
+  "pipc2024": {
+   "title": "개인정보보호위원회 「분야별 개인정보 보호 안내서」(2024.12., 현재 안내서 — 온라인 경품행사편 통합)",
+   "url": "https://www.pipc.go.kr/np/cop/bbs/selectBoardArticle.do?bbsId=BS217&mCode=G010030000&nttId=10898",
+   "kind": "개인정보보호위원회"
+  },
+  "pipcNews": {
+   "title": "정책브리핑(개인정보보호위원회) 「경품 배송에 필요한 정보는 당첨자에 한해 수집해야」(2023.5.3.)",
+   "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148914606",
+   "kind": "개인정보보호위원회"
+  },
+  "pipcQA": {
+   "title": "개인정보 포털 질의응답 「이벤트 등에서의 주민등록번호의 처리 제한」(지급명세서 면제 시 주민번호 불필요 취지)",
+   "url": "https://www.privacy.go.kr/cmm/fms/FileDown.do?atchFileId=ATCH_000000000872116&fileSn=1",
+   "kind": "개인정보보호위원회"
+  },
+  "winnertax": {
+   "title": "위너세무회계 칼럼 「시청자 이벤트로 준 상품권과 현금은 스트리머가 세금을 떼고 줘야 합니다」(2026.9.12., 세무사 칼럼·광고)",
+   "url": "https://bj.winnertax.kr/column/mtxw6ppp",
+   "kind": "칼럼"
+  },
+  "catchsecu": {
+   "title": "캐치시큐 「유튜브 구독자 이벤트 개인정보 규제 5가지」",
+   "url": "https://www.catchsecu.com/archives/20116",
+   "kind": "칼럼"
+  },
+  "kasa": {
+   "title": "우주항공청 2027년 월력요항(공휴일)",
+   "url": "https://www.kasa.go.kr/prog/plcyBrf/brief/kor/sub01_01_04/view.do?plcyBrfNo=431",
+   "kind": "정부"
+  },
+  "hometax": {
+   "title": "홈택스",
+   "url": "https://www.hometax.go.kr",
+   "kind": "국세청"
+  }
+ }
+}
