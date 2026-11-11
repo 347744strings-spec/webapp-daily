@@ -1,0 +1,1726 @@
+{
+ "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+ "sourceName": "국립공원공단 입산시간지정제(탐방로별 입산시간)",
+ "checkedAt": "2026-11-11",
+ "hallaSource": "https://visithalla.jeju.go.kr/contents/contents.do?id=49",
+ "hallaPress": "https://www.asiae.co.kr/article/2026092815502484956",
+ "notice": "국립공원공단 페이지 기준(2026-11-11 확인), 출발 전 공식 공지 재확인",
+ "geoNote": "좌표·정상 고도는 근사값(공개 자료)이며 사용자가 수정할 수 있습니다. 한라산 정상·윗세오름·남벽분기점 고도는 한라산 탐방예약시스템 탐방로 안내 기준.",
+ "items": [
+  {
+   "id": "seorak-osaek",
+   "park": "설악산",
+   "name": "남설악탐방지원센터 (오색→대청봉)",
+   "summitName": "대청봉",
+   "summitElev": 1708,
+   "elevApprox": true,
+   "lat": 38.119,
+   "lon": 128.465,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "04:00",
+    "close": "11:00"
+   },
+   "summer": {
+    "open": "03:00",
+    "close": "12:00"
+   },
+   "hut": [
+    {
+     "label": "소청·희운각대피소 예약자",
+     "minutes": 60
+    }
+   ],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "seorak-hangye",
+   "park": "설악산",
+   "name": "한계령탐방지원센터 (한계령→한계령삼거리)",
+   "summitName": "대청봉",
+   "summitElev": 1708,
+   "elevApprox": true,
+   "lat": 38.119,
+   "lon": 128.465,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "04:00",
+    "close": "10:00"
+   },
+   "summer": {
+    "open": "03:00",
+    "close": "12:00"
+   },
+   "hut": [
+    {
+     "label": "소청·희운각대피소 예약자",
+     "minutes": 60
+    }
+   ],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "seorak-baekdam",
+   "park": "설악산",
+   "name": "백담탐방지원센터 (백담→수렴동대피소→소청)",
+   "summitName": "대청봉",
+   "summitElev": 1708,
+   "elevApprox": true,
+   "lat": 38.119,
+   "lon": 128.465,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "04:00",
+    "close": "13:00"
+   },
+   "summer": {
+    "open": "03:00",
+    "close": "14:00"
+   },
+   "hut": [
+    {
+     "label": "소청대피소 예약자",
+     "minutes": 60
+    },
+    {
+     "label": "수렴동대피소 예약자",
+     "minutes": 120
+    }
+   ],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "seorak-biseon",
+   "park": "설악산",
+   "name": "비선대탐방지원센터 (비선대→양폭 방향)",
+   "summitName": "대청봉",
+   "summitElev": 1708,
+   "elevApprox": true,
+   "lat": 38.119,
+   "lon": 128.465,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "04:00",
+    "close": "12:00"
+   },
+   "summer": {
+    "open": "03:00",
+    "close": "14:00"
+   },
+   "hut": [
+    {
+     "label": "희운각대피소 예약자",
+     "minutes": 60
+    },
+    {
+     "label": "양폭대피소 예약자",
+     "minutes": 120
+    }
+   ],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "jiri-jungsan",
+   "park": "지리산",
+   "name": "중산리탐방지원센터",
+   "summitName": "천왕봉",
+   "summitElev": 1915,
+   "elevApprox": true,
+   "lat": 35.337,
+   "lon": 127.731,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "04:00",
+    "close": "13:00"
+   },
+   "summer": {
+    "open": "03:00",
+    "close": "14:00"
+   },
+   "hut": [
+    {
+     "label": "로타리대피소 예약자·법계사 이용자",
+     "minutes": 120
+    },
+    {
+     "label": "장터목대피소 예약자",
+     "minutes": 60
+    }
+   ],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "jiri-baekmu",
+   "park": "지리산",
+   "name": "백무동탐방지원센터",
+   "summitName": "천왕봉",
+   "summitElev": 1915,
+   "elevApprox": true,
+   "lat": 35.337,
+   "lon": 127.731,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "04:00",
+    "close": "12:00"
+   },
+   "summer": {
+    "open": "03:00",
+    "close": "13:00"
+   },
+   "hut": [
+    {
+     "label": "세석·장터목대피소 예약자",
+     "minutes": 120
+    }
+   ],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "jiri-yupyeong",
+   "park": "지리산",
+   "name": "유평 (대원사)",
+   "summitName": "천왕봉",
+   "summitElev": 1915,
+   "elevApprox": true,
+   "lat": 35.337,
+   "lon": 127.731,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "04:00",
+    "close": "12:00"
+   },
+   "summer": {
+    "open": "03:00",
+    "close": "13:00"
+   },
+   "hut": [
+    {
+     "label": "치밭목대피소 예약자",
+     "minutes": 120
+    }
+   ],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "jiri-saejae",
+   "park": "지리산",
+   "name": "새재",
+   "summitName": "천왕봉",
+   "summitElev": 1915,
+   "elevApprox": true,
+   "lat": 35.337,
+   "lon": 127.731,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "04:00",
+    "close": "13:00"
+   },
+   "summer": {
+    "open": "03:00",
+    "close": "14:00"
+   },
+   "hut": [
+    {
+     "label": "치밭목대피소 예약자",
+     "minutes": 120
+    }
+   ],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "jiri-seongsam",
+   "park": "지리산",
+   "name": "성삼재 (노고단 방향)",
+   "summitName": "노고단",
+   "summitElev": 1507,
+   "elevApprox": true,
+   "lat": 35.295,
+   "lon": 127.531,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "04:00",
+    "close": "16:00"
+   },
+   "summer": {
+    "open": "03:00",
+    "close": "16:30"
+   },
+   "hut": [],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "jiri-hwaeom",
+   "park": "지리산",
+   "name": "화엄사 (노고단 방향)",
+   "summitName": "노고단",
+   "summitElev": 1507,
+   "elevApprox": true,
+   "lat": 35.295,
+   "lon": 127.531,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "04:00",
+    "close": "11:00"
+   },
+   "summer": {
+    "open": "03:00",
+    "close": "12:00"
+   },
+   "hut": [],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "sobaek-huibang",
+   "park": "소백산",
+   "name": "희방탐방지원센터",
+   "summitName": "비로봉",
+   "summitElev": 1439,
+   "elevApprox": true,
+   "lat": 36.957,
+   "lon": 128.485,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "05:00",
+    "close": "13:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "14:00"
+   },
+   "hut": [],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "sobaek-samga",
+   "park": "소백산",
+   "name": "삼가탐방지원센터",
+   "summitName": "비로봉",
+   "summitElev": 1439,
+   "elevApprox": true,
+   "lat": 36.957,
+   "lon": 128.485,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "05:00",
+    "close": "13:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "14:00"
+   },
+   "hut": [],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "sobaek-cheondong",
+   "park": "소백산",
+   "name": "천동탐방지원센터",
+   "summitName": "비로봉",
+   "summitElev": 1439,
+   "elevApprox": true,
+   "lat": 36.957,
+   "lon": 128.485,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "05:00",
+    "close": "13:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "14:00"
+   },
+   "hut": [],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "sobaek-eouigok",
+   "park": "소백산",
+   "name": "어의곡탐방지원센터",
+   "summitName": "비로봉",
+   "summitElev": 1439,
+   "elevApprox": true,
+   "lat": 36.957,
+   "lon": 128.485,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "05:00",
+    "close": "13:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "14:00"
+   },
+   "hut": [],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "sobaek-jukryeong",
+   "park": "소백산",
+   "name": "죽령탐방지원센터",
+   "summitName": "비로봉",
+   "summitElev": 1439,
+   "elevApprox": true,
+   "lat": 36.957,
+   "lon": 128.485,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "05:00",
+    "close": "13:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "14:00"
+   },
+   "hut": [],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "deogyu-gucheon",
+   "park": "덕유산",
+   "name": "구천동탐방지원센터 (어사길-백련사-향적봉)",
+   "summitName": "향적봉",
+   "summitElev": 1614,
+   "elevApprox": true,
+   "lat": 35.86,
+   "lon": 127.746,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "05:00",
+    "close": "14:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "15:00"
+   },
+   "hut": [
+    {
+     "label": "향적봉·삿갓재대피소 예약자",
+     "minutes": 60
+    }
+   ],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "deogyu-anseong",
+   "park": "덕유산",
+   "name": "안성탐방지원센터",
+   "summitName": "향적봉",
+   "summitElev": 1614,
+   "elevApprox": true,
+   "lat": 35.86,
+   "lon": 127.746,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "05:00",
+    "close": "14:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "15:00"
+   },
+   "hut": [
+    {
+     "label": "향적봉·삿갓재대피소 예약자",
+     "minutes": 60
+    }
+   ],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "deogyu-hwangjeom",
+   "park": "덕유산",
+   "name": "황점 탐방로 입구",
+   "summitName": "남덕유산",
+   "summitElev": 1507,
+   "elevApprox": true,
+   "lat": 35.749,
+   "lon": 127.65,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "05:00",
+    "close": "14:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "15:00"
+   },
+   "hut": [
+    {
+     "label": "향적봉·삿갓재대피소 예약자",
+     "minutes": 60
+    }
+   ],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "deogyu-yeonggak",
+   "park": "덕유산",
+   "name": "영각 탐방로 입구",
+   "summitName": "남덕유산",
+   "summitElev": 1507,
+   "elevApprox": true,
+   "lat": 35.749,
+   "lon": 127.65,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "05:00",
+    "close": "13:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "14:00"
+   },
+   "hut": [
+    {
+     "label": "향적봉·삿갓재대피소 예약자",
+     "minutes": 60
+    }
+   ],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "odae-jeokmyeol",
+   "park": "오대산",
+   "name": "적멸보궁지킴터 (비로봉방향)",
+   "summitName": "비로봉",
+   "summitElev": 1563,
+   "elevApprox": true,
+   "lat": 37.795,
+   "lon": 128.543,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "05:00",
+    "close": "15:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "16:00"
+   },
+   "hut": [],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "odae-jingogae",
+   "park": "오대산",
+   "name": "진고개탐방지원센터 (노인봉방향)",
+   "summitName": "노인봉",
+   "summitElev": 1338,
+   "elevApprox": true,
+   "lat": 37.733,
+   "lon": 128.67,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "05:00",
+    "close": "14:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "15:00"
+   },
+   "hut": [],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "taebaek-yuilsa",
+   "park": "태백산",
+   "name": "유일사탐방지원센터",
+   "summitName": "장군봉",
+   "summitElev": 1567,
+   "elevApprox": true,
+   "lat": 37.096,
+   "lon": 128.916,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "04:00",
+    "close": "15:00"
+   },
+   "summer": {
+    "open": "03:00",
+    "close": "16:00"
+   },
+   "hut": [],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "taebaek-danggol",
+   "park": "태백산",
+   "name": "당골탐방지원센터",
+   "summitName": "장군봉",
+   "summitElev": 1567,
+   "elevApprox": true,
+   "lat": 37.096,
+   "lon": 128.916,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "04:00",
+    "close": "15:00"
+   },
+   "summer": {
+    "open": "03:00",
+    "close": "16:00"
+   },
+   "hut": [],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "taebaek-baekdan",
+   "park": "태백산",
+   "name": "백단사탐방지원센터",
+   "summitName": "장군봉",
+   "summitElev": 1567,
+   "elevApprox": true,
+   "lat": 37.096,
+   "lon": 128.916,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "04:00",
+    "close": "15:00"
+   },
+   "summer": {
+    "open": "03:00",
+    "close": "16:00"
+   },
+   "hut": [],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "chiak-seryeom",
+   "park": "치악산",
+   "name": "세렴안전지킴터 (구룡지구)",
+   "summitName": "비로봉",
+   "summitElev": 1288,
+   "elevApprox": true,
+   "lat": 37.365,
+   "lon": 128.055,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "05:00",
+    "close": "13:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "14:00"
+   },
+   "hut": [],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "chiak-hwanggol",
+   "park": "치악산",
+   "name": "황골탐방지원센터",
+   "summitName": "비로봉",
+   "summitElev": 1288,
+   "elevApprox": true,
+   "lat": 37.365,
+   "lon": 128.055,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "05:00",
+    "close": "13:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "14:00"
+   },
+   "hut": [],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "chiak-sangwon",
+   "park": "치악산",
+   "name": "상원골주차장 (성남지구)",
+   "summitName": "남대봉",
+   "summitElev": 1182,
+   "elevApprox": true,
+   "lat": 37.288,
+   "lon": 128.087,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "05:00",
+    "close": "13:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "14:00"
+   },
+   "hut": [],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "bukhan-baekun",
+   "park": "북한산",
+   "name": "백운탐방지원센터~백운대",
+   "summitName": "백운대",
+   "summitElev": 836,
+   "elevApprox": true,
+   "lat": 37.659,
+   "lon": 126.978,
+   "geoApprox": true,
+   "winterMonths": [
+    12,
+    1,
+    2
+   ],
+   "winterLabel": "12~2월",
+   "winter": {
+    "open": "04:00",
+    "close": "16:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "17:00"
+   },
+   "hut": [],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "bukhan-sanseong",
+   "park": "북한산",
+   "name": "북한산성입구~위문",
+   "summitName": "백운대",
+   "summitElev": 836,
+   "elevApprox": true,
+   "lat": 37.659,
+   "lon": 126.978,
+   "geoApprox": true,
+   "winterMonths": [
+    12,
+    1,
+    2
+   ],
+   "winterLabel": "12~2월",
+   "winter": {
+    "open": "04:00",
+    "close": "16:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "17:00"
+   },
+   "hut": [],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "bukhan-dobong",
+   "park": "북한산",
+   "name": "서원교~도봉주능선, 포대능선 (도봉)",
+   "summitName": "자운봉",
+   "summitElev": 740,
+   "elevApprox": true,
+   "lat": 37.699,
+   "lon": 127.016,
+   "geoApprox": true,
+   "winterMonths": [
+    12,
+    1,
+    2
+   ],
+   "winterLabel": "12~2월",
+   "winter": {
+    "open": "04:00",
+    "close": "16:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "17:00"
+   },
+   "hut": [],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "gyeryong-cheonjeong",
+   "park": "계룡산",
+   "name": "천정탐방지원센터 (동학사 지구)",
+   "summitName": "관음봉",
+   "summitElev": 766,
+   "elevApprox": true,
+   "lat": 36.343,
+   "lon": 127.205,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "05:00",
+    "close": "15:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "17:00"
+   },
+   "hut": [],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "gyeryong-gapsa",
+   "park": "계룡산",
+   "name": "대성암입구 (갑사 지구)",
+   "summitName": "관음봉",
+   "summitElev": 766,
+   "elevApprox": true,
+   "lat": 36.343,
+   "lon": 127.205,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "05:00",
+    "close": "15:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "17:00"
+   },
+   "hut": [],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "songni-munjang",
+   "park": "속리산",
+   "name": "법주사~문장대",
+   "summitName": "문장대",
+   "summitElev": 1054,
+   "elevApprox": true,
+   "lat": 36.546,
+   "lon": 127.871,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "05:00",
+    "close": "14:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "15:00"
+   },
+   "hut": [],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "songni-cheonwang",
+   "park": "속리산",
+   "name": "법주사~천왕봉",
+   "summitName": "천왕봉",
+   "summitElev": 1058,
+   "elevApprox": true,
+   "lat": 36.516,
+   "lon": 127.858,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "05:00",
+    "close": "12:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "14:00"
+   },
+   "hut": [],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "songni-hwabuk",
+   "park": "속리산",
+   "name": "화북탐방지원센터~문장대",
+   "summitName": "문장대",
+   "summitElev": 1054,
+   "elevApprox": true,
+   "lat": 36.546,
+   "lon": 127.871,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "05:00",
+    "close": "14:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "15:00"
+   },
+   "hut": [],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "worak-deokju",
+   "park": "월악산",
+   "name": "덕주사",
+   "summitName": "영봉",
+   "summitElev": 1097,
+   "elevApprox": true,
+   "lat": 36.886,
+   "lon": 128.105,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "05:00",
+    "close": "13:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "14:00"
+   },
+   "hut": [],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "worak-dongchang",
+   "park": "월악산",
+   "name": "동창교(02-01)",
+   "summitName": "영봉",
+   "summitElev": 1097,
+   "elevApprox": true,
+   "lat": 36.886,
+   "lon": 128.105,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "05:00",
+    "close": "13:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "14:00"
+   },
+   "hut": [],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "worak-sinreuk",
+   "park": "월악산",
+   "name": "신륵사",
+   "summitName": "영봉",
+   "summitElev": 1097,
+   "elevApprox": true,
+   "lat": 36.886,
+   "lon": 128.105,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "05:00",
+    "close": "13:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "14:00"
+   },
+   "hut": [],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "mudeung-wonhyo",
+   "park": "무등산",
+   "name": "원효광장~서석대 (옛길2구간)",
+   "summitName": "서석대",
+   "summitElev": 1100,
+   "elevApprox": true,
+   "lat": 35.134,
+   "lon": 126.989,
+   "geoApprox": true,
+   "winterMonths": [
+    12,
+    1,
+    2
+   ],
+   "winterLabel": "12~2월",
+   "winter": {
+    "open": "04:00",
+    "close": "16:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "17:00"
+   },
+   "hut": [],
+   "note": "원문 하절기 표기 \"04:00~1700\"을 17:00으로 읽음",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "mudeung-jeungsim",
+   "park": "무등산",
+   "name": "증심사상가~중머리재",
+   "summitName": "서석대",
+   "summitElev": 1100,
+   "elevApprox": true,
+   "lat": 35.134,
+   "lon": 126.989,
+   "geoApprox": true,
+   "winterMonths": [
+    12,
+    1,
+    2
+   ],
+   "winterLabel": "12~2월",
+   "winter": {
+    "open": "04:00",
+    "close": "16:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "17:00"
+   },
+   "hut": [],
+   "note": "원문 하절기 표기 \"04:00~1700\"을 17:00으로 읽음",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "hallyeo-geumsan",
+   "park": "한려해상",
+   "name": "금산입구 (남해)",
+   "summitName": "금산",
+   "summitElev": 705,
+   "elevApprox": true,
+   "lat": 34.75,
+   "lon": 127.98,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "winterLabel": "11~4월",
+   "winter": {
+    "open": "05:00",
+    "close": "16:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "17:00"
+   },
+   "hut": [],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "gaya-yonggi",
+   "park": "가야산",
+   "name": "백운동 용기골",
+   "summitName": "상왕봉",
+   "summitElev": 1430,
+   "elevApprox": true,
+   "lat": 35.823,
+   "lon": 128.12,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "05:00",
+    "close": "13:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "14:00"
+   },
+   "hut": [],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "wolchul-cheonhwang",
+   "park": "월출산",
+   "name": "천황사탐방로 입구",
+   "summitName": "천황봉",
+   "summitElev": 809,
+   "elevApprox": true,
+   "lat": 34.759,
+   "lon": 126.705,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "05:00",
+    "close": "14:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "15:00"
+   },
+   "hut": [],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "palgong-donghwa",
+   "park": "팔공산",
+   "name": "동화사 (대구)",
+   "summitName": "동봉",
+   "summitElev": 1167,
+   "elevApprox": true,
+   "lat": 36.016,
+   "lon": 128.695,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "05:00",
+    "close": "15:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "16:00"
+   },
+   "hut": [],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "juwang-janggun",
+   "park": "주왕산",
+   "name": "장군봉(백련암) 입구",
+   "summitName": "장군봉",
+   "summitElev": 687,
+   "elevApprox": true,
+   "lat": 36.39,
+   "lon": 129.16,
+   "geoApprox": true,
+   "winterMonths": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "11~3월",
+   "winter": {
+    "open": "05:00",
+    "close": "14:00"
+   },
+   "summer": {
+    "open": "04:00",
+    "close": "15:00"
+   },
+   "hut": [],
+   "note": "",
+   "source": "https://knps.or.kr/portal/main/contents.do?menuNo=8000198",
+   "sourceName": "국립공원공단 입산시간지정제",
+   "verified": true
+  },
+  {
+   "id": "halla-seongpanak",
+   "park": "한라산",
+   "name": "성판악 탐방로 입구",
+   "summitName": "백록담(동능 정상)",
+   "summitElev": 1950,
+   "elevApprox": false,
+   "lat": 33.362,
+   "lon": 126.533,
+   "geoApprox": true,
+   "winterMonths": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "10~3월",
+   "winter": {
+    "open": "05:00",
+    "close": "11:30"
+   },
+   "summer": {
+    "open": "05:00",
+    "close": "12:30"
+   },
+   "summitLeave": {
+    "winter": "13:30",
+    "summer": "14:30"
+   },
+   "gates": [
+    {
+     "name": "진달래밭통제소",
+     "winter": "11:30",
+     "summer": "12:30"
+    }
+   ],
+   "hut": [],
+   "openVerified": true,
+   "note": "일출·일몰 무관하게 관리소 지정 시각 적용. 입산 시작 05:00은 성판악·관음사 안내 페이지 기준이며, 같은 누리집 하단 구표(동절기 06:00)와 다름 — 출발 전 확인 필요.",
+   "source": "https://visithalla.jeju.go.kr/contents/contents.do?id=49",
+   "source2": "https://visithalla.jeju.go.kr/contents/contents.do?id=61",
+   "sourceName": "한라산국립공원 탐방예약시스템 (제주특별자치도)",
+   "verified": true
+  },
+  {
+   "id": "halla-gwaneum",
+   "park": "한라산",
+   "name": "관음사 탐방로 입구",
+   "summitName": "백록담(동능 정상)",
+   "summitElev": 1950,
+   "elevApprox": false,
+   "lat": 33.362,
+   "lon": 126.533,
+   "geoApprox": true,
+   "winterMonths": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "10~3월",
+   "winter": {
+    "open": "05:00",
+    "close": "11:30"
+   },
+   "summer": {
+    "open": "05:00",
+    "close": "12:30"
+   },
+   "summitLeave": {
+    "winter": "13:30",
+    "summer": "14:30"
+   },
+   "gates": [
+    {
+     "name": "삼각봉통제소",
+     "winter": "11:30",
+     "summer": "12:30"
+    }
+   ],
+   "hut": [],
+   "openVerified": true,
+   "note": "일출·일몰 무관하게 관리소 지정 시각 적용. 입산 시작 05:00은 성판악·관음사 안내 페이지 기준이며, 같은 누리집 하단 구표(동절기 06:00)와 다름 — 출발 전 확인 필요.",
+   "source": "https://visithalla.jeju.go.kr/contents/contents.do?id=49",
+   "source2": "https://visithalla.jeju.go.kr/contents/contents.do?id=62",
+   "sourceName": "한라산국립공원 탐방예약시스템 (제주특별자치도)",
+   "verified": true
+  },
+  {
+   "id": "halla-eorimok",
+   "park": "한라산",
+   "name": "어리목 탐방로 통제소",
+   "summitName": "윗세오름",
+   "summitElev": 1700,
+   "elevApprox": false,
+   "lat": 33.361,
+   "lon": 126.512,
+   "geoApprox": true,
+   "winterMonths": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "10~3월",
+   "winter": {
+    "open": "05:00",
+    "close": "12:00"
+   },
+   "summer": {
+    "open": "05:00",
+    "close": "15:00"
+   },
+   "summitLeave": {
+    "winter": "15:00",
+    "summer": "17:00"
+   },
+   "gates": [],
+   "hut": [],
+   "openVerified": false,
+   "note": "일출·일몰 무관하게 관리소 지정 시각 적용. 입산 시작 05:00은 성판악·관음사 안내 페이지 기준이며, 같은 누리집 하단 구표(동절기 06:00)와 다름 — 출발 전 확인 필요.",
+   "source": "https://visithalla.jeju.go.kr/contents/contents.do?id=49",
+   "source2": "",
+   "sourceName": "한라산국립공원 탐방예약시스템 (제주특별자치도)",
+   "verified": true
+  },
+  {
+   "id": "halla-yeongsil",
+   "park": "한라산",
+   "name": "영실 탐방로 통제소",
+   "summitName": "윗세오름",
+   "summitElev": 1700,
+   "elevApprox": false,
+   "lat": 33.361,
+   "lon": 126.512,
+   "geoApprox": true,
+   "winterMonths": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "10~3월",
+   "winter": {
+    "open": "05:00",
+    "close": "12:00"
+   },
+   "summer": {
+    "open": "05:00",
+    "close": "15:00"
+   },
+   "summitLeave": {
+    "winter": "15:00",
+    "summer": "17:00"
+   },
+   "gates": [],
+   "hut": [],
+   "openVerified": false,
+   "note": "일출·일몰 무관하게 관리소 지정 시각 적용. 입산 시작 05:00은 성판악·관음사 안내 페이지 기준이며, 같은 누리집 하단 구표(동절기 06:00)와 다름 — 출발 전 확인 필요.",
+   "source": "https://visithalla.jeju.go.kr/contents/contents.do?id=49",
+   "source2": "https://visithalla.jeju.go.kr/contents/contents.do?id=60",
+   "sourceName": "한라산국립공원 탐방예약시스템 (제주특별자치도)",
+   "verified": true
+  },
+  {
+   "id": "halla-donnaeko",
+   "park": "한라산",
+   "name": "돈내코 안내소",
+   "summitName": "남벽분기점",
+   "summitElev": 1600,
+   "elevApprox": false,
+   "lat": 33.354,
+   "lon": 126.53,
+   "geoApprox": true,
+   "winterMonths": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "winterLabel": "10~3월",
+   "winter": {
+    "open": "05:00",
+    "close": "10:00"
+   },
+   "summer": {
+    "open": "05:00",
+    "close": "11:00"
+   },
+   "summitLeave": {
+    "winter": "14:00",
+    "summer": "15:00"
+   },
+   "gates": [],
+   "hut": [],
+   "openVerified": false,
+   "note": "일출·일몰 무관하게 관리소 지정 시각 적용. 입산 시작 05:00은 성판악·관음사 안내 페이지 기준이며, 같은 누리집 하단 구표(동절기 06:00)와 다름 — 출발 전 확인 필요.",
+   "source": "https://visithalla.jeju.go.kr/contents/contents.do?id=49",
+   "source2": "https://visithalla.jeju.go.kr/contents/contents.do?id=63",
+   "sourceName": "한라산국립공원 탐방예약시스템 (제주특별자치도)",
+   "verified": true
+  }
+ ]
+}

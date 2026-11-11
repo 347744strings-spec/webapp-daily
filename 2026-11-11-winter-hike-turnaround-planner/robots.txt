@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://347744strings-spec.github.io/webapp-daily/2026-11-11-winter-hike-turnaround-planner/sitemap.xml

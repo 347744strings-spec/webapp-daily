@@ -1,0 +1,16 @@
+{
+  "name": "겨울산행 하산 마감표",
+  "short_name": "하산 마감표",
+  "description": "국립공원 동절기 입산통제시간·일몰·팀 페이스로 반환 시각표, 공지문, 인원 점검, 119 비상 카드",
+  "lang": "ko",
+  "id": "./",
+  "scope": "./",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#F4F7FA",
+  "theme_color": "#1F5F4A",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ]
+}
