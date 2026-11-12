@@ -1,0 +1,942 @@
+{
+ "version": "2026-11-12",
+ "checkedAt": "2026-11-12",
+ "notice": "참고용 계산입니다. 최종 확인은 농림축산검역본부와 도착국 공식 안내 — 최종 판단은 검역본부·도착국 공식 안내를 따르세요.",
+ "sources": {
+  "jp_aqs": {
+   "title": "일본 동물검역소 · 犬、猫の日本への入国（指定地域以外編）",
+   "url": "https://www.maff.go.jp/aqs/animal/dog/import-other.html",
+   "kind": "primary"
+  },
+  "jp_guide_ko": {
+   "title": "일본 동물검역소 · 개·고양이 수입 지침서(한국어 PDF)",
+   "url": "https://www.maff.go.jp/aqs/animal/dog/attach/pdf/import-other-44.pdf",
+   "kind": "primary"
+  },
+  "jp_seido": {
+   "title": "일본 동물검역소 · 犬等の輸入検疫制度の見直しについて",
+   "url": "https://www.maff.go.jp/aqs/animal/dog/h220415seidokaisei.html",
+   "kind": "primary"
+  },
+  "jp_export": {
+   "title": "일본 동물검역소 · 犬、猫を輸出するには",
+   "url": "https://www.maff.go.jp/aqs/animal/aq12-1.html",
+   "kind": "primary"
+  },
+  "mafra_lab": {
+   "title": "농림축산식품부 보도자료(2025-08-21) · 일본행 광견병 항체검사 국내 검사기관 지정",
+   "url": "https://www.mafra.go.kr/bbs/home/792/574910/artclView.do",
+   "kind": "primary"
+  },
+  "kvma_lab": {
+   "title": "대한수의사회 안내(2025-09-02) · 국내 일본 지정 광견병항체가 검사기관",
+   "url": "https://www.kvma.or.kr/kvma_info?num=1457&tbl=0",
+   "kind": "secondary"
+  },
+  "qia_list": {
+   "title": "농림축산검역본부 · 수출국가별 검역조건·지역 사무실",
+   "url": "http://qia.go.kr/animal/prevent/listwebQiaCom.do?type=95_dogcatexp",
+   "kind": "primary"
+  },
+  "easylaw": {
+   "title": "찾기쉬운 생활법령 · 수출검역(검역본부 Q&A 인용)",
+   "url": "https://www.easylaw.go.kr/CSP/CnpClsMainBtr.laf?ccfNo=1&cciNo=2&cnpClsNo=2&csmSeq=2605&popMenu=ov",
+   "kind": "primary"
+  },
+  "korea_brief": {
+   "title": "정책브리핑(2025-06-26) · 반려동물 동반 해외여행 동물검역",
+   "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148945014",
+   "kind": "primary"
+  },
+  "qia_import_en": {
+   "title": "농림축산검역본부 · Bring a dog or a cat to Korea",
+   "url": "http://qia.go.kr/english/html/Animal_livestock/02AnimalLivestock_007-8.jsp",
+   "kind": "primary"
+  },
+  "qia_faq": {
+   "title": "농림축산검역본부 · 개·고양이 검역절차 Q&A",
+   "url": "http://qia.go.kr/popup/popup_livestock_outforeign_hygiene_inf.html",
+   "kind": "primary"
+  },
+  "eu_pets": {
+   "title": "EU 집행위원회 · Bringing a pet into the EU from a non-EU country",
+   "url": "https://food.ec.europa.eu/animals/live-animal-movements/dogs-cats-and-ferrets/bringing-pet-eu-non-eu-country_en",
+   "kind": "primary"
+  },
+  "eu_636": {
+   "title": "Commission Implementing Regulation (EU) 2026/636 (항체검사 면제국 Annex I·II)",
+   "url": "https://eur-lex.europa.eu/eli/reg_impl/2026/636/oj",
+   "kind": "primary"
+  },
+  "gb_vax": {
+   "title": "GOV.UK · Rabies vaccination and boosters",
+   "url": "https://www.gov.uk/bring-pet-to-great-britain/rabies-vaccination-and-boosters",
+   "kind": "primary"
+  },
+  "gb_blood": {
+   "title": "GOV.UK · Blood tests for rabies",
+   "url": "https://www.gov.uk/bring-pet-to-great-britain/rabies-blood-tests",
+   "kind": "primary"
+  },
+  "gb_doc": {
+   "title": "GOV.UK · Which pet travel document you need (listed countries)",
+   "url": "https://www.gov.uk/bring-pet-to-great-britain/which-pet-travel-document",
+   "kind": "primary"
+  },
+  "gb_cert": {
+   "title": "GOV.UK · Great Britain pet health certificate",
+   "url": "https://www.gov.uk/bring-pet-to-great-britain/great-britain-pet-health-certificate",
+   "kind": "primary"
+  },
+  "gb_main": {
+   "title": "GOV.UK · Bringing your pet dog, cat or ferret to Great Britain",
+   "url": "https://www.gov.uk/bring-pet-to-great-britain",
+   "kind": "primary"
+  },
+  "cdc_low": {
+   "title": "CDC · Entry Requirements for Dogs from Dog-Rabies Free or Low-Risk Countries",
+   "url": "https://www.cdc.gov/importation/dogs/rabies-free-low-risk-countries.html",
+   "kind": "primary"
+  },
+  "cdc_high": {
+   "title": "CDC · High-Risk Countries for Dog Rabies (2026-04-15)",
+   "url": "https://www.cdc.gov/importation/dogs/high-risk-countries.html",
+   "kind": "primary"
+  },
+  "au_g3": {
+   "title": "호주 농림부(DAFF) · How to bring your dog to Australia from a Group 3 country",
+   "url": "https://www.agriculture.gov.au/biosecurity-trade/cats-dogs/how-to-import/step-by-step-guides/category-3-step-by-step-guide-for-dogs",
+   "kind": "primary"
+  }
+ },
+ "korea": {
+  "rules": [
+   {
+    "id": "exportCertDays",
+    "label": "검역증명서 발급",
+    "value": 10,
+    "unit": "일",
+    "text": "검역증명서는 출국 전 10일 이내부터 발급",
+    "src": [
+     "easylaw"
+    ],
+    "status": "verified"
+   },
+   {
+    "id": "exportFeeKRW",
+    "label": "검역 수수료(개·고양이)",
+    "value": 10000,
+    "unit": "원",
+    "text": "신청 건당 1만원",
+    "src": [
+     "easylaw"
+    ],
+    "status": "verified"
+   },
+   {
+    "id": "bookingMinDays",
+    "label": "검역본부 방문 예약",
+    "value": 1,
+    "unit": "일 전",
+    "text": "사전 예약 필수(당일 예약 불가, 최소 1일 전까지 — 중부지역본부 안내). 사무실마다 다름",
+    "src": [
+     "qia_list"
+    ],
+    "status": "verified"
+   },
+   {
+    "id": "petMustAttend",
+    "label": "반려동물 동반",
+    "text": "증명서 발급 때 칩 번호를 확인하므로 반려동물을 반드시 데려가요",
+    "src": [
+     "korea_brief"
+    ],
+    "status": "verified"
+   },
+   {
+    "id": "fineKRW",
+    "label": "입국 시 미검역 과태료",
+    "value": 3000000,
+    "unit": "원",
+    "text": "최대 300만원",
+    "src": [
+     "korea_brief"
+    ],
+    "status": "verified"
+   },
+   {
+    "id": "labFeeKRW",
+    "label": "일본행 항체검사(검역본부 서울지역본부 전염병검사과)",
+    "value": 110000,
+    "unit": "원",
+    "text": "2025-08-21부터 국내 검사 가능, 비용 11만원",
+    "src": [
+     "mafra_lab"
+    ],
+    "status": "verified"
+   },
+   {
+    "id": "labDays",
+    "label": "항체검사 결과까지",
+    "value": 14,
+    "unit": "일(약 2주)",
+    "text": "농식품부 발표 '대략 2주'. 대한수의사회 안내는 민원처리기간 접수일부터 15일(주말·공휴일 제외)",
+    "src": [
+     "mafra_lab",
+     "kvma_lab"
+    ],
+    "status": "verified",
+    "note": "15영업일은 2차 출처 — 확인 필요"
+   }
+  ],
+  "returnRules": [
+   {
+    "id": "retMinAgeDays",
+    "label": "항체검사 대상",
+    "value": 90,
+    "unit": "일령 이상",
+    "text": "광견병 발생국에서 오는 90일령 이상 개·고양이",
+    "src": [
+     "qia_import_en",
+     "qia_faq"
+    ],
+    "status": "verified"
+   },
+   {
+    "id": "retTiter",
+    "label": "항체가",
+    "value": 0.5,
+    "unit": "IU/ml 이상",
+    "text": "중화항체가 0.5IU/㎖ 이상",
+    "src": [
+     "qia_import_en",
+     "qia_faq"
+    ],
+    "status": "verified"
+   },
+   {
+    "id": "retDrawMinDays",
+    "label": "검사 시기(최소)",
+    "value": 30,
+    "unit": "일 전",
+    "text": "선적 전 30일 ∼ 24개월 사이 검사",
+    "src": [
+     "qia_faq"
+    ],
+    "status": "verified"
+   },
+   {
+    "id": "retDrawMaxMonths",
+    "label": "검사 시기(최대)",
+    "value": 24,
+    "unit": "개월",
+    "text": "채혈일 기준 24개월 이내",
+    "src": [
+     "qia_import_en",
+     "qia_faq"
+    ],
+    "status": "verified"
+   },
+   {
+    "id": "retRabiesFree",
+    "label": "출발국이 광견병 비발생지역인지",
+    "text": "비발생지역 목록은 검역본부 홈페이지 게시 기준 — 이 앱은 목록 원문을 확인하지 못했어요",
+    "src": [
+     "qia_faq"
+    ],
+    "status": "check"
+   },
+   {
+    "id": "jpExportApplyDays",
+    "label": "일본에서 출국 시 수출검사 신청",
+    "value": 14,
+    "unit": "일 전까지",
+    "text": "輸出検査申請は輸出日の14日前まで(일본 동물검역소)",
+    "src": [
+     "jp_export"
+    ],
+    "status": "verified"
+   }
+  ]
+ },
+ "countries": {
+  "JP": {
+   "name": "일본",
+   "flag": "🇯🇵",
+   "species": [
+    "dog",
+    "cat"
+   ],
+   "city": "도쿄",
+   "params": {
+    "minAgeDays": 91,
+    "vax2MinDays": 30,
+    "drawAfterVax2Days": 0,
+    "titerMin": 0.5,
+    "titerValidMonths": 24,
+    "waitDays": 180,
+    "noticeDaysBefore": 40,
+    "exportExamDays": 10,
+    "maxQuarantineDays": 180
+   },
+   "dogAirports": [
+    [
+     "CTS",
+     "신치토세"
+    ],
+    [
+     "NRT",
+     "나리타"
+    ],
+    [
+     "HND",
+     "하네다"
+    ],
+    [
+     "NGO",
+     "주부"
+    ],
+    [
+     "KIX",
+     "간사이"
+    ],
+    [
+     "ITM",
+     "이타미"
+    ],
+    [
+     "UKB",
+     "고베"
+    ],
+    [
+     "KKJ",
+     "기타큐슈"
+    ],
+    [
+     "FUK",
+     "후쿠오카"
+    ],
+    [
+     "KOJ",
+     "가고시마"
+    ],
+    [
+     "OKA",
+     "나하"
+    ]
+   ],
+   "rules": [
+    {
+     "id": "chip",
+     "label": "마이크로칩 → 1차 주사",
+     "text": "칩을 먼저 심고 1차 주사(같은 날 가능). 칩보다 먼저 맞은 주사는 무효(조건부 수용 예외는 검역소 상담)",
+     "src": [
+      "jp_aqs",
+      "jp_seido"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "minAgeDays",
+     "label": "1차 주사 시기",
+     "value": 91,
+     "unit": "일령 이후",
+     "text": "생후 91일령 이후(생일=0일째). 91일령 전 주사는 무효",
+     "src": [
+      "jp_aqs",
+      "jp_guide_ko"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "vax2MinDays",
+     "label": "2차 주사",
+     "value": 30,
+     "unit": "일 이상",
+     "text": "1차로부터 30일 이상(1차=0일째), 1차 유효 면역기간 안",
+     "src": [
+      "jp_aqs",
+      "jp_guide_ko"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "drawAfterVax2Days",
+     "label": "채혈",
+     "value": 0,
+     "unit": "일(같은 날 가능)",
+     "text": "2차 주사 후(같은 날 가능), 유효 면역기간 안. 일본 지정 검사기관만 인정",
+     "src": [
+      "jp_aqs"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "titerMin",
+     "label": "항체가",
+     "value": 0.5,
+     "unit": "IU/ml 이상",
+     "text": "0.5IU/ml 미만이면 재검사",
+     "src": [
+      "jp_aqs"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "titerValidMonths",
+     "label": "항체검사 유효",
+     "value": 24,
+     "unit": "개월(2년)",
+     "text": "채혈일부터 2년간 유효",
+     "src": [
+      "jp_aqs",
+      "jp_guide_ko"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "waitDays",
+     "label": "수출 전 대기",
+     "value": 180,
+     "unit": "일 이상",
+     "text": "채혈일=0일째로 180일 이상. 모자라면 모자란 날만큼 도착 후 계류",
+     "src": [
+      "jp_aqs",
+      "jp_seido"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "continuous",
+     "label": "추가 접종",
+     "text": "유효 면역기간이 하루도 끊기지 않게 추가 접종. 기간이 지난 뒤 맞은 주사는 추가 접종으로 인정되지 않아 처음부터 다시",
+     "src": [
+      "jp_aqs",
+      "jp_seido"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "noticeDaysBefore",
+     "label": "사전 신고",
+     "value": 40,
+     "unit": "일 전까지",
+     "text": "도착 40일 전까지 도착 공항 관할 동물검역소에 신고(NACCS 또는 이메일). 원칙상 늦으면 수리 안 됨",
+     "src": [
+      "jp_aqs"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "exportExamDays",
+     "label": "출국 전 임상검사",
+     "value": 10,
+     "unit": "일 이내",
+     "text": "출국 직전(출국 전 10일 이내) 임상검사 → Form AC에 검역본부 배서",
+     "src": [
+      "jp_aqs"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "dogAirports",
+     "label": "개 입국 공항",
+     "value": 11,
+     "unit": "곳",
+     "text": "개는 신치토세·나리타·하네다·주부·간사이·이타미·고베·기타큐슈·후쿠오카·가고시마·나하 공항만",
+     "src": [
+      "jp_aqs"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "maxQuarantineDays",
+     "label": "서류 미비 시",
+     "value": 180,
+     "unit": "일(최장)",
+     "text": "조건 미충족·증명서 미비면 최장 180일 계류 또는 수입 불가(비용 보호자 부담)",
+     "src": [
+      "jp_aqs"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "chip900202",
+     "label": "칩 번호 900202",
+     "text": "앞 6자리가 900202인 칩은 당분간 인정되지 않아요(2023-04-07 공지)",
+     "src": [
+      "jp_aqs"
+     ],
+     "status": "verified"
+    }
+   ]
+  },
+  "EU": {
+   "name": "EU",
+   "flag": "🇪🇺",
+   "species": [
+    "dog",
+    "cat"
+   ],
+   "city": "EU",
+   "subs": [
+    [
+     "DE",
+     "독일",
+     false
+    ],
+    [
+     "FR",
+     "프랑스",
+     false
+    ],
+    [
+     "NL",
+     "네덜란드",
+     false
+    ],
+    [
+     "ES",
+     "스페인",
+     false
+    ],
+    [
+     "IT",
+     "이탈리아",
+     false
+    ],
+    [
+     "FI",
+     "핀란드",
+     true
+    ],
+    [
+     "IE",
+     "아일랜드",
+     true
+    ],
+    [
+     "MT",
+     "몰타",
+     true
+    ],
+    [
+     "XX",
+     "그 밖의 EU 국가",
+     false
+    ]
+   ],
+   "params": {
+    "minAgeDays": 84,
+    "validityStartDays": 21,
+    "drawAfterVaxDays": 30,
+    "certAfterDrawDays": 90,
+    "certValidDays": 10,
+    "titerMin": 0.5,
+    "tapewormHours": [
+     24,
+     120
+    ]
+   },
+   "rules": [
+    {
+     "id": "chip",
+     "label": "마이크로칩 → 접종",
+     "text": "접종일이 칩 이식·판독일보다 앞서면 안 돼요(같은 날 가능)",
+     "src": [
+      "eu_pets"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "minAgeDays",
+     "label": "접종 나이",
+     "value": 84,
+     "unit": "일령(12주) 이상",
+     "text": "접종일에 12주령 이상(12주=84일로 계산)",
+     "src": [
+      "eu_pets"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "validityStartDays",
+     "label": "접종 유효 시작",
+     "value": 21,
+     "unit": "일 후",
+     "text": "1차 접종 완료 21일 이후부터 유효, 이후 접종은 이전 유효기간 안",
+     "src": [
+      "eu_pets"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "drawAfterVaxDays",
+     "label": "채혈",
+     "value": 30,
+     "unit": "일 이후",
+     "text": "1차 접종 후 최소 30일 지나 채혈, 지정 실험실, 0.5IU/ml 이상",
+     "src": [
+      "eu_pets"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "certAfterDrawDays",
+     "label": "건강증명서 발급",
+     "value": 90,
+     "unit": "일 이후",
+     "text": "채혈일이 건강증명서 발급일보다 90일 이상 앞서야 해요",
+     "src": [
+      "eu_pets"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "certValidDays",
+     "label": "건강증명서 유효",
+     "value": 10,
+     "unit": "일",
+     "text": "발급일부터 입국 검사일까지 10일 유효(해상 이동은 항해 기간만큼 연장)",
+     "src": [
+      "eu_pets"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "titerKorea",
+     "label": "한국은 항체검사 면제국이 아님",
+     "text": "면제국 목록(Annex I·II, 2026/636)에 한국이 없다고 보고 항체검사 경로로 계산. 목록 원문을 이 앱에서 열지 못해 확인 필요",
+     "src": [
+      "eu_636",
+      "eu_pets"
+     ],
+     "status": "check"
+    },
+    {
+     "id": "boosterKeep",
+     "label": "재검사",
+     "text": "결과가 기준을 넘은 뒤 유효기간 안에 추가 접종을 이어 가면 재검사 불필요",
+     "src": [
+      "eu_pets"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "tapewormHours",
+     "label": "촌충 구제(개)",
+     "value": 120,
+     "unit": "~24시간 전",
+     "text": "핀란드·아일랜드·몰타(·북아일랜드·노르웨이)행 개는 입국 120시간 이내~24시간 이상 전에 수의사 투약",
+     "src": [
+      "eu_pets"
+     ],
+     "status": "verified"
+    }
+   ]
+  },
+  "GB": {
+   "name": "영국",
+   "flag": "🇬🇧",
+   "species": [
+    "dog",
+    "cat"
+   ],
+   "city": "런던",
+   "params": {
+    "minAgeDays": 84,
+    "travelAfterVaxDays": 22,
+    "drawAfterVaxDays": 30,
+    "waitMonths": 3,
+    "certValidDays": 10,
+    "titerMin": 0.5,
+    "tapewormHours": [
+     24,
+     120
+    ],
+    "maxQuarantineMonths": 4
+   },
+   "rules": [
+    {
+     "id": "chip",
+     "label": "마이크로칩 → 접종",
+     "text": "칩은 광견병 접종 전 또는 같은 때. 아니면 다시 접종",
+     "src": [
+      "gb_vax"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "minAgeDays",
+     "label": "접종 나이",
+     "value": 84,
+     "unit": "일령(12주) 이상",
+     "text": "수의사가 12주령 이상임을 확인한 뒤 접종(12주=84일로 계산)",
+     "src": [
+      "gb_vax"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "travelAfterVaxDays",
+     "label": "접종 후 이동",
+     "value": 21,
+     "unit": "일(만) 대기",
+     "text": "1차 접종 뒤 21일을 꽉 채워 기다려요(접종 다음 날이 1일째) → 접종일 + 22일부터 이동",
+     "src": [
+      "gb_vax"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "listed",
+     "label": "한국은 비지정(not listed) 국가",
+     "text": "GOV.UK listed 국가 표에 한국이 없어 혈액검사·3개월 대기가 필요",
+     "src": [
+      "gb_doc"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "drawAfterVaxDays",
+     "label": "채혈",
+     "value": 30,
+     "unit": "일 이후",
+     "text": "접종 후 최소 30일 지나 채혈, EU 승인 실험실, 0.5IU/ml 이상",
+     "src": [
+      "gb_blood"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "waitMonths",
+     "label": "채혈 후 대기",
+     "value": 3,
+     "unit": "개월(달력)",
+     "text": "채혈일부터 3개월 기다린 뒤 이동",
+     "src": [
+      "gb_blood"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "certValidDays",
+     "label": "GB 건강증명서",
+     "value": 10,
+     "unit": "일 이내 입국",
+     "text": "증명서 발급 후 10일 안에 영국 입국",
+     "src": [
+      "gb_cert"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "tapewormHours",
+     "label": "촌충 구제(개)",
+     "value": 120,
+     "unit": "~24시간 전",
+     "text": "도착 24시간 이상 전, 5일(120시간) 이내",
+     "src": [
+      "gb_main"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "maxQuarantineMonths",
+     "label": "규칙 위반 시",
+     "value": 4,
+     "unit": "개월(최장)",
+     "text": "규칙을 지키지 않으면 최대 4개월 격리 또는 입국 거부, 비용 본인 부담",
+     "src": [
+      "gb_main"
+     ],
+     "status": "verified"
+    }
+   ]
+  },
+  "US": {
+   "name": "미국",
+   "flag": "🇺🇸",
+   "species": [
+    "dog",
+    "cat"
+   ],
+   "city": "미국",
+   "params": {
+    "minAgeMonths": 6,
+    "cdcReceiptMonths": 6
+   },
+   "rules": [
+    {
+     "id": "lowRisk",
+     "label": "한국은 고위험국 목록에 없음",
+     "text": "CDC 고위험국 목록(2026-04-15)에 한국이 없어 저위험국 규정 적용. 최근 6개월 안에 고위험국에 있었다면 다른 규정",
+     "src": [
+      "cdc_high"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "minAgeMonths",
+     "label": "개 나이",
+     "value": 6,
+     "unit": "개월 이상",
+     "text": "입국 시점에 6개월령 이상",
+     "src": [
+      "cdc_low"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "chip",
+     "label": "마이크로칩",
+     "text": "범용 스캐너로 읽히는 마이크로칩",
+     "src": [
+      "cdc_low"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "cdcReceiptMonths",
+     "label": "CDC Dog Import Form 영수증",
+     "value": 6,
+     "unit": "개월 유효",
+     "text": "온라인 작성·무료, 개 1마리당 1장, 발급일부터 6개월 유효, 출발국이 바뀌면 새로 작성, 여행 당일 작성도 가능",
+     "src": [
+      "cdc_low"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "cat",
+     "label": "고양이",
+     "text": "CDC 개 수입 규정 대상이 아니에요 — 도착 주(州)와 항공사 규정을 확인하세요",
+     "src": [
+      "cdc_low"
+     ],
+     "status": "check"
+    }
+   ]
+  },
+  "AU": {
+   "name": "호주",
+   "flag": "🇦🇺",
+   "species": [
+    "dog",
+    "cat"
+   ],
+   "city": "멜버른",
+   "complex": true,
+   "params": {
+    "minAgeDays": 84,
+    "drawAfterVaxDays": 21,
+    "residencyDays": 180,
+    "rnattValidMonths": 12,
+    "permitBizDays": [
+     20,
+     40,
+     123
+    ],
+    "peqDays": [
+     10,
+     30
+    ]
+   },
+   "rules": [
+    {
+     "id": "group3",
+     "label": "한국 = Group 3",
+     "text": "호주 농림부 Group 3 목록에 한국(South Korea) 포함",
+     "src": [
+      "au_g3"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "minAgeDays",
+     "label": "접종 나이",
+     "value": 84,
+     "unit": "일령 이상",
+     "text": "광견병 접종은 84일령 이상에서",
+     "src": [
+      "au_g3"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "drawAfterVaxDays",
+     "label": "접종 → RNATT 채혈",
+     "value": 21,
+     "unit": "일(3~4주)",
+     "text": "첫 접종이면 3~4주 기다린 뒤 채혈(앱은 3주=21일을 최소로 계산)",
+     "src": [
+      "au_g3"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "residencyDays",
+     "label": "RNATT 후 거주",
+     "value": 180,
+     "unit": "일",
+     "text": "시료가 실험실에 도착한 날부터 180일 지나야 수출(예외 없음, 계류 아님)",
+     "src": [
+      "au_g3"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "rnattValidMonths",
+     "label": "RNATT 유효",
+     "value": 12,
+     "unit": "개월",
+     "text": "채혈일부터 12개월. 수출 전 12개월~180일 사이 채혈",
+     "src": [
+      "au_g3"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "permitBizDays",
+     "label": "수입허가",
+     "value": 40,
+     "unit": "영업일(보통 20~40, 최대 123)",
+     "text": "RNATT 신고서 후 BICON으로 신청, 대부분 20~40영업일, 길면 123영업일",
+     "src": [
+      "au_g3"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "peqDays",
+     "label": "도착 후 계류(Mickleham)",
+     "value": 30,
+     "unit": "일 이상(신원확인 시 10일)",
+     "text": "최소 30일. 채혈 전 정부 수의사 신원확인을 받았으면 최소 10일. 멜버른 공항으로 직접 도착",
+     "src": [
+      "au_g3"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "agent",
+     "label": "복잡도 높음",
+     "text": "최소 6개월 이상 걸리는 복잡한 절차 — 경험 있는 운송 대행 이용 권장",
+     "src": [
+      "au_g3"
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "cat",
+     "label": "고양이",
+     "text": "이 앱의 호주 일정은 개 안내서 기준이에요. 고양이는 DAFF 고양이 안내서를 확인하세요",
+     "src": [
+      "au_g3"
+     ],
+     "status": "check"
+    }
+   ]
+  }
+ }
+}
