@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>계산 테스트 — 겨울방학 돌봄 빈칸표</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="맞벌이 일반, 교대근무 한부모, 초4 학교 돌봄 없음 세 시나리오의 빈칸 계산을 손계산과 대조합니다.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="static">
+<main class="page" id="view">
+  <p><a href="./">← 돌봄 빈칸표</a></p>
+  <h1>계산 테스트 (손계산 대조)</h1>
+  <p id="sum">실행 중…</p>
+  <div class="tbl-wrap"><table class="tbl"><thead><tr><th scope="col">케이스</th><th scope="col">기대</th><th scope="col">결과</th></tr></thead><tbody id="rows"></tbody></table></div>
+  <p class="small">시나리오: 맞벌이 일반(스펙 예시), 교대근무 한부모(주간/야간 주 단위), 초4 학교 돌봄 없음. 공휴일은 월력요항 데이터.</p>
+</main>
+<script src="engine.js"></script>
+<script>
+fetch('data/holidays.json').then(r=>r.json()).then(H => fetch('data/idolbom-rates-2026.json').then(r=>r.json()).then(R => {
+  const E = GapEngine;
+  const rows = [];
+  function add(name, want, got, ok){ rows.push({name, want, got, ok}); }
+  const a1 = E.analyze(E.scenarioDualIncome(), H);
+  const j4 = a1.days.find(d=>d.date==='2027-01-04');
+  const j5 = a1.days.find(d=>d.date==='2027-01-05');
+  const c24 = a1.days.find(d=>d.date==='2027-02-24');
+  add('기간 일수', '61', String(a1.totalDays), a1.totalDays===61);
+  add('평일 수', '39', String(a1.weekdays), a1.weekdays===39);
+  add('1/4(월·학원) 빈칸 분', '40', String(j4.gapMin), j4.gapMin===40);
+  add('1/5(화) 빈칸 분', '100', String(j5.gapMin), j5.gapMin===100);
+  add('2/24 미운영(수·학원) 분', '520', String(c24.gapMin), c24.gapMin===520);
+  const a2 = E.analyze(E.scenarioShiftSingle(), H);
+  add('교대 12/31 주간주 아침 분', '240', String(a2.days.find(d=>d.date==='2026-12-31').gapMin), a2.days.find(d=>d.date==='2026-12-31').gapMin===240);
+  add('교대 1/4 야간주 저녁 분', '60', String(a2.days.find(d=>d.date==='2027-01-04').gapMin), a2.days.find(d=>d.date==='2027-01-04').gapMin===60);
+  const a3 = E.analyze(E.scenarioGrade4NoCare(), H);
+  add('초4 1/5 돌봄 없음 분', '600', String(a3.days.find(d=>d.date==='2027-01-05').gapMin), a3.days.find(d=>d.date==='2027-01-05').gapMin===600);
+  const st = E.runSelfTest(H, R);
+  add('engine.runSelfTest', '통과', st.ok?'통과':st.fails.join('; '), st.ok);
+  document.getElementById('rows').innerHTML = rows.map(c => '<tr><td>'+c.name+'</td><td>'+c.want+'</td><td>'+(c.ok?'✓ ':'✕ ')+c.got+'</td></tr>').join('');
+  const pass = rows.filter(c=>c.ok).length;
+  document.getElementById('sum').textContent = pass+'/'+rows.length+' 통과';
+  document.title = (pass===rows.length?'통과 ':'실패 ')+'계산 테스트 — 겨울방학 돌봄 빈칸표';
+}));
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="돌봄 빈칸표">
+  <rect width="32" height="32" rx="7" fill="#2F4BA0"/>
+  <rect x="5" y="7" width="22" height="20" rx="3" fill="#F7F8FC"/>
+  <rect x="5" y="7" width="22" height="5" rx="3" fill="#3E63DD"/>
+  <rect x="5" y="10" width="22" height="2" fill="#3E63DD"/>
+  <rect x="8" y="15" width="4" height="4" rx="0.8" fill="#4C9A6A"/>
+  <rect x="14" y="15" width="4" height="4" rx="0.8" fill="#E5484D"/>
+  <rect x="20" y="15" width="4" height="4" rx="0.8" fill="#FDE2E2"/>
+  <rect x="8" y="21" width="4" height="4" rx="0.8" fill="#F9A8A8"/>
+  <rect x="14" y="21" width="4" height="4" rx="0.8" fill="#4C9A6A"/>
+  <rect x="20" y="21" width="4" height="4" rx="0.8" fill="#E5484D"/>
+</svg>
