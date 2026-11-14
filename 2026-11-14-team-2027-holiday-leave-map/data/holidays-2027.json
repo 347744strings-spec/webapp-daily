@@ -1,0 +1,327 @@
+{
+ "version": "2027.1",
+ "checkedAt": "2026-11-14",
+ "year": 2027,
+ "notice": "우주항공청 「2027년 월력요항」(2026-06-29 발표) 기준. 임시공휴일 미반영(발표 시 업데이트).",
+ "src": [
+  "kasa_2027",
+  "kasi_2027",
+  "law_holiday_reg"
+ ],
+ "official": {
+  "publicHolidays": 72,
+  "fiveDayRestDays": 119,
+  "longWeekends3plus": 10,
+  "saturdayOverlaps": [
+   "2027-02-06",
+   "2027-05-01",
+   "2027-07-17",
+   "2027-10-09",
+   "2027-12-25"
+  ],
+  "src": [
+   "kasa_2027"
+  ]
+ },
+ "substituteRule": {
+  "text": "관공서의 공휴일에 관한 규정 제3조: 국경일·부처님오신날·노동절·어린이날·기독탄신일이 토·일요일과 겹치거나, 설·추석 연휴가 일요일과 겹치거나, 평일에 다른 공휴일과 겹치면 그 다음 첫 번째 비공휴일(토요일 제외)이 대체공휴일. 1월 1일·현충일은 대상 아님.",
+  "satSun": [
+   "national",
+   "buddha",
+   "labor",
+   "children",
+   "xmas"
+  ],
+  "sunOnly": [
+   "lunarNY",
+   "chuseok"
+  ],
+  "none": [
+   "newyear",
+   "memorial"
+  ],
+  "src": [
+   "law_holiday_reg",
+   "mpm_2026"
+  ]
+ },
+ "holidays": [
+  {
+   "date": "2027-01-01",
+   "wd": "금",
+   "name": "1월 1일(신정)",
+   "type": "holiday",
+   "cat": "newyear"
+  },
+  {
+   "date": "2027-02-06",
+   "wd": "토",
+   "name": "설날 전날",
+   "type": "holiday",
+   "cat": "lunarNY"
+  },
+  {
+   "date": "2027-02-07",
+   "wd": "일",
+   "name": "설날",
+   "type": "holiday",
+   "cat": "lunarNY"
+  },
+  {
+   "date": "2027-02-08",
+   "wd": "월",
+   "name": "설날 다음 날",
+   "type": "holiday",
+   "cat": "lunarNY"
+  },
+  {
+   "date": "2027-02-09",
+   "wd": "화",
+   "name": "대체공휴일(설날)",
+   "type": "sub",
+   "cat": "lunarNY"
+  },
+  {
+   "date": "2027-03-01",
+   "wd": "월",
+   "name": "3·1절",
+   "type": "holiday",
+   "cat": "national"
+  },
+  {
+   "date": "2027-05-01",
+   "wd": "토",
+   "name": "노동절",
+   "type": "holiday",
+   "cat": "labor"
+  },
+  {
+   "date": "2027-05-03",
+   "wd": "월",
+   "name": "대체공휴일(노동절)",
+   "type": "sub",
+   "cat": "labor"
+  },
+  {
+   "date": "2027-05-05",
+   "wd": "수",
+   "name": "어린이날",
+   "type": "holiday",
+   "cat": "children"
+  },
+  {
+   "date": "2027-05-13",
+   "wd": "목",
+   "name": "부처님오신날",
+   "type": "holiday",
+   "cat": "buddha"
+  },
+  {
+   "date": "2027-06-06",
+   "wd": "일",
+   "name": "현충일(대체공휴일 없음)",
+   "type": "holiday",
+   "cat": "memorial"
+  },
+  {
+   "date": "2027-07-17",
+   "wd": "토",
+   "name": "제헌절",
+   "type": "holiday",
+   "cat": "national"
+  },
+  {
+   "date": "2027-07-19",
+   "wd": "월",
+   "name": "대체공휴일(제헌절)",
+   "type": "sub",
+   "cat": "national"
+  },
+  {
+   "date": "2027-08-15",
+   "wd": "일",
+   "name": "광복절",
+   "type": "holiday",
+   "cat": "national"
+  },
+  {
+   "date": "2027-08-16",
+   "wd": "월",
+   "name": "대체공휴일(광복절)",
+   "type": "sub",
+   "cat": "national"
+  },
+  {
+   "date": "2027-09-14",
+   "wd": "화",
+   "name": "추석 전날",
+   "type": "holiday",
+   "cat": "chuseok"
+  },
+  {
+   "date": "2027-09-15",
+   "wd": "수",
+   "name": "추석",
+   "type": "holiday",
+   "cat": "chuseok"
+  },
+  {
+   "date": "2027-09-16",
+   "wd": "목",
+   "name": "추석 다음 날",
+   "type": "holiday",
+   "cat": "chuseok"
+  },
+  {
+   "date": "2027-10-03",
+   "wd": "일",
+   "name": "개천절",
+   "type": "holiday",
+   "cat": "national"
+  },
+  {
+   "date": "2027-10-04",
+   "wd": "월",
+   "name": "대체공휴일(개천절)",
+   "type": "sub",
+   "cat": "national"
+  },
+  {
+   "date": "2027-10-09",
+   "wd": "토",
+   "name": "한글날",
+   "type": "holiday",
+   "cat": "national"
+  },
+  {
+   "date": "2027-10-11",
+   "wd": "월",
+   "name": "대체공휴일(한글날)",
+   "type": "sub",
+   "cat": "national"
+  },
+  {
+   "date": "2027-12-25",
+   "wd": "토",
+   "name": "기독탄신일",
+   "type": "holiday",
+   "cat": "xmas"
+  },
+  {
+   "date": "2027-12-27",
+   "wd": "월",
+   "name": "대체공휴일(기독탄신일)",
+   "type": "sub",
+   "cat": "xmas"
+  },
+  {
+   "date": "2028-01-01",
+   "wd": "토",
+   "name": "1월 1일(신정, 연말 구간 계산용)",
+   "type": "holiday",
+   "cat": "newyear"
+  }
+ ],
+ "presets": [
+  {
+   "id": "seol",
+   "title": "설 연휴",
+   "leave": [
+    "2027-02-10",
+    "2027-02-11",
+    "2027-02-12"
+   ],
+   "expect": {
+    "start": "2027-02-06",
+    "end": "2027-02-14",
+    "days": 9
+   }
+  },
+  {
+   "id": "may5",
+   "title": "5월 초(노동절·어린이날)",
+   "leave": [
+    "2027-05-04"
+   ],
+   "expect": {
+    "start": "2027-05-01",
+    "end": "2027-05-05",
+    "days": 5
+   }
+  },
+  {
+   "id": "may9",
+   "title": "5월 초 길게",
+   "leave": [
+    "2027-05-04",
+    "2027-05-06",
+    "2027-05-07"
+   ],
+   "expect": {
+    "start": "2027-05-01",
+    "end": "2027-05-09",
+    "days": 9
+   }
+  },
+  {
+   "id": "buddha",
+   "title": "부처님오신날",
+   "leave": [
+    "2027-05-14"
+   ],
+   "expect": {
+    "start": "2027-05-13",
+    "end": "2027-05-16",
+    "days": 4
+   }
+  },
+  {
+   "id": "chuseok",
+   "title": "추석 연휴",
+   "leave": [
+    "2027-09-13",
+    "2027-09-17"
+   ],
+   "expect": {
+    "start": "2027-09-11",
+    "end": "2027-09-19",
+    "days": 9
+   }
+  },
+  {
+   "id": "oct",
+   "title": "10월 개천절·한글날",
+   "leave": [
+    "2027-10-05",
+    "2027-10-06",
+    "2027-10-07",
+    "2027-10-08"
+   ],
+   "expect": {
+    "start": "2027-10-02",
+    "end": "2027-10-11",
+    "days": 10
+   }
+  },
+  {
+   "id": "yearend",
+   "title": "연말·신정",
+   "leave": [
+    "2027-12-28",
+    "2027-12-29",
+    "2027-12-30",
+    "2027-12-31"
+   ],
+   "expect": {
+    "start": "2027-12-25",
+    "end": "2028-01-02",
+    "days": 9
+   }
+  }
+ ],
+ "presetsSrc": [
+  "kasa_2027",
+  "joongang_bridge",
+  "cbc_bridge"
+ ]
+}

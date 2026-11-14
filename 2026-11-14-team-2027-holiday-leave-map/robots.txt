@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://347744strings-spec.github.io/webapp-daily/2026-11-14-team-2027-holiday-leave-map/sitemap.xml
