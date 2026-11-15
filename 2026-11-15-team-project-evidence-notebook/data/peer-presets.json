@@ -1,0 +1,46 @@
+{
+ "version": 1,
+ "note": "일반 항목 예시예요. 수업에서 정한 평가 서식이 있으면 그 항목을 그대로 입력해 쓰세요.",
+ "items": [
+  {
+   "id": "participation",
+   "label": "참여도",
+   "default": true
+  },
+  {
+   "id": "responsibility",
+   "label": "책임감(약속 이행)",
+   "default": true
+  },
+  {
+   "id": "communication",
+   "label": "소통",
+   "default": true
+  },
+  {
+   "id": "workload",
+   "label": "기여 분량",
+   "default": true
+  },
+  {
+   "id": "cooperation",
+   "label": "협동",
+   "default": true
+  },
+  {
+   "id": "deadline",
+   "label": "기한 준수",
+   "default": false
+  },
+  {
+   "id": "sharing",
+   "label": "자료 공유",
+   "default": false
+  },
+  {
+   "id": "meeting",
+   "label": "회의 참석",
+   "default": false
+  }
+ ]
+}

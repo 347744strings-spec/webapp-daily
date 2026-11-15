@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>팀플 증거노트 — 저격 대신 기록, 조별과제 대응 키트</title>
+<meta name="description" content="카톡 대화 내보내기를 붙여 넣으면 누가 언제 무엇을 맡았고 지켰는지 날짜 박힌 장부가 돼요. 감정 없는 3단계 요청 문구, 교수님께 낼 A4 사실 보고서, 근거 붙은 동료평가 초안까지. 서버 없이 기기 안에서만.">
+<meta name="theme-color" content="#2F5D8A">
+<link rel="canonical" href="https://347744strings-spec.github.io/webapp-daily/2026-11-15-team-project-evidence-notebook/">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="icon" href="icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="WebAppDaily">
+<meta property="og:title" content="팀플 증거노트 — 저격 대신 기록, 조별과제 대응 키트">
+<meta property="og:description" content="싸우지 말고, 날짜로 말하세요. 카톡 대화로 장부를 만들고, 사실만 담은 요청 문구와 교수님께 낼 한 장까지. 대화는 업로드되지 않아요.">
+<meta property="og:url" content="https://347744strings-spec.github.io/webapp-daily/2026-11-15-team-project-evidence-notebook/">
+<meta property="og:image" content="https://347744strings-spec.github.io/webapp-daily/2026-11-15-team-project-evidence-notebook/screenshot.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="shell">
+<a class="skip" href="#view">본문으로 건너뛰기</a>
+<header class="top">
+  <a class="brand" href="#/" aria-label="팀플 증거노트 홈"><span class="logo" aria-hidden="true">📒</span><span>팀플 증거노트</span></a>
+  <nav class="toplinks" aria-label="보조 메뉴"><a href="#/check">공개글 점검</a><a href="#/settings">설정</a></nav>
+</header>
+<main id="view" tabindex="-1"><h1 class="sr-only">불러오는 중</h1><p class="loading">불러오는 중…</p></main>
+<footer class="foot">
+  <p class="disc"><strong>법률 자문이 아니에요.</strong> 장부는 내 기록에 기반한 참고 자료이고, 해시는 이 앱 안에서 수정 여부를 표시할 뿐 <strong>법적 증거력을 보장하지 않아요</strong>.</p>
+  <p class="foot-links"><a href="kakao-export-guide/">카톡 대화 내보내기 방법</a><a href="team-project-free-rider-guide/">조별과제 3단계 대응법</a><a href="peer-evaluation-evidence/">동료평가 근거 쓰는 법</a><a href="privacy.html">개인정보 안내</a></p>
+  <p class="small">대화 내용·장부는 이 기기에만 저장돼요(서버 전송·분석 도구·외부 글꼴 없음). 확인일 2026-11-15.</p>
+</footer>
+<button type="button" class="fab" id="fab" hidden aria-label="기록 추가">＋ 기록</button>
+<nav class="tabs" aria-label="주요 화면">
+  <a href="#/" data-tab="home"><span aria-hidden="true">🏠</span>홈</a>
+  <a href="#/ledger" data-tab="ledger"><span aria-hidden="true">📒</span>장부</a>
+  <a href="#/msg" data-tab="msg"><span aria-hidden="true">💬</span>문구</a>
+  <a href="#/report" data-tab="report"><span aria-hidden="true">📄</span>보고서</a>
+  <a href="#/more" data-tab="more"><span aria-hidden="true">☰</span>더보기</a>
+</nav>
+</div>
+<dialog id="dlg" aria-labelledby="dlg-t"><form method="dialog"><h2 id="dlg-t"></h2><div id="dlg-b"></div><div class="actions"><button class="btn ghost" value="cancel" id="dlg-no">취소</button><button class="btn" value="ok" id="dlg-ok">확인</button></div></form></dialog>
+<dialog id="sheet" class="sheet" aria-labelledby="sheet-t"><div id="sheet-b"></div></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="engine.js"></script>
+<script src="app.js"></script>
+<script>if ('serviceWorker' in navigator && location.protocol !== 'file:') addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));</script>
+</body>
+</html>
