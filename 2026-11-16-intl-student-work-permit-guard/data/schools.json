@@ -1,0 +1,5 @@
+{"asOf":"2026-11-16","schools":[
+{"id":"yonsei","name":"연세대학교 (신촌·국제처 안내)","certified":null,"expiredTopik":"accepted","online":null,"maxPlaces":2,"commuteMin":60,"src":"yonsei","calendarUrl":"https://www.yonsei.ac.kr/sc/support/calendar.jsp","note":"인증대학 여부는 이 문서에 없음 → 직접 확인"},
+{"id":"hallym","name":"한림대학교 (글로벌교류센터 안내)","certified":true,"expiredTopik":"rejected","online":true,"maxPlaces":2,"commuteMin":null,"src":"hallym","calendarUrl":"https://www.hallym.ac.kr/","note":"'현재 인증대학, 추후 변동될 수 있음'(2026-01-26 문서)"},
+{"id":"custom","name":"직접 입력","certified":null,"expiredTopik":"unknown","online":null,"maxPlaces":null,"commuteMin":null,"src":null,"calendarUrl":null,"note":""}
+]}

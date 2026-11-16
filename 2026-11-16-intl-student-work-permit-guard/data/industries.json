@@ -1,0 +1,182 @@
+{
+ "asOf": "2026-11-16",
+ "src": "moj_manual",
+ "signals": {
+  "ban": {
+   "order": 0
+  },
+  "restricted": {
+   "order": 1
+  },
+  "conditional": {
+   "order": 2
+  },
+  "ok": {
+   "order": 3
+  },
+  "unknown": {
+   "order": 4
+  }
+ },
+ "items": [
+  {
+   "id": "delivery",
+   "signal": "ban",
+   "kw": [
+    "배달",
+    "배민",
+    "쿠팡이츠",
+    "요기요",
+    "라이더",
+    "퀵서비스",
+    "퀵 ",
+    "택배",
+    "배송기사",
+    "delivery",
+    "rider",
+    "courier"
+   ],
+   "oneStrike": true
+  },
+  {
+   "id": "construction",
+   "signal": "ban",
+   "kw": [
+    "건설",
+    "건축",
+    "공사",
+    "토목",
+    "철거",
+    "인테리어 시공",
+    "construction"
+   ],
+   "oneStrike": true
+  },
+  {
+   "id": "nightlife",
+   "signal": "ban",
+   "kw": [
+    "유흥",
+    "단란주점",
+    "노래연습장",
+    "노래방",
+    "룸살롱",
+    "나이트",
+    "호스트바",
+    "사행",
+    "카지노",
+    "성인pc",
+    "bar hostess"
+   ],
+   "oneStrike": true
+  },
+  {
+   "id": "special",
+   "signal": "restricted",
+   "kw": [
+    "대리운전",
+    "대리기사",
+    "보험설계",
+    "학습지",
+    "방문판매",
+    "특수형태"
+   ]
+  },
+  {
+   "id": "dispatch",
+   "signal": "restricted",
+   "kw": [
+    "파견",
+    "도급",
+    "인력사무소",
+    "인력공급",
+    "용역",
+    "알선",
+    "직업소개"
+   ]
+  },
+  {
+   "id": "e2",
+   "signal": "restricted",
+   "kw": [
+    "어학원",
+    "영어학원",
+    "외국어학원",
+    "회화지도",
+    "원어민 강사",
+    "과외",
+    "회화",
+    "외국어 강사",
+    "english teacher"
+   ]
+  },
+  {
+   "id": "manufacturing",
+   "signal": "conditional",
+   "kw": [
+    "제조",
+    "공장",
+    "생산직",
+    "포장",
+    "조립",
+    "물류센터",
+    "manufactur",
+    "factory"
+   ],
+   "needLevel": 4
+  },
+  {
+   "id": "kidscafe",
+   "signal": "conditional",
+   "kw": [
+    "키즈카페",
+    "영어캠프",
+    "놀이보조",
+    "안전보조"
+   ]
+  },
+  {
+   "id": "food",
+   "signal": "ok",
+   "kw": [
+    "음식점",
+    "일반음식점",
+    "식당",
+    "휴게음식점",
+    "카페",
+    "커피",
+    "제과",
+    "베이커리",
+    "패스트푸드",
+    "치킨"
+   ]
+  },
+  {
+   "id": "retail",
+   "signal": "ok",
+   "kw": [
+    "편의점",
+    "소매",
+    "마트",
+    "슈퍼",
+    "판매점",
+    "의류",
+    "잡화"
+   ]
+  },
+  {
+   "id": "office",
+   "signal": "ok",
+   "kw": [
+    "사무보조",
+    "사무",
+    "행정",
+    "통역",
+    "번역",
+    "통번역",
+    "도서관",
+    "교내"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>알바 허가 지킴이 — 유학생 시간제취업 한도·근무표 점검</title>
+<meta name="description" content="외국인 유학생(D-2·D-4) 알바 허용시간을 6문항으로 계산하고, 근무표가 이번 주 한도 안인지, 금지 업종(배달·건설·유흥)인지 바로 보여 줘요. 법무부 매뉴얼 2026-11-16판 기준, 5개 언어, 데이터는 이 기기에만.">
+<meta name="theme-color" content="#1E3A5F">
+<link rel="canonical" href="https://347744strings-spec.github.io/webapp-daily/2026-11-16-intl-student-work-permit-guard/">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="icon" href="icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="alternate" hreflang="ko" href="https://347744strings-spec.github.io/webapp-daily/2026-11-16-intl-student-work-permit-guard/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="WebAppDaily">
+<meta property="og:title" content="알바 허가 지킴이 — 유학생 시간제취업 한도·근무표 점검">
+<meta property="og:description" content="6문항이면 내 주중 한도, 근무표 넣으면 이번 주 남은 시간. 배달·건설·유흥은 적발 시 원칙적 출국(2026-11-09 시행). 한/영/베/중/우즈베크어.">
+<meta property="og:url" content="https://347744strings-spec.github.io/webapp-daily/2026-11-16-intl-student-work-permit-guard/">
+<meta property="og:image" content="https://347744strings-spec.github.io/webapp-daily/2026-11-16-intl-student-work-permit-guard/screenshot.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="shell">
+<a class="skip" href="#view">본문으로 건너뛰기</a>
+<header class="top">
+  <a class="brand" href="#/" aria-label="알바 허가 지킴이 홈"><span class="logo" aria-hidden="true">🛡️</span><span class="bname">알바 허가 지킴이</span></a>
+  <div class="topr">
+    <a class="toplink" href="#/export" id="tl-export">내보내기</a>
+    <label class="sr-only" for="lang">언어 Language</label>
+    <select id="lang" class="langsel"><option value="ko">한국어</option><option value="en">English</option><option value="vi">Tiếng Việt</option><option value="zh">简体中文</option><option value="uz">O‘zbekcha</option></select>
+  </div>
+</header>
+<p class="mt" id="mt" hidden></p>
+<main id="view" tabindex="-1"><h1 class="sr-only">불러오는 중</h1><p class="loading">불러오는 중…</p></main>
+<footer class="foot">
+  <p class="disc" id="foot-disc">법률 자문이 아니고 확정 판정도 아니에요. 규칙은 바뀔 수 있어요.</p>
+  <p class="foot-links"><a href="d2-part-time-hours/">D-2 허용시간 표</a><a href="d4-language-student-part-time/">D-4 어학연수생 6개월</a><a href="restricted-jobs-one-strike/">금지 업종 One-strike</a><a href="privacy.html">개인정보 안내</a></p>
+  <p class="small" id="foot-priv">입력한 내용은 이 기기(localStorage)에만 저장돼요. 외국인등록번호·여권번호는 받지 않아요. 서버·분석 도구·외부 글꼴 없음.</p>
+</footer>
+<div class="final" role="note" id="final"><span lang="ko">확정 판정 아님 · 최종 확인: 국제처·하이코리아·1345</span><span class="final-tr" id="final-tr"></span></div>
+<nav class="tabs" aria-label="주요 화면">
+  <a href="#/" data-tab="home"><span aria-hidden="true">🏠</span><span class="tl" data-k="tab_home">홈</span></a>
+  <a href="#/work" data-tab="work"><span aria-hidden="true">🗓️</span><span class="tl" data-k="tab_work">근무표</span></a>
+  <a href="#/todo" data-tab="todo"><span aria-hidden="true">✅</span><span class="tl" data-k="tab_todo">할 일</span></a>
+  <a href="#/rules" data-tab="rules"><span aria-hidden="true">📘</span><span class="tl" data-k="tab_rules">규칙</span></a>
+</nav>
+</div>
+<dialog id="dlg" aria-labelledby="dlg-t"><form method="dialog"><h2 id="dlg-t"></h2><div id="dlg-b"></div><div class="actions"><button class="btn ghost" id="dlg-no" value="no">취소</button><button class="btn" id="dlg-ok" value="ok">확인</button></div></form></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div id="print" class="printroot" aria-hidden="true"></div>
+<script src="engine.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
