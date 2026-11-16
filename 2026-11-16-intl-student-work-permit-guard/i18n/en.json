@@ -203,7 +203,7 @@
  "sug_cut_at": "Week {week}: cut {h} hours — e.g. shorten {dow} {from}–{to}.",
  "warn_h": "Warnings",
  "no_warn": "No warnings found right now",
- "w_over": "Weekly limit exceeded: {counted}h / {cap}h (week of {week})",
+ "w_over": "Weekly limit exceeded: {n} week(s)",
  "wd_over": "Going over the limit breaks your permit conditions. See the suggestions.",
  "w_places": "{n} workplaces — max {max}",
  "wd_places": "More workplaces than allowed at the same time.",
@@ -408,5 +408,13 @@
  "wipe_p1": "Your answers, workplaces and shifts will all be deleted.",
  "wipe_t2": "Final check (2/2)",
  "wipe_p2": "This cannot be undone. Back up first if needed.",
- "wiped": "Everything deleted"
+ "wiped": "Everything deleted",
+ "app_short": "Work Permit Guard",
+ "over_weeks": "Affected weeks (from Monday) · counted/limit",
+ "vb_secondary": "Private/press source",
+ "lg_info": "Info",
+ "legend_src": "Source badge legend",
+ "mt_short": "Machine translation · needs native review",
+ "mt_less": "Shorten",
+ "mt_more": "Details"
 }

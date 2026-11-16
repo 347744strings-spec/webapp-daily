@@ -203,7 +203,7 @@
  "sug_cut_at": "{week} haftasi: {h} soat kamaytiring — masalan {dow} {from}–{to} smenasini qisqartiring.",
  "warn_h": "Ogohlantirishlar",
  "no_warn": "Hozircha ogohlantirish yoʻq",
- "w_over": "Haftalik limit oshdi: {counted} / {cap} soat ({week} haftasi)",
+ "w_over": "Haftalik limit oshdi: {n} hafta",
  "wd_over": "Limitdan oshish ruxsat shartlarini buzish hisoblanadi. Takliflarni koʻring.",
  "w_places": "{n} ta ish joyi — koʻpi bilan {max}",
  "wd_places": "Bir vaqtda ruxsat etilganidan koʻp ish joyi.",
@@ -408,5 +408,13 @@
  "wipe_p1": "Shartlar, ish joylari va jadval butunlay oʻchadi.",
  "wipe_t2": "Soʻnggi tasdiq (2/2)",
  "wipe_p2": "Qaytarib boʻlmaydi. Kerak boʻlsa avval zaxiralang.",
- "wiped": "Hammasi oʻchirildi"
+ "wiped": "Hammasi oʻchirildi",
+ "app_short": "Ish ruxsati",
+ "over_weeks": "Tegishli haftalar (dushanbadan) · hisoblangan/limit",
+ "vb_secondary": "Xususiy/matbuot manbasi",
+ "lg_info": "Maʼlumot",
+ "legend_src": "Manba belgilari izohi",
+ "mt_short": "Mashina tarjimasi · ona tili egasi tekshiruvi kerak",
+ "mt_less": "Qisqartirish",
+ "mt_more": "Batafsil"
 }

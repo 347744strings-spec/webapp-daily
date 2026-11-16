@@ -156,7 +156,8 @@
   function warnings(state, limit, rules, industries, weeks, today) {
     const W = []; const p = state.profile || {}; const wps = state.workplaces || [];
     const add = (id, sev, params, src, status) => W.push({ id, sev, params: params || {}, src: src || 'moj_manual', status: status || 'verified' });
-    for (const w of weeks) if (w.over) add('over', 'stop', { week: w.week, counted: w.countedMins, cap: w.capMins, unlimited: limit.unlimited }, limit.src, limit.status);
+    const overs = weeks.filter(w => w.over); // 반복 근무로 여러 주가 넘으면 카드 1장에 주 목록으로 묶음
+    if (overs.length) add('over', 'stop', { n: overs.length, weeks: overs.map(w => ({ week: w.week, counted: w.countedMins, cap: w.capMins })), week: overs[0].week, counted: overs[0].countedMins, cap: overs[0].capMins, unlimited: limit.unlimited }, limit.src, limit.status);
     if (wps.length > limit.maxPlaces) add('places', 'stop', { n: wps.length, max: limit.maxPlaces, visa: limit.visa }, 'moj_manual');
     if (p.visa === 'D-4' && !limit.eligibleNow) {
       const has = weeks.some(w => w.segs.some(s => !limit.eligibleFrom || s.date < limit.eligibleFrom));

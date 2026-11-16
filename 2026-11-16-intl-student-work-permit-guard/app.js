@@ -31,11 +31,12 @@
     return new Promise(res => { const d = $('#dlg'); $('#dlg-t').textContent = title; $('#dlg-b').innerHTML = bodyHtml; $('#dlg-ok').textContent = okText || t('ok'); const no = $('#dlg-no'); no.textContent = noText || t('cancel'); no.hidden = noText === false;
       d.returnValue = ''; d.onclose = () => res(d.returnValue === 'ok'); d.showModal(); });
   }
-  const STATUS = { verified: 'vb_verified', gov: 'vb_gov', school: 'vb_school', check: 'vb_check', secondary: 'vb_check', press: 'vb_check' };
-  function vb(status) { return `<span class="vb vb-${esc(status)}">${esc(t(STATUS[status] || 'vb_check'))}</span>`; }
+  const STATUS = { verified: ['verified', '✔', 'vb_verified'], gov: ['gov', '🏛', 'vb_gov'], school: ['school', '🏫', 'vb_school'], check: ['check', '?', 'vb_check'], secondary: ['secondary', '📰', 'vb_secondary'], press: ['secondary', '📰', 'vb_secondary'] };
+  function vb(status) { const [c, i, k] = STATUS[status] || STATUS.check; return `<span class="vb vb-${c}"><span aria-hidden="true">${i}</span>${esc(t(k))}</span>`; }
+  function legendSrc() { return `<div class="legend" aria-label="${esc(t('legend_src'))}">${['verified', 'gov', 'school', 'secondary', 'check'].map(vb).join('')}</div>`; }
   function src(key, status) {
     const s = S.D.sources.sources[key]; if (!s) return '';
-    const st = status || (s.kind === 'primary' ? 'verified' : s.kind === 'gov' ? 'gov' : s.kind === 'school' ? 'school' : 'check');
+    const st = status || (s.kind === 'primary' ? 'verified' : s.kind === 'gov' ? 'gov' : s.kind === 'school' ? 'school' : (s.kind === 'secondary' || s.kind === 'press') ? 'secondary' : 'check');
     return `<span class="srcline"><button type="button" class="src" data-src="${esc(key)}">ⓘ ${esc(s.short || s.org)} · ${esc(t('asof'))} <span class="num">${esc(shortAsOf(s.asOf))}</span><span class="sr-only"> — ${esc(t('src_open'))}: ${esc(s.org)}, ${esc(s.asOf)}</span></button>${vb(st)}</span>`;
   }
   function shortAsOf(a) { const m = /\d{4}-\d{2}(-\d{2})?/.exec(a || ''); return m ? m[0] : '확인 필요'; }
@@ -47,7 +48,7 @@
   function sig(signal) { const [c, i, k] = SIGI[signal] || SIGI.unknown; return `<span class="sig ${c}"><span aria-hidden="true">${i}</span>${esc(t(k))}</span>`; }
   const SEVI = { stop: ['s-stop', '⛔'], warn: ['s-warn', '⚠'], check: ['s-chk', '?'], info: ['s-info', 'ℹ'] };
   function legendStatus() {
-    return `<div class="legend" aria-label="${esc(t('legend'))}"><span class="lg s-ok">✓ ${esc(t('lg_ok'))}</span><span class="lg s-warn">⚠ ${esc(t('lg_warn'))}</span><span class="lg s-stop">⛔ ${esc(t('lg_stop'))}</span><span class="lg s-rst">🚫 ${esc(t('lg_rst'))}</span><span class="lg s-chk">? ${esc(t('lg_chk'))}</span><span class="lg s-unl">∞ ${esc(t('lg_unl'))}</span></div>`;
+    return `<div class="legend" aria-label="${esc(t('legend'))}"><span class="lg s-ok">✓ ${esc(t('lg_ok'))}</span><span class="lg s-warn">⚠ ${esc(t('lg_warn'))}</span><span class="lg s-stop">⛔ ${esc(t('lg_stop'))}</span><span class="lg s-rst">🚫 ${esc(t('lg_rst'))}</span><span class="lg s-chk">? ${esc(t('lg_chk'))}</span><span class="lg s-unl">∞ ${esc(t('lg_unl'))}</span><span class="lg s-info">ℹ ${esc(t('lg_info'))}</span></div>`;
   }
   function legendDays() { return `<div class="legend"><span class="lg day">${esc(t('dt_weekday'))}</span><span class="lg day d-weekend">${esc(t('dt_weekend'))}</span><span class="lg day d-holiday">🎌 ${esc(t('dt_holiday'))}</span><span class="lg day d-vacation">🏖 ${esc(t('dt_vacation'))}</span></div>`; }
   function setTitle(k) { document.title = t('title_' + k) + ' — ' + t('app'); }
@@ -73,19 +74,28 @@
     $('#lang').value = S.lang; $('#lang').onchange = e => setLang(e.target.value);
     document.addEventListener('click', e => { const b = e.target.closest('[data-src]'); if (b) { e.preventDefault(); showSrc(b.dataset.src); } });
     window.addEventListener('hashchange', route);
-    chrome(); route(); S.ready = true;
+    chrome(); route(); fitFixed();
+    if (window.ResizeObserver) { const ro = new ResizeObserver(fitFixed); ro.observe($('#final')); ro.observe($('.tabs')); ro.observe($('.top')); }
+    window.addEventListener('resize', fitFixed); S.ready = true;
     if ('serviceWorker' in navigator && location.protocol !== 'file:') navigator.serviceWorker.register('sw.js').catch(() => {});
   }
-  async function setLang(l) { if (!LANGS.includes(l)) return; await loadLang(l); S.lang = l; S.st.lang = l; save(); $('#lang').value = l; chrome(); route(); }
+  async function setLang(l) { if (!LANGS.includes(l)) return; await loadLang(l); S.lang = l; S.st.lang = l; save(); $('#lang').value = l; chrome(); route(); fitFixed(); }
   function chrome() {
     document.documentElement.lang = HTMLLANG[S.lang];
     $$('.tabs .tl').forEach(e => e.textContent = t(e.dataset.k));
     $('#tl-export').textContent = t('tab_export');
-    $('.bname').textContent = t('app'); $('.brand').setAttribute('aria-label', t('app') + ' — ' + t('tab_home'));
+    $('.bname').textContent = t('app_short'); $('.brand').setAttribute('aria-label', t('app') + ' — ' + t('tab_home'));
     $('#foot-disc').textContent = t('foot_disc'); $('#foot-priv').textContent = t('foot_priv');
-    const mt = $('#mt'); mt.hidden = !MT[S.lang]; mt.innerHTML = MT[S.lang] ? `⚙ ${esc(t('mt_banner'))} <span lang="ko">(기계 번역 · 원어민 검수 필요)</span>` : '';
+    const mt = $('#mt'); mt.hidden = !MT[S.lang]; const cmp = !!S.st.mtCompact; mt.classList.toggle('compact', cmp);
+    mt.innerHTML = MT[S.lang] ? `<span class="mtx">⚙ ${cmp ? esc(t('mt_short')) : esc(t('mt_banner')) + ' <span lang="ko">(기계 번역 · 원어민 검수 필요)</span>'}</span><button type="button" class="mtb" id="mtb" aria-expanded="${!cmp}">${esc(t(cmp ? 'mt_more' : 'mt_less'))}</button>` : '';
+    const mb = $('#mtb'); if (mb) mb.onclick = () => { S.st.mtCompact = !S.st.mtCompact; save(); chrome(); fitFixed(); };
     $('#final-tr').textContent = S.lang === 'ko' ? '' : t('final'); $('#final-tr').hidden = S.lang === 'ko';
     $('.tabs').setAttribute('aria-label', t('nav_main'));
+  }
+  function fitFixed() {
+    const f = $('#final'), top = $('.top'); if (!f) return;
+    const b = Math.max(0, Math.ceil(innerHeight - f.getBoundingClientRect().top)); const h = top ? Math.ceil(top.getBoundingClientRect().height) : 0;
+    document.documentElement.style.setProperty('--fixed-b', b + 'px'); document.documentElement.style.setProperty('--fixed-t', (h + 8) + 'px');
   }
   function applySchool(id) {
     const sc = S.D.schools.schools.find(s => s.id === id); if (!sc) return;
@@ -223,7 +233,7 @@
   }
   function limitView() {
     const L = limit();
-    page('limit', `<h1>${esc(t('my_limit'))}</h1><section class="card limit" id="limitcard">${limitBlock(L)}</section>
+    page('limit', `<h1>${esc(t('my_limit'))}</h1><section class="card limit" id="limitcard">${limitBlock(L)}</section><details class="card"><summary class="btn ghost sm">${esc(t('legend_src'))}</summary>${legendSrc()}${legendStatus()}</details>
       <div class="stack"><a class="btn block" href="#/work" id="to-work">${esc(t('to_work'))}</a><a class="btn ghost block" href="#/q/1">${esc(t('redo'))}</a></div>
       <section class="card"><h2>${esc(t('vac_h'))}</h2><p>${esc(L.unlimited ? t('vac_unl') : t('vac_lim'))}</p></section>`);
   }
@@ -232,9 +242,12 @@
   function weeksNow(n) { const L = limit(); return { L, weeks: E.aggregate(S.st, L, S.D.holidays, E.weekKey(today()), n || 5) }; }
   function meter(w) { if (w.capMins == null) return ''; const pct = Math.min(100, w.capMins ? w.countedMins / w.capMins * 100 : 0); return `<div class="meter" role="img" aria-label="${esc(t('meter_aria', { used: H(w.countedMins), cap: H(w.capMins) }))}"><i class="${w.status}" style="width:${pct}%"></i></div>`; }
   function stChip(s) { const m = { ok: ['s-ok', '✓', 'wk_ok'], warn: ['s-warn', '⚠', 'wk_near'], stop: ['s-stop', '⛔', 'wk_over'] }[s]; return `<span class="chip ${m[0]}">${m[1]} ${esc(t(m[2]))}</span>`; }
+  function wParams(w) { const p = Object.assign({}, w.params); if (p.counted != null) { p.counted = H(p.counted); p.cap = H(p.cap); } if (p.mins != null) { p.mins = H(p.mins); p.cap = H(p.cap); } return p; }
+  function overList(w) { return (w.params.weeks || []).map(x => `${x.week.slice(5)}~ ${H(x.counted)}/${H(x.cap)}h`); }
   function warnHtml(w) {
-    const p = Object.assign({}, w.params); if (p.counted != null) { p.counted = H(p.counted); p.cap = H(p.cap); } if (p.mins != null) { p.mins = H(p.mins); p.cap = H(p.cap); }
-    const [c, i] = SEVI[w.sev]; return `<li class="${c}"><b><span aria-hidden="true">${i}</span> ${dual('w_' + w.id, p)}</b><span class="small">${esc(t('wd_' + w.id, p))}</span>${src(w.src, w.status)}</li>`;
+    const p = wParams(w);
+    const wk = w.id === 'over' ? `<span class="small">${esc(t('over_weeks'))}</span><span class="wkl">${overList(w).map(x => `<span class="kw num">${esc(x)}</span>`).join('')}</span>` : '';
+    const [c, i] = SEVI[w.sev]; return `<li class="${c}" data-w="${esc(w.id)}"><b><span aria-hidden="true">${i}</span> ${dual('w_' + w.id, p)}</b>${wk}<span class="small">${esc(t('wd_' + w.id, p))}</span>${src(w.src, w.status)}</li>`;
   }
   function dashView() {
     const { L, weeks } = weeksNow(5); const W = E.warnings(S.st, L, S.D.rules, S.D.industries, weeks, today()); const w0 = weeks[0];
@@ -250,7 +263,7 @@
         <div class="days" aria-label="${esc(t('week_days'))}">${w0.days.map(d => `<div class="day d-${d.type}"><b>${esc(dowName(E.dowIdx(d.date)))}</b><span class="num">${d.date.slice(5)}</span><br><span class="num">${d.mins ? H(d.mins) + 'h' : '–'}</span>${d.holiday ? '<br>🎌' : d.type === 'vacation' ? '<br>🏖' : ''}</div>`).join('')}</div>${legendDays()}</section>
       <section class="card"><h2>${esc(t('next_weeks'))}</h2>${weeks.map(w => `<div class="wk"><span class="num">${w.week.slice(5)}~</span>${w.capMins == null ? '<span></span>' : meter(w)}<span class="num">${H(w.countedMins)}${w.capMins != null ? '/' + H(w.capMins) : ''}h ${{ ok: '✓', warn: '⚠', stop: '⛔' }[w.status]}</span></div>`).join('')}${legendStatus()}</section>
       ${sug.length ? `<section class="card" id="sug"><h2>${esc(t('sug_h'))}</h2><ul class="wlist">${sug.map(s => `<li class="s-info">${esc(s.kind === 'move' ? t(s.fixes ? 'sug_move' : 'sug_move_part', { week: s.week.slice(5), dow: dowName(s.dow), from: hmS(s.from), to: hmS(s.to), toDow: dowName(s.toDow), toType: t('dt_' + s.toType), h: H(s.mins) }) : (s.dow != null ? t('sug_cut_at', { week: s.week.slice(5), h: H(s.mins), dow: dowName(s.dow), from: hmS(s.from), to: hmS(s.to) }) : t('sug_cut', { week: s.week.slice(5), h: H(s.mins) })))}</li>`).join('')}</ul></section>` : ''}`}
-      <section class="card" id="warns"><h2>${esc(t('warn_h'))} <span class="num">(${W.length})</span></h2>${W.length ? `<ul class="wlist">${W.map(warnHtml).join('')}</ul>` : `<p class="chip s-ok">✓ ${esc(t('no_warn'))}</p>`}${legendStatus()}</section>`);
+      <section class="card" id="warns"><h2>${esc(t('warn_h'))} <span class="num">(${W.length})</span></h2>${W.length ? `<ul class="wlist">${W.map(warnHtml).join('')}</ul>` : `<p class="chip s-ok">✓ ${esc(t('no_warn'))}</p>`}${legendStatus()}<p class="small">${esc(t('legend_src'))}</p>${legendSrc()}</section>`);
     const sb = $('#sample'); if (sb) sb.onclick = fillSample;
   }
   const hmS = m => String(Math.floor(m / 60)).padStart(2, '0') + ':' + String(m % 60).padStart(2, '0');
@@ -309,7 +322,7 @@
     $('#sadd').onclick = () => { const wp = $('#swp').value, a = $('#sst').value, b = $('#sen').value; if (!a || !b || a === b) { toast(t('shift_err')); return; } const sh = { wpId: wp, start: a, end: b }; if ($('#sdow').value === 'date') { if (!E.isYmd($('#sdate').value)) { toast(t('shift_err')); return; } sh.date = $('#sdate').value; } else sh.dow = +$('#sdow').value; st.shifts.push(sh); save(); toast(t('saved')); workView(); };
     $('#parse').onclick = () => { const r = E.parseScheduleText($('#paste').value); const wp = $('#swp').value; if (!r.ok.length) { $('#perr').textContent = t('paste_err'); $('#perr').hidden = false; return; } r.ok.forEach(x => st.shifts.push(Object.assign({ wpId: wp }, x))); save(); toast(t('paste_ok', { n: r.ok.length, bad: r.bad.length })); workView(); };
   }
-  function sigDetail(r) { return `${sig(r.signal)}${r.matched.length ? ` <span class="small">${esc(t('kw_hit'))}: ${esc(r.matched.slice(0, 4).join(', '))}</span>` : ''}<span class="small" style="display:block">${dual('sigd_' + (r.top === 'manufacturing' ? (r.levelOk ? 'mfg_ok' : 'mfg_low') : r.signal), { from: S.D.rules.oneStrike.from })}</span>`; }
+  function sigDetail(r) { return `${sig(r.signal)}${r.matched.length ? ` <span class="small kwline">${esc(t('kw_hit'))}: <span class="kws">${r.matched.slice(0, 4).map(k => `<span class="kw" lang="ko">${esc(k)}</span>`).join('')}</span></span>` : ''}<span class="small" style="display:block">${dual('sigd_' + (r.top === 'manufacturing' ? (r.levelOk ? 'mfg_ok' : 'mfg_low') : r.signal), { from: S.D.rules.oneStrike.from })}</span>`; }
   function wpCard(w, lv) {
     const r = E.classifyIndustry(w.industry, S.D.industries, lv.unknown ? null : lv.level);
     return `<div class="wpcard"><div class="row"><b>${esc(w.name)}</b><button type="button" class="btn sm ghost" data-delwp="${esc(w.id)}" aria-label="${esc(t('del'))} ${esc(w.name)}">✕</button></div>
@@ -375,7 +388,7 @@
       <section class="card" id="wage"><h2>${esc(t('wage_h'))}</h2><div class="two"><div><label class="f" for="hw">${esc(t('hourly'))}</label><input type="number" id="hw" inputmode="numeric" value="${esc(W.hourly ?? '')}"></div><div><label class="f" for="wh">${esc(t('weekly_h'))}</label><input type="number" id="wh" inputmode="decimal" value="${esc(W.weekly ?? '')}"></div></div>
         <label class="f" for="wy">${esc(t('year'))}</label><select id="wy">${[2026, 2027].map(y => `<option ${W.year == y ? 'selected' : ''}>${y}</option>`).join('')}</select>
         <div id="wageout">${wageOut(wr, W)}</div>${src('moel_2027')}${src('labor_act', 'check')}</section>
-      <section class="card"><h2>${esc(t('src_h'))}</h2><ul class="wlist">${src2.map(([k, s]) => `<li class="s-info"><b>${esc(s.org)}</b><span class="small">${esc(s.title)} · ${esc(t('asof'))} ${esc(s.asOf)}</span>${src(k)}</li>`).join('')}</ul></section>
+      <section class="card"><h2>${esc(t('src_h'))}</h2><p class="small">${esc(t('legend_src'))}</p>${legendSrc()}<ul class="wlist">${src2.map(([k, s]) => `<li class="s-info"><b>${esc(s.org)}</b><span class="small">${esc(s.title)} · ${esc(t('asof'))} ${esc(s.asOf)}</span>${src(k)}</li>`).join('')}</ul></section>
       <section class="card"><h2>${esc(t('tr_h'))}</h2><p>${esc(t('tr_p'))}</p><ul><li>한국어 — ${esc(t('tr_orig'))}</li><li>English — ${esc(t('tr_human'))}</li><li>Tiếng Việt · 简体中文 · O‘zbekcha — ${esc(t('tr_mt'))}</li></ul></section>`);
     $('#indq').oninput = e => { const lv = E.langLevel((S.st.profile || {}).lang, S.D.rules); $('#indr').innerHTML = e.target.value ? sigDetail(E.classifyIndustry(e.target.value, S.D.industries, lv.unknown ? null : lv.level)) : ''; };
     const upd = () => { const W2 = S.st.wage; W2.hourly = parseFloat($('#hw').value) || null; W2.weekly = parseFloat($('#wh').value) || null; W2.year = +$('#wy').value; save(); $('#wageout').innerHTML = wageOut(E.wage(W2.hourly, W2.weekly, W2.year, S.D.rules), W2); };
@@ -431,7 +444,7 @@
       <tr><th scope="row">앱 계산 한도</th><td>${esc(cap)} · 사업장 최대 ${L.maxPlaces}곳${L.unknown.length ? ' · 모름 항목은 낮은 값으로 계산' : ''}</td></tr>
       <tr><th scope="row">사업장</th><td>${S.st.workplaces.map(w => esc(w.name + (w.permitted ? ' (허가 ' + (w.permitFrom || '?') + '~' + (w.permitTo || '?') + ')' : ' (허가 전)'))).join('<br>') || '—'}</td></tr></tbody></table>
       <h3>향후 5주 근무(한도 계산 시간)</h3><table class="tbl"><thead><tr><th scope="col">주(월~일)</th><th scope="col">계산 시간</th><th scope="col">주말·공휴일·방학</th><th scope="col">상태</th></tr></thead><tbody>${weeks.map(w => `<tr><td class="num">${w.week}</td><td class="num">${H(w.countedMins)}${w.capMins != null ? ' / ' + H(w.capMins) : ''}h</td><td class="num">${H(w.otherMins)}h</td><td>${{ ok: '✓ 한도 안', warn: '⚠ 한도 근접', stop: '⛔ 초과' }[w.status]}</td></tr>`).join('')}</tbody></table>
-      <h3>앱이 찾은 확인 사항</h3><ul>${W.map(w => `<li>${esc(tk('w_' + w.id, Object.assign({}, w.params, w.params.counted != null ? { counted: H(w.params.counted), cap: H(w.params.cap) } : {}, w.params.mins != null ? { mins: H(w.params.mins), cap: H(w.params.cap) } : {})))}</li>`).join('') || '<li>없음</li>'}</ul>
+      <h3>앱이 찾은 확인 사항</h3><ul>${W.map(w => `<li>${esc(tk('w_' + w.id, wParams(w)))}${w.id === 'over' ? ' — ' + esc(overList(w).join(', ')) : ''}</li>`).join('') || '<li>없음</li>'}</ul>
       <h3>여쭤볼 질문</h3><ol><li>만료된 TOPIK 성적도 우리 학교에서 인정되나요?</li><li>우리 학교가 인증대학인가요(주중 +5시간 우대 해당 여부)?</li><li>고용주가 바뀌면 새 허가와 15일 이내 변경 신고 중 무엇을 해야 하나요?</li></ol>
       <p class="small">확정 판정 아님 · 최종 확인: 국제처·하이코리아·1345 · 외국인등록번호·여권번호는 적지 않았어요.</p></div>`;
   }

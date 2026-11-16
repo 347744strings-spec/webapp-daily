@@ -203,7 +203,7 @@
  "sug_cut_at": "Tuần {week}: giảm {h} giờ — vd: rút ngắn ca {dow} {from}–{to}.",
  "warn_h": "Cảnh báo",
  "no_warn": "Hiện chưa có cảnh báo",
- "w_over": "Vượt giới hạn tuần: {counted}h / {cap}h (tuần {week})",
+ "w_over": "Vượt giới hạn tuần: {n} tuần",
  "wd_over": "Vượt giới hạn là vi phạm điều kiện giấy phép. Xem gợi ý điều chỉnh.",
  "w_places": "{n} nơi làm — tối đa {max}",
  "wd_places": "Vượt số nơi được làm cùng lúc.",
@@ -408,5 +408,13 @@
  "wipe_p1": "Điều kiện, nơi làm và lịch làm sẽ bị xóa hết.",
  "wipe_t2": "Xác nhận lần cuối (2/2)",
  "wipe_p2": "Không thể hoàn tác. Hãy sao lưu trước nếu cần.",
- "wiped": "Đã xóa tất cả"
+ "wiped": "Đã xóa tất cả",
+ "app_short": "Giấy phép làm thêm",
+ "over_weeks": "Các tuần bị ảnh hưởng (từ thứ Hai) · giờ tính/giới hạn",
+ "vb_secondary": "Nguồn tư nhân/báo chí",
+ "lg_info": "Thông tin",
+ "legend_src": "Chú thích nhãn nguồn",
+ "mt_short": "Bản dịch máy · cần người bản ngữ kiểm tra",
+ "mt_less": "Thu gọn",
+ "mt_more": "Chi tiết"
 }
